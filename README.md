@@ -2,7 +2,7 @@
 
 Vorlesung:  Webbasierte Datenbankanwendungen 
 
-Dozent: Dr. Peter Neumayer
+Dozent: Peter Neumayer
 
 Gruppennummer:  7
 
