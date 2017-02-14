@@ -12,7 +12,7 @@ Arbeitstitel der Anwendung: "Larrybook"
 
 Beschreibung der Applikation: 
 "Larrybook" ist ein Online-Haushaltbuch, zur Verwaltung der persönlichen Einnahmen und Ausgaben.
-Ziel ist eine einfach und übersichtliche Verfolgung aller Transaktionen. Einnahmen und Ausgaben können kategorisiert und     kommentiert werden. Transaktionen können in monatlichen oder jährlichen Ansichten dargestellt werden. Eine Darstellung der Kategorien ist auch möglich. Eine Anbindung an Bankdienstleister ist nicht vorgesehen. 
+Ziel ist eine einfach und übersichtliche Verfolgung aller Transaktionen. Einnahmen und Ausgaben können kategorisiert und     kommentiert werden. Transaktionen können in monatlichen oder jährlichen Ansichten dargestellt werden. Eine Darstellung der Kategorien ist auch möglich. Eine Anbindung an Bankdienstleister ist nicht vorgesehen. Daher ist auch keine Representation des Nutzerkontostand geplant, sondern lediglich des Cashflows.
 
 Technische Details(_wip_)): 
 
