@@ -6,7 +6,7 @@ Dozent: Peter Neumayer
 
 Gruppennummer:  7
 
-Gruppenmitglieder: Lars Robert Lux, Matthias Peter Kugel, Jan Alexander Fischer, Christian Bergen 
+Gruppenmitglieder: Lars Robert Lux, Matthias Peter Kugel, Jan Alexander Fischer, Christian J. Bergen 
 
 Arbeitstitel der Anwendung: "Larrybook" 
 
