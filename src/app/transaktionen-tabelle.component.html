@@ -1,0 +1,36 @@
+<style>
+
+</style>
+
+<div>
+    <table id="transaktionen-table" class="table table-hover header-fixed">
+        <thead>
+            <tr>
+                <th>Betrag</th>
+                <th>Kategorie</th>
+                <th>Beschreibung</th>
+                <th>Datum</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let transaktion of transaktionen">
+            <tr [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
+                <th scope="row">{{transaktion.betrag}} €</th>
+                <td>{{transaktion.kategorie}}</td>
+                <td>{{transaktion.beschreibung}}</td>
+                <td>{{transaktion.datum | date: 'dd/MM/yyyy'}}</td>
+                <td>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
