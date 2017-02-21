@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ContentContainerComponent } from './content-container.component';
@@ -9,10 +10,11 @@ import { TransaktionenTabelleComponent } from './transaktionen-tabelle.component
 import { PieChartComponent } from './pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { MyDatePickerModule } from 'mydatepicker';
-
+import { TransaktionenService } from './transaktionen.service';
 @NgModule({
-  imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule],
+  imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule],
   declarations: [AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent],
+  providers: [TransaktionenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
