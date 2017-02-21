@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {TransaktionenService} from './transaktionen.service';
 
 @Component({
     selector: 'transaktionen-tabelle',
@@ -6,140 +7,13 @@ import { Component } from '@angular/core';
     styleUrls: ['app/transaktionen-tabelle.component.css']
 
 })
-export class TransaktionenTabelleComponent {
-    transaktionen = [
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: true,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: true,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-        {
-            isEinnahme: false,
-            betrag: 100,
-            kategorie: "xyz",
-            beschreibung: "beschreibung hier",
-            datum: new Date()
-        },
-    ];
+export class TransaktionenTabelleComponent implements OnInit {
+    
+    transaktionen: Array<any>;
+
+constructor(private service: TransaktionenService){}
+
+    ngOnInit(): void {
+        this.transaktionen = this.service.getTransaktionen();
+    }
 }

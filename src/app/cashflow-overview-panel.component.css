@@ -1,0 +1,21 @@
+#cashflow-overview-panel{
+    background-color: lightskyblue;
+    width: 100%;
+    height: 100%;
+}
+
+#cashflow-overview-panel-table-header{
+    border-bottom: 3px solid black;
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+.positiverBetrag{
+    color: green;
+}
+
+.negativerBetrag{
+    color: red;
+}
