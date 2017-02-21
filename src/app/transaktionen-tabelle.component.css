@@ -1,0 +1,60 @@
+div{
+    display: block;
+    height: 100%;
+    /*overflow: auto;*/
+    
+}
+
+
+
+table.fixed-header{
+    width:100%;
+    overflow: auto;
+}
+
+.fixed-header > thead,
+.fixed-header > tbody,
+.fixed-header > tr,
+.fixed-header > td,
+.fixed-header > th{
+    display: block;
+}
+
+.fixed-header > tr::after{
+    content: ' ';‚
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.fixed-header > thead > th{
+    height: 100px;
+   
+}
+
+.fixed-header > tbody{
+    height: 500px;
+    overflow-y: auto;
+}
+
+.fixed-header > tbody > td,
+.fixed-header > thead > th{
+    width: 16.2%;
+    /*float: left; */
+}
+
+/*.fixed-header thead {
+  width: 97%;
+}
+.fixed-header tbody {
+  height: 500px;
+  overflow-y: auto;
+  width: 100%;
+}
+.fixed-header thead, .fixed-header tbody, .fixed-header tr, .fixed-header td, .fixed-header th {
+  display: block;
+}
+.fixed-header tbody td, .fixed-header thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}*/

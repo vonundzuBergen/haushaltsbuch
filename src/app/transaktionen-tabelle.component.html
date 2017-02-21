@@ -3,7 +3,7 @@
 </style>
 
 <div>
-    <table id="transaktionen-table" class="table table-hover">
+    <table id="transaktionen-table" class="table table-hover fixed-header">
         <thead>
             <tr>
                 <th>Betrag</th>
@@ -14,8 +14,8 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody *ngFor="let transaktion of transaktionen">
-            <tr [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
+        <tbody >
+            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
                 <th scope="row">{{transaktion.betrag}} €</th>
                 <td>{{transaktion.kategorie}}</td>
                 <td>{{transaktion.beschreibung}}</td>

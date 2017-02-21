@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'transaktionen-tabelle',
-    templateUrl: '/app/transaktionen-tabelle.component.html'
+    templateUrl: '/app/transaktionen-tabelle.component.html',
+    styleUrls: ['app/transaktionen-tabelle.component.css']
+
 })
 export class TransaktionenTabelleComponent {
     transaktionen = [
