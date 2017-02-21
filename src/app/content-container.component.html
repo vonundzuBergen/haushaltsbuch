@@ -1,50 +1,34 @@
 <neue-transaktion-modal></neue-transaktion-modal>
 
-
 <div class="container-fluid">
     <div>
         <div id="content-container">
             <div id="top-content-container">
                 <div id="cashflow-container">
-
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                        Launch demo modal
-                     </button>
-
-
+                    <cashflow-overview-panel></cashflow-overview-panel>
                 </div>
                 <div id="chart-container">
-
                 </div>
             </div>
             <div id="bottom-content-container">
                 <div id="left-container">
-
-
-
                     <div id="transaction-table-container">
                         <transaktionen-tabelle></transaktionen-tabelle>
                     </div>
-
                 </div>
             </div>
             <div id="right-container">
-
                 <div id="right-middle-container">
                     <div id="kategorien-container">
                         <pie-chart></pie-chart>
                     </div>
                     <div id="new-kategorie-container">
-
                     </div>
                 </div>
                 <div class="container-fluid" id="right-bottom-container">
-
-                    <div class="row justify-content-center">
-                        <div class="col-2">
-                            <label for="usr">Beschreibung:</label>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Launch demo modal
+                     </button>
                 </div>
             </div>
         </div>

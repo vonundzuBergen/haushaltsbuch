@@ -1,0 +1,57 @@
+<div id="cashflow-overview-panel" class="container">
+    <table class="table borderless">
+        <thead id="cashflow-overview-panel-table-header">
+            <td class="text-center">
+                <h2 class="display-2">Einnahmen</h2>
+            </td>
+            <td class="text-center">
+                <h2 class="display-2">Ausgaben</h2>
+            </td>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center positiverBetrag">
+                    <h3>{{ gesamtEinnahmen | currency:'EUR':true:'1.2-2'}}</h3>
+                </td>
+                <td class="text-center negativerBetrag">
+                    <h3>{{ gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center" [class.positiverBetrag]="gesamtCashflow>=0" [class.negativerBetrag]="gesamtCashflow<0">
+                    <h1 class="display-1">{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</h1>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--
+    <div class="row">
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>hallo</h3>
+        </div>
+    </div>
+</div>
+-->

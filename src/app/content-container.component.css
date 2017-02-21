@@ -52,7 +52,7 @@
     }
     
     #top-content-container {
-        background-color: grey;
+        background-color: lightpink;
         position: absolute;
         height: 30%;
         width: 100%;
@@ -87,7 +87,7 @@
         position: relative;
         top: 10%;
         left: 10%;
-        height: 70%;
-        width: 80%;
+        max-height: 70%;
+        max-width: 80%;
         background-color: pink;
     }

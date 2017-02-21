@@ -11,9 +11,11 @@ import { PieChartComponent } from './pie-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { MyDatePickerModule } from 'mydatepicker';
 import { TransaktionenService } from './transaktionen.service';
+import { CashflowOverviewPanelComponent } from './cashflow-overview-panel.component';
+
 @NgModule({
   imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule],
-  declarations: [AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent],
+  declarations: [AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent],
   providers: [TransaktionenService],
   bootstrap: [AppComponent]
 })
