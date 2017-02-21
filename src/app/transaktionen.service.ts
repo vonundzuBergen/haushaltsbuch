@@ -126,14 +126,14 @@ export class TransaktionenService {
             datum: new Date()
         },
         {
-            isEinnahme: true,
+            isEinnahme: false,
             betrag: 100,
             kategorie: "xyz",
             beschreibung: "beschreibung hier",
             datum: new Date()
         },
         {
-            isEinnahme: false,
+            isEinnahme: true,
             betrag: 100,
             kategorie: "xyz",
             beschreibung: "beschreibung hier",

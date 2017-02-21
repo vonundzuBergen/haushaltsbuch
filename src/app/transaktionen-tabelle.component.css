@@ -1,15 +1,14 @@
 div{
     display: block;
     height: 100%;
+    /*overflow:hidden; */
     /*overflow: auto;*/
     
 }
 
-
-
-table.fixed-header{
+.fixed-header > table{
     width:100%;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .fixed-header > thead,
@@ -21,26 +20,26 @@ table.fixed-header{
 }
 
 .fixed-header > tr::after{
-    content: ' ';‚
+    content: ' ';
     display: block;
     visibility: hidden;
     clear: both;
 }
 
-.fixed-header > thead > th{
+/*.fixed-header > thead > th{
     height: 100px;
    
-}
+}*/
 
 .fixed-header > tbody{
-    height: 500px;
+    height: 100px;
     overflow-y: auto;
 }
 
 .fixed-header > tbody > td,
 .fixed-header > thead > th{
-    width: 16.2%;
-    /*float: left; */
+    width: 16.67%;
+    float: left; 
 }
 
 /*.fixed-header thead {
