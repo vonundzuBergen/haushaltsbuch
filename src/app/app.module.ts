@@ -12,11 +12,13 @@ import { ChartsModule } from 'ng2-charts';
 import { MyDatePickerModule } from 'mydatepicker';
 import { TransaktionenService } from './transaktionen.service';
 import { CashflowOverviewPanelComponent } from './cashflow-overview-panel.component';
+import { LineChartComponent } from './line-chart.component';
+import { LineChartService } from './line-chart.service';
 
 @NgModule({
   imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule],
-  declarations: [AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent],
-  providers: [TransaktionenService],
+  declarations: [AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent],
+  providers: [TransaktionenService, LineChartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
