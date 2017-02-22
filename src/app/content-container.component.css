@@ -132,7 +132,7 @@
     }
 
     #bottom-left-container{
-        height: 90%%;
+        height: 100%;
         background: white;
         border: black solid;
         overflow: auto;
@@ -153,3 +153,4 @@
         height: 100%;
     }
 
+ 
