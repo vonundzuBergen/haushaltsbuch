@@ -24,6 +24,6 @@ export class LineChartService {
     }
 
     getLineChartData(): Array<any>{
-        
+        return null;
     }
 }
