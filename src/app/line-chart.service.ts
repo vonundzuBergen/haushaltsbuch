@@ -23,7 +23,7 @@ export class LineChartService {
         }).map(x => x.getDate());
     }
 
-    getLineChartData(): Array<any>{
-        return null;
+    getLineChartData(): Array<any> {
+        return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     }
 }
