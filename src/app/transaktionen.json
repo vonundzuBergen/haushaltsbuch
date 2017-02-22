@@ -1,0 +1,46 @@
+{
+    "transaktionen": [
+        {
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz",
+            "beschreibung": "beschreibung hier",
+            "datum": "2012-04-23T18:25:43.511Z"
+        },
+        {
+            "isEinnahme": true,
+            "betrag": 100,
+            "kategorie": "xyz",
+            "beschreibung": "beschreibung hier",
+            "datum": "2012-04-23T18:25:43.511Z"
+        },
+        {
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz",
+            "beschreibung": "beschreibung hier",
+            "datum": "2012-04-23T18:25:43.511Z"
+        },
+        {
+            "isEinnahme": true,
+            "betrag": 100,
+            "kategorie": "xyz",
+            "beschreibung": "beschreibung hier",
+            "datum": "2012-04-23T18:25:43.511Z"
+        },
+        {
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz",
+            "beschreibung": "beschreibung hier",
+            "datum": "2012-04-23T18:25:43.511Z"
+        },
+        {
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz",
+            "beschreibung": "beschreibung hier",
+            "datum": "2012-04-23T18:25:43.511Z"
+        }
+    ]
+}
