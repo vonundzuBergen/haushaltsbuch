@@ -102,11 +102,7 @@
         background: white;
     }
     
-    #placeholder{
-        height: 100%;
-        background: lightgrey;
-        border: black solid;
-    }
+
     #right-top-container{
         height: 30%;
         background: lightgray;
