@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LineChartService } from './line-chart.service';
+import { TransaktionenService } from './transaktionen.service';
+import { Transaktion } from './transaktion';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -8,19 +10,25 @@ import 'rxjs/add/operator/map';
 })
 export class LineChartComponent implements OnInit {
 
-    public lineChartData: Array<any>;
-    public lineChartLabels: Array<any>;
+    public lineChartData = new Array<any>();
+    public lineChartLabels = new Array<any>();
     public lineChartType: string;
 
+    transaktionen: Array<Transaktion>;
 
-    constructor(private _lineChartService: LineChartService) {
+    constructor(private _lineChartService: LineChartService, private _transaktionenService: TransaktionenService) {
 
+        this.transaktionen = new Array<Transaktion>();
+
+        _transaktionenService.transaktionen$.subscribe(
+            transaktionen => {
+                this.lineChartData = this._lineChartService.getLineChartData(transaktionen);
+                this.lineChartLabels = this._lineChartService.getLineChartLabels(transaktionen);
+            }
+        );
     }
 
     ngOnInit(): void {
-
-        this.lineChartData = this._lineChartService.getLineChartData();
-        this.lineChartLabels = this._lineChartService.getLineChartLabels();
         this.lineChartType = 'line';
     }
 

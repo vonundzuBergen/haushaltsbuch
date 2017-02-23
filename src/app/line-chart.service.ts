@@ -6,13 +6,14 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class LineChartService {
 
-    getLineChartLabels(): Array<any> {
+    getLineChartLabels(transaktionen: Array<any>): Array<any> {
+
+        console.log(transaktionen);
         let _last30DaysDates = new Array<Date>(30);
 
         for (var i = 0; i < _last30DaysDates.length; i++) {
             var d = new Date();
             d.setDate(d.getDate() - i);
-            console.log(d);
             _last30DaysDates[i] = d;
         }
 
@@ -23,7 +24,7 @@ export class LineChartService {
         }).map(x => x.getDate());
     }
 
-    getLineChartData(): Array<any> {
+    getLineChartData(transaktionen: Array<any>): Array<any> {
         return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     }
 }
