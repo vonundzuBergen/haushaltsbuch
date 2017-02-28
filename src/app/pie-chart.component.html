@@ -1,4 +1,4 @@
-<div style="display: block">
+<div style="display: block; max-width: 70%; max-height:70%;"><!--Größenangaben, damit das Chart nicht die Grenzen des DIVs überschreitet.-->
     <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
         (chartClick)="chartClicked($event)"></canvas>
 </div>
