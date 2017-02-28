@@ -1,0 +1,32 @@
+<div class="modal fade" id="neueKategorieModal" tabindex="-1" role="dialog" aria-labelledby="neueKategorieModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form [formGroup]="form" (ngSubmit)="addKategorie(form.controls['name'].value)">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="form-group row" [class.has-success]="form.valid">
+                            <label for="kategorieName" class="col-2 col-form-label">Kategorie Name</label>
+                            <div class="col-10">
+                                <input 
+                                    type="text" 
+                                    formControlName="name" 
+                                    class="form-control " 
+                                    placeholder="Name"
+                                    maxlength="15"  
+                                    >
+                                <small *ngIf="form.controls['name'].hasError('required') || form.controls['name'].hasError('minlength')">
+                                    Name muss zwischen 3 - 15 Zeichen beinhalten.
+                                </small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="clearForm()" data-dismiss="modal" >Schliessen</button>
+                    <button type="submit" [disabled]="!form.valid" (click)="clearForm()" class="btn btn-primary">Speichern</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

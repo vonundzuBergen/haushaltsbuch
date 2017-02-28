@@ -1,0 +1,24 @@
+{
+    "kategorien": [
+        {
+            "id": 1,
+            "name": "xyz1"
+        },
+        {
+            "id": 2,
+            "name": "xyz2"
+        },
+        {
+            "id": 3,
+            "name": "xyz3"
+        },
+        {
+            "id": 4,
+            "name": "xyz4"
+        },
+        {
+            "id": 5,
+            "name": "xyz5"
+        }
+    ]
+}
