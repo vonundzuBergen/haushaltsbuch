@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {TransaktionenService} from './transaktionen.service';
+import { TransaktionenController } from './transaktionen.controller';
+import { Transaktion } from './transaktion';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'transaktionen-tabelle',
@@ -8,12 +10,24 @@ import {TransaktionenService} from './transaktionen.service';
 
 })
 export class TransaktionenTabelleComponent implements OnInit {
-    
-    transaktionen: Array<any>;
 
-constructor(private service: TransaktionenService){}
+    transaktionen: Array<Transaktion>;
 
+    constructor(private _transaktionenController: TransaktionenController) {
+        this.transaktionen = new Array<Transaktion>();
+
+        _transaktionenController.transaktionen$.subscribe(
+            transaktionen => {
+                for (var t of transaktionen) {
+                    this.transaktionen.push(t);
+                }
+            }
+        );
+    }
     ngOnInit(): void {
-        this.transaktionen = this.service.getTransaktionen();
+    }
+
+    editTransaktion(){
+        
     }
 }

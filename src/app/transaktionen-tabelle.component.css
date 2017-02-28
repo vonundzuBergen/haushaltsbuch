@@ -1,11 +1,16 @@
 div{
     display: block;
-    height: 100%;
-    /*overflow:hidden; */
-    /*overflow: auto;*/
+    height: 50%;
+    width:75%;
+    margin: auto;
     
 }
 
+thead{
+    border-top: black solid;
+    border-right: black solid;
+    border-left: black solid;
+}
 .fixed-header > table{
     width:100%;
     overflow-y: auto;

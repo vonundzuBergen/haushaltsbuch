@@ -1,4 +1,4 @@
-    #content-container {
+/*    #content-container {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -90,9 +90,72 @@
         max-height: 70%;
         max-width: 80%;
         background-color: pink;
+<<<<<<< HEAD
     }
 /* Funktion nicht bekannt. 
     #cashflow-overview-panel {
         position: absolute;
         height: 100%;
     }*/
+=======
+    }*/
+    #top-container{
+        display: block;
+        height: 33%;
+        
+    }
+
+    body, html, .container-fluid{
+        height: 100%;
+        background: white;
+    }
+    
+
+    #right-top-container{
+        height: 30%;
+        background: lightgray;
+        border: black solid;
+    }
+    #placeholder2{
+        height: 100%;
+        background: lightgrey;
+        border: black solid;
+    }
+
+    
+    #right-bottom-container{
+        height: 70%;
+        background: lightgrey;
+        border: black solid;
+    }
+ 
+    #bottom-content-container{
+        height: 70%;
+        
+        background: white;
+    }
+
+    #bottom-left-container{
+        height: 100%;
+        background: white;
+        border: black solid;
+        overflow: auto;
+    }
+    
+    #border{
+        border: black solid;
+    }
+
+    #top-content{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #bottom-right-container{
+        height: 100%;
+    }
+
+ 
+>>>>>>> d38475cea667d59c9f1df82b4ba3b348968d95fd

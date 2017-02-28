@@ -1,4 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+
+import { TransaktionenService } from './transaktionen.service';
+import { Transaktion } from './transaktion';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'content-container',
@@ -6,6 +10,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
     styleUrls: ['app/content-container.component.css'],
     encapsulation: ViewEncapsulation.None
 })
-export class ContentContainerComponent {
+export class ContentContainerComponent implements OnInit {
 
+    //constructor(private _transaktionenService: TransaktionenService) { }
+
+    ngOnInit(): void {
+    }
 }
