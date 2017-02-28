@@ -1,46 +1,64 @@
 {
     "transaktionen": [
         {
+            "id": 1,
             "isEinnahme": false,
             "betrag": 100,
             "kategorie": "xyz",
             "beschreibung": "beschreibung hier",
-            "datum": "2012-04-23T18:25:43.511Z"
+            "year": 2017,
+            "month": 2,
+            "day": 18
         },
         {
+            "id": 1,
             "isEinnahme": true,
             "betrag": 100,
             "kategorie": "xyz",
             "beschreibung": "beschreibung hier",
-            "datum": "2012-04-23T18:25:43.511Z"
+            "year": 2017,
+            "month": 2,
+            "day": 20
         },
         {
+            "id": 1,
             "isEinnahme": false,
             "betrag": 100,
             "kategorie": "xyz",
             "beschreibung": "beschreibung hier",
-            "datum": "2012-04-23T18:25:43.511Z"
+            "year": 2017,
+            "month": 2,
+            "day": 20
         },
         {
-            "isEinnahme": true,
-            "betrag": 100,
-            "kategorie": "xyz",
-            "beschreibung": "beschreibung hier",
-            "datum": "2012-04-23T18:25:43.511Z"
-        },
-        {
+            "id": 1,
             "isEinnahme": false,
             "betrag": 100,
             "kategorie": "xyz",
             "beschreibung": "beschreibung hier",
-            "datum": "2012-04-23T18:25:43.511Z"
+            "year": 2017,
+            "month": 2,
+            "day": 21
         },
         {
+            "id": 1,
             "isEinnahme": false,
             "betrag": 100,
             "kategorie": "xyz",
             "beschreibung": "beschreibung hier",
-            "datum": "2012-04-23T18:25:43.511Z"
+            "year": 2017,
+            "month": 2,
+            "day": 22
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
         }
         ,
         {

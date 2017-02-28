@@ -2,8 +2,13 @@
 
 </style>
 
+<<<<<<< HEAD
 <div class= "fixed-header">
     <table id="transaktionen-table" class="table table-hover">
+=======
+<div class="fixed-header">
+    <table id="transaktionen-table" class="table table-hover table-bordered">
+>>>>>>> d38475cea667d59c9f1df82b4ba3b348968d95fd
         <thead>
             <tr>
                 <th>Betrag</th>
@@ -14,12 +19,12 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody >
+        <tbody>
             <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
                 <th scope="row">{{transaktion.betrag}} €</th>
                 <td>{{transaktion.kategorie}}</td>
                 <td>{{transaktion.beschreibung}}</td>
-                <td>{{transaktion.datum | date: 'dd/MM/yyyy'}}</td>
+                <td>{{("0" + transaktion.day).slice(-2)}}/{{("0" + transaktion.month).slice(-2)}}/{{transaktion.year}}</td>
                 <td>
                     <a href="#">
                         <span class="glyphicon glyphicon-edit"></span>

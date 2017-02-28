@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="neueTransaktionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,72 +9,82 @@
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
-                    <form>
-                        <div class="form-group row">
-                            <div class="form-check form-check-inline">
+                    <form [formGroup]="form">
+                        <div class="form-group row">                          
+                            <div *ngFor="let t of transaktionsTypen" class="form-check form-check-inline">
                                 <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Einnahme
-  </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Ausgabe
-  </label>
+                                    <input 
+                                        type="radio"  
+                                        formControlName="transaktionsTyp"
+                                        [value]="t">
+                                     {{t}}
+                                </label>
                             </div>
                         </div>
-
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Betrag</label>
+                            <div class="col-10">
+                                <input 
+                                    maxlength="10" 
+                                    type="text" 
+                                    class="form-control" 
+                                    formControlName="betrag" 
+                                    placeholder="0,00"
+                                    (focusout)="onFocusOut()"
+                                    >
+                            </div>
+                        </div>
                         <fieldset>
                             <div class="form-group row">
                                 <label class="mr-sm-2" for="inlineFormCustomSelect">Kategorie</label>
-                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
+                                <select 
+                                    class="custom-select mb-2 mr-sm-2 mb-sm-0" 
+                                    id="inlineFormCustomSelect"
+                                    formControlName="kategorie" 
+                                    class="form-control"
+                                >
+                                    <option *ngFor="let kategorie of kategorien">{{kategorie.name}}</option>
+                                </select>
                             </div>
                         </fieldset>
-
-
                         <div class="form-group row">
                             <label for="inputBeschreibung" class="col-2 col-form-label">Beschreibung</label>
                             <div class="col-10">
-                                <input type="text" class="form-control" id="inputBeschreibung" placeholder="Beschreibung">
+                                <input 
+                                    maxlength="50" 
+                                    type="text" 
+                                    class="form-control" 
+                                    formControlName="beschreibung" 
+                                    placeholder="Beschreibung">
                             </div>
                         </div>
-
-
-
                         <fieldset class="form-group row">
                             <div class="col-sm-10">
-                                <div class="form-check">
+                                <div class="form-check" *ngFor="let t of transaktionsHaeufigkeiten">
                                     <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-            Einmalig
-          </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-            Wöchentlich
-          </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-            Monatlich
-          </label>
+                                        <input type="radio"  
+                                        formControlName="transaktionsHaeufigkeit"
+                                        [value]="t">
+                                        {{t}}
+                                    </label>
                                 </div>
                             </div>
                         </fieldset>
+                        <label class="col-2 col-form-label">Datum</label>
+                        <div class="col-2">
+                            <my-date-picker class="col-2"
+                                [options]="myDatePickerOptions" 
+                                (dateChanged)="onDateChanged($event)"
+                                class="form-control" 
+                                formControlName="datum" 
+                            ></my-date-picker>
+                        </div>
                     </form>
-                    <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)"></my-date-picker>
-
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" (click)="clearForm()" data-dismiss="modal">Schliessen</button>
+                <button type="submit" [disabled]="!form.valid" (click)="clearForm()" class="btn btn-primary">Speichern</button>
             </div>
         </div>
     </div>
