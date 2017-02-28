@@ -2,15 +2,11 @@ div{
     display: block;
     height: 50%;
     width:75%;
+    overflow: auto;
     margin: auto;
     
 }
 
-thead{
-    border-top: black solid;
-    border-right: black solid;
-    border-left: black solid;
-}
 .fixed-header > table{
     width:100%;
     overflow-y: auto;
