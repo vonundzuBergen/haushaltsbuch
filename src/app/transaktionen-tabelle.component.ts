@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TransaktionenController } from './transaktionen.controller';
 import { Transaktion } from './transaktion';
 import { Observable } from 'rxjs/Observable';
+import { NeueTransaktionModalService } from './neue-transaktion-modal.service';
 
 @Component({
     selector: 'transaktionen-tabelle',
@@ -10,10 +11,10 @@ import { Observable } from 'rxjs/Observable';
 
 })
 export class TransaktionenTabelleComponent implements OnInit {
-
+    
     transaktionen: Array<Transaktion>;
 
-    constructor(private _transaktionenController: TransaktionenController) {
+    constructor(private _transaktionenController: TransaktionenController, private _neueTransaktionModalService: NeueTransaktionModalService) {
         this.transaktionen = new Array<Transaktion>();
 
         _transaktionenController.transaktionen$.subscribe(
@@ -27,7 +28,7 @@ export class TransaktionenTabelleComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    editTransaktion(){
-        
+    editTransaktion(transaktion: Transaktion) {
+        this._neueTransaktionModalService.updateTransaktion(transaktion);
     }
 }

@@ -11,13 +11,16 @@
                 <div class="container-fluid">
                     <form [formGroup]="form">
                         <div class="form-group row">                          
-                            <div *ngFor="let t of transaktionsTypen" class="form-check form-check-inline">
+                            <div *ngFor="let transaktionsTyp of transaktionsTypen" class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input 
                                         type="radio"  
                                         formControlName="transaktionsTyp"
-                                        [value]="t">
-                                     {{t}}
+                                        [checked]="transaktionsTyp == selectedTransaktionsTyp"
+                                        value="transaktionsTyp"
+                                        (change)="onTransaktionsTypSelectionChange(transaktionsTyp)"
+                                        >
+                                     {{transaktionsTyp}}
                                 </label>
                             </div>
                         </div>

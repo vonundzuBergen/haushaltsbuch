@@ -20,11 +20,13 @@ import { CashflowOverviewPanelService } from './cashflow-overview-panel.service'
 import { TransaktionenController } from './transaktionen.controller';
 import { KategorienController } from './kategorien.controller';
 import { NeueKategorieModalComponent } from './neue-kategorie-modal.component';
+import { NeueTransaktionModalService } from './neue-transaktion-modal.service';
+import { PieChartService } from './pie-chart.service';
 
 @NgModule({
   imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
   declarations: [AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
-  providers: [TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController],
+  providers: [PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

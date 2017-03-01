@@ -21,7 +21,7 @@
                 <td>{{transaktion.beschreibung}}</td>
                 <td>{{("0" + transaktion.day).slice(-2)}}/{{("0" + transaktion.month).slice(-2)}}/{{transaktion.year}}</td>
                 <td>
-                    <a href="#">
+                    <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
                         <span class="glyphicon glyphicon-edit"></span>
                     </a>
                 </td>

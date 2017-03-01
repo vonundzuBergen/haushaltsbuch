@@ -6,6 +6,7 @@ import { Kategorie } from './kategorie';
 import { KategorienController } from './kategorien.controller';
 import { Transaktion } from './transaktion';
 import { TransaktionenController } from './transaktionen.controller';
+import { NeueTransaktionModalService } from './neue-transaktion-modal.service';
 
 @Component({
     selector: 'neue-transaktion-modal',
@@ -15,7 +16,9 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
 
     public form: FormGroup;
     private kategorien: Array<Kategorie>;
-    private subscription: Subscription;
+    private kategorienControllerSubscription: Subscription;
+    private neueTransaktionModalServiceSubscription: Subscription;
+    private currentDateObject: any;
     private myDatePickerOptions: IMyOptions = {
         dateFormat: 'dd.mm.yyyy',
     };
@@ -23,16 +26,31 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
         'Einnahme',
         'Ausgabe'
     ];
+    private selectedTransaktionsTyp: string;
+
     private transaktionsHaeufigkeiten = [
         'Einmalig',
         'Woechentlich',
         'Monatlich'
     ];
 
-    constructor(private _kategorienConroller: KategorienController, private _fb: FormBuilder) {
+    constructor(private _kategorienController: KategorienController, private _fb: FormBuilder, private _neueTransaktionModalService: NeueTransaktionModalService) {
         this.kategorien = new Array<Kategorie>();
+        this.selectedTransaktionsTyp = this.transaktionsTypen[0];
+        let currentDate = new Date();
+        this.currentDateObject = {
+            date: {
+                year: currentDate.getFullYear(),
+                month: currentDate.getMonth() + 1,
+                day: currentDate.getDate()
+            }
+        };
 
-        this.subscription = this._kategorienConroller.kategorien$.subscribe(
+        this.neueTransaktionModalServiceSubscription = this._neueTransaktionModalService.transaktion$.subscribe(
+            transaktion => this.populateForm(transaktion)
+        );
+
+        this.kategorienControllerSubscription = this._kategorienController.kategorien$.subscribe(
             kategorien => {
                 for (var k of kategorien) {
                     this.kategorien.push(k);
@@ -43,34 +61,47 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.form = this._fb.group({
-            transaktionsTyp: ['Einnahme'],
+            transaktionsTyp: [''],
             betrag: ['', Validators.required],
             kategorie: [''],
             beschreibung: [''],
             transaktionsHaeufigkeit: ['Einmalig'],
-            datum: ['', Validators.required]
+            datum: [this.currentDateObject, Validators.required]
         })
     }
 
     ngOnDestroy() {
-        this.subscription.unsubscribe();
+        this.neueTransaktionModalServiceSubscription.unsubscribe();
+        this.kategorienControllerSubscription.unsubscribe();
+    }
+
+
+    populateForm(transaktion: Transaktion) {
+
+        this.selectedTransaktionsTyp = transaktion.isEinnahme ? 'Einnahme' : 'Ausgabe';
+        this.form.controls['betrag'].setValue(transaktion.betrag);
+        this.form.controls['kategorie'].setValue(transaktion.kategorie);
+        this.form.controls['beschreibung'].setValue(transaktion.beschreibung);
+        this.form.controls['datum'].setValue({ date: { year: transaktion.year, month: transaktion.month, day: transaktion.day } });
+
+        console.log("here we are");
     }
 
     clearForm() {
-        console.log(this.form.controls['beschreibung'].value);
-        console.log(this.form.controls['datum'].value.date.day);
-        console.log(this.form.controls['datum'].value.date.month);
-        console.log(this.form.controls['datum'].value.date.year);
-
-        console.log(this.form.controls['transaktionsTyp'].value);
-        console.log(this.form.controls['transaktionsHaeufigkeit'].value);
-
-        this.form.controls['transaktionsTyp'].reset();
+        this.selectedTransaktionsTyp = 'Einnahme';
+        this.form.controls['betrag'].reset();
+        this.form.controls['kategorie'].reset();
         this.form.controls['beschreibung'].reset();
+        this.form.controls['datum'].setValue(this.currentDateObject);
     }
 
-    onFocusOut(){
+    onFocusOut() {
         console.log("onFocusOut");
+    }
+
+    onTransaktionsTypSelectionChange(typ: string) {
+        this.selectedTransaktionsTyp = typ;
+        console.log(this.selectedTransaktionsTyp);
     }
 
     // dateChanged callback function called when the user select the date. This is mandatory callback

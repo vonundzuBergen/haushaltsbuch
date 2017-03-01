@@ -39,7 +39,7 @@ export class LineChartService {
                         einnahmen[counter] += t.betrag;
                     }
                     else {
-                        ausgaben[counter] -= t.betrag;
+                        ausgaben[counter] += t.betrag;
                     }
                 }
             });
