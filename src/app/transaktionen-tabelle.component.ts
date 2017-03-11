@@ -31,4 +31,8 @@ export class TransaktionenTabelleComponent implements OnInit {
     editTransaktion(transaktion: Transaktion) {
         this._neueTransaktionModalService.updateTransaktion(transaktion);
     }
+
+    deleteTransaktion(transaktion: Transaktion){
+        this._transaktionenController.deleteTransaktion(transaktion.id);
+    }
 }

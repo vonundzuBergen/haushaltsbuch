@@ -3,7 +3,7 @@ export class Transaktion {
     isEinnahme: boolean;
     betrag: number;
     kategorie: string;
-    beschreibung: "beschreibung hier";
+    beschreibung: string;
     year: number;
     month: number;
     day: number;

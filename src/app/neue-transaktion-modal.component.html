@@ -62,25 +62,41 @@
                             </div>
                         </div>
                         <fieldset class="form-group row">
-                            <div class="col-sm-10">
+                            <div *ngIf="isUpdateWiederkehrendeZahlung" class="col-sm-10">
                                 <div class="form-check" *ngFor="let t of transaktionsHaeufigkeiten">
                                     <label class="form-check-label">
                                         <input type="radio"  
                                         formControlName="transaktionsHaeufigkeit"
-                                        [value]="t">
+                                        [value]="t"
+                                        (click)="onTransaktionsHaeufigkeitChange(t)"
+                                        >
                                         {{t}}
                                     </label>
                                 </div>
                             </div>
                         </fieldset>
-                        <label class="col-2 col-form-label">Datum</label>
+                        <div>
+                            <label *ngIf="!isWiederkehrendeZahlung" class="col-2 col-form-label">Datum</label>
+                            <label *ngIf="isWiederkehrendeZahlung" class="col-2 col-form-label">Start Datum</label>                            
+                            <div class="col-2">
+                                <my-date-picker class="col-2"
+                                    [options]="myStartDatePickerOptions" 
+                                    (dateChanged)="onStartDateChanged($event)"
+                                    class="form-control" 
+                                    formControlName="startDatum" 
+                                ></my-date-picker>
+                            </div>
+                        </div>
+                        <div *ngIf="isWiederkehrendeZahlung">
+                        <label class="col-2 col-form-label">End Datum</label>
                         <div class="col-2">
                             <my-date-picker class="col-2"
-                                [options]="myDatePickerOptions" 
-                                (dateChanged)="onDateChanged($event)"
+                                [options]="myEndDatePickerOptions" 
+                                (dateChanged)="onEndDateChanged($event)"
                                 class="form-control" 
-                                formControlName="datum" 
+                                formControlName="endDatum" 
                             ></my-date-picker>
+                        </div>
                         </div>
                     </form>
                 </div>

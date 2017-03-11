@@ -1,0 +1,74 @@
+{
+    "transaktionen": [
+        {
+            "id": 1,
+            "isEinnahme": true,
+            "betrag": 100,
+            "kategorie": "xyz2",
+            "beschreibung": "beschreibung hier",
+            "startYear": 2017,
+            "startMonth": 3,
+            "startDay": 18,
+            "frequenz": 1,
+            "endYear": 2017,
+            "endMonth": 4,
+            "endDay": 1
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz2",
+            "beschreibung": "christian",
+            "startYear": 2017,
+            "startMonth": 3,
+            "startDay": 18,
+            "frequenz": 2,
+            "endYear": 2017,
+            "endMonth": 4,
+            "endDay": 1
+        },
+        {
+            "id": 1,
+            "isEinnahme": true,
+            "betrag": 100,
+            "kategorie": "xyz2",
+            "beschreibung": "j",
+            "startYear": 2017,
+            "startMonth": 3,
+            "startDay": 18,
+            "frequenz": 3,
+            "endYear": 2017,
+            "endMonth": 4,
+            "endDay": 1
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz2",
+            "beschreibung": "bergen hier",
+            "startYear": 2017,
+            "startMonth": 3,
+            "startDay": 18,
+            "frequenz": 1,
+            "endYear": 2017,
+            "endMonth": 4,
+            "endDay": 1
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz2",
+            "beschreibung": "bgvvasdsaversch",
+            "startYear": 2017,
+            "startMonth": 3,
+            "startDay": 18,
+            "frequenz": 1,
+            "endYear": 2017,
+            "endMonth": 4,
+            "endDay": 1
+        }
+    ]
+}
