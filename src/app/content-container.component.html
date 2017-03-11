@@ -3,46 +3,58 @@
 
 <div class="container-fluid">
     <div class="row row-eq-height" id="top-container">
-        <div class="col-md-4 col-ld-4" id="top-content">
-            <div id="border">
-                <cashflow-overview-panel></cashflow-overview-panel>
+        <div class="col-md-4" id="top-content">
+            <div class="col-md-12 contentdiv">
+                <div>
+                    <cashflow-overview-panel></cashflow-overview-panel>
+                </div>
             </div>
         </div>
-        <div class="col-md-3 col-ld-3" id="top-content">
-            <div>
-                <pie-chart></pie-chart>
-            </div>
+        <div class="col-md-3" id="top-content">
+           
+                <div class="col-md-12 contentdiv">
+                    <pie-chart></pie-chart>
+                </div>
+            
         </div>
-        <div class="col-md-5 col-ld-5">
-            <div>
-                <line-chart></line-chart>
+        <div class="col-md-5" id="top-content">
+            <div class="col-md-12 contentdiv">
+                <div>
+                    <line-chart></line-chart>
+                </div>
             </div>
         </div>
     </div>
     <div class="row row-eq-height" id="bottom-content-container">
-        <div class="col-md-7 col-ld-7" id="bottom-left-container">
-            <div>
-                <transaktionen-tabelle></transaktionen-tabelle>
+        <div class="col-md-7 " id="bottom-left-container">
+            <div class="col-md-12 contentdiv">
+                <div>
+                    <transaktionen-tabelle></transaktionen-tabelle>
+                </div>
             </div>
         </div>
-        <div class="col-md-5 col-ld-5" id="bottom-right-container">
+        <div class="col-md-5" id="bottom-right-container">
             <div class="row" id="right-top-container">
-                <div class="col-md-12 col-ld-12" id="top-content">
-                    <div>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueTransaktionModal">
+                <div class="col-md-12">
+                    <div class="col-md-12 contentdiv">
+                        <div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueTransaktionModal">
   Neue Transaktion Modal
 </button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row" id="right-bottom-container">
-                <div class="col-md-12 col-ld-12" id="placeholder2">
-                    <div>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
+                
+                    <div class="col-md-12" id="bottom-content">
+                        <div class="col-md-12 contentdiv" >
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
   Neue Kategorie Modal
 </button>
+                        </div>
                     </div>
-                </div>
+                
             </div>
 
         </div>
