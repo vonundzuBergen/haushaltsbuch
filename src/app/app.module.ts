@@ -22,11 +22,14 @@ import { KategorienController } from './kategorien.controller';
 import { NeueKategorieModalComponent } from './neue-kategorie-modal.component';
 import { NeueTransaktionModalService } from './neue-transaktion-modal.service';
 import { PieChartService } from './pie-chart.service';
+import { WiederkehrendeTransaktionenTabelleComponent } from './wiederkehrende-transaktionen-tabelle.component';
+import { WiederkehrendeTransaktionenService } from './wiederkehrende-transaktionen.service';
+import { WiederkehrendeTransaktionenController } from './wiederkehrende-transaktionen.controller';
 
 @NgModule({
   imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
-  declarations: [AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
-  providers: [PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
+  declarations: [WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
+  providers: [WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

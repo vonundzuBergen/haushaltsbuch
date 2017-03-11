@@ -4,6 +4,7 @@
             <tr>
                 <th>Betrag</th>
                 <th>Datum</th>
+                <th>End Datum</th>
                 <th>Kategorie</th>
                 <th>Beschreibung</th>
                 <th></th>
@@ -13,7 +14,8 @@
         <tbody>
             <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
                 <th scope="row">{{transaktion.betrag}} €</th>
-                <td>{{("0" + transaktion.day).slice(-2)}}/{{("0" + transaktion.month).slice(-2)}}/{{transaktion.year}}</td>
+                <td>{{("0" + transaktion.startDay).slice(-2)}}/{{("0" + transaktion.startMonth).slice(-2)}}/{{transaktion.startYear}}</td>
+                <td>{{("0" + transaktion.endDay).slice(-2)}}/{{("0" + transaktion.endMonth).slice(-2)}}/{{transaktion.endYear}}</td>
                 <td>{{transaktion.kategorie}}</td>
                 <td>{{transaktion.beschreibung}}</td>
                 <td>
@@ -22,7 +24,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="#" (click)="deleteTransaktion(transaktion)">
+                    <a href="#">
                         <span class="glyphicon glyphicon-remove"></span>
                     </a>
                 </td>
