@@ -23,7 +23,6 @@ export class KategorienController {
         let obs = this._kategorienService.post(kategorie);
 
         obs.subscribe(res => {
-            console.log(res);
             let t: Kategorie[] = this._kategorienSource.getValue();
 
             kategorie.KategorieId = res.KategorieId;
@@ -72,7 +71,6 @@ export class KategorienController {
             });
             this._kategorienSource.next(t);
             t.forEach(element => {
-                console.log("Kategorien:");
                 console.log(element);
             });
         })
