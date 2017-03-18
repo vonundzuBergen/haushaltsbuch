@@ -38,10 +38,13 @@ export class KategorienController {
 
         obs.subscribe(res => {
             let t = this._kategorienSource.getValue();
+
             let index = t.map(x => x.KategorieId).indexOf(kategorie.KategorieId, 0);
             t.splice(index, 1);
             t.push(kategorie);
             this._kategorienSource.next(t);
+
+            console.log(t);
         });
     }
 

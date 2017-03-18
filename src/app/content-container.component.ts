@@ -35,7 +35,7 @@ export class ContentContainerComponent implements OnInit {
 
 
         let kategorie = new Kategorie();
-        kategorie.KategorieId = 1;
+        kategorie.KategorieId = 9;
         kategorie.Name = "halllooooooooooooo";
 
         this._kategorienController.updateKategorie(kategorie);

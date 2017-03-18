@@ -14,12 +14,12 @@ export class KategorienService {
     constructor(private http: Http) {
     }
 
-    put(kategorie: Kategorie): Observable<Kategorie[]> {
+    put(kategorie: Kategorie): Observable<Kategorie> {
 
         let bodyString = JSON.stringify(kategorie);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        let url = `${this.baseUrl}/${kategorie.KategorieId}`;
+        let url = `${this.baseUrl}(${kategorie.KategorieId})`;
 
         return this.http
             .put(url, bodyString, options)

@@ -72,9 +72,8 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
 
         this.kategorienControllerSubscription = this._kategorienController.kategorien$.subscribe(
             kategorien => {
-                for (var k of kategorien) {
-                    this.kategorien.push(k);
-                }
+                console.log(kategorien);
+                this.kategorien = kategorien;
             }
         )
     }
