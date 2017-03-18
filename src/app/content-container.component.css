@@ -100,8 +100,8 @@
     body, html{
         background: darkgray;
        /* background-image: url(https://binary.edu.my/web/wp-content/uploads/2016/11/accounts.jpg);*/
-        background-size: cover;
     }
+    
     body, html, .container-fluid{
         height: 100%;
     }
