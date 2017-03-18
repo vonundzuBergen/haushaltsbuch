@@ -1,19 +1,16 @@
 div{
-    display: block;
-    height: 50%;
-    width:75%;
-    margin: auto;
-    
+    border-radius: 5px;
 }
-
 thead{
-    border-top: black solid;
+    /*border-top: black solid;
     border-right: black solid;
-    border-left: black solid;
+    border-left: black solid;*/
+    border-radius: 5px;
 }
 .fixed-header > table{
     width:100%;
     overflow-y: auto;
+    border-radius: 5px;
 }
 
 .fixed-header > thead,
@@ -22,6 +19,7 @@ thead{
 .fixed-header > td,
 .fixed-header > th{
     display: block;
+    border-radius: 5px;
 }
 
 .fixed-header > tr::after{

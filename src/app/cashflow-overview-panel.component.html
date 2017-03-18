@@ -2,10 +2,10 @@
     <table class="table borderless">
         <thead id="cashflow-overview-panel-table-header">
             <td class="text-center">
-                <h2 class="display-2">Einnahmen</h2>
+                <h3 class="display-2">Einnahmen</h3>
             </td>
             <td class="text-center">
-                <h2 class="display-2">Ausgaben</h2>
+                <h3 class="display-2">Ausgaben</h3>
             </td>
         </thead>
         <tbody>
@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <td colspan="2" class="text-center" [class.positiverBetrag]="gesamtCashflow>=0" [class.negativerBetrag]="gesamtCashflow<0">
-                    <h1 class="display-1">{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</h1>
+                    <h3 class="display-1">{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</h3>
                 </td>
             </tr>
         </tbody>
