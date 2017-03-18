@@ -12,7 +12,7 @@ export class PieChartService {
         let k = new Array<string>(kategorien.length);
 
         for (var i = 0; i < kategorien.length; i++) {
-            k[i] = kategorien[i].name;
+            k[i] = kategorien[i].Name;
         }
 
         return k;
@@ -23,7 +23,7 @@ export class PieChartService {
 
         for (var i = 0; i < kategorien.length; i++) {
             transaktionen.forEach(transaktion => {
-                if (transaktion.kategorie == kategorien[i].name) {
+                if (transaktion.kategorie == kategorien[i].Name) {
                     k[i] += transaktion.betrag
                 }
             });
