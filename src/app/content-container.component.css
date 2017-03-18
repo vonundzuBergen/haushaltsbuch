@@ -94,14 +94,14 @@
 
     #top-container{
        padding: 1em;
-        height: 33%;
-        
+       height: 250px;
+       position: relative;
     }
     body, html{
-        background: lightblue;
-        /*background-image: url(http://usbookkeepersdirectory.com/wp-content/uploads/Accounting-Image-3504x2236-or-11.7-x-7.8-in.jpg);*/
-        background-size: cover;
+        background: darkgray;
+       /* background-image: url(https://binary.edu.my/web/wp-content/uploads/2016/11/accounts.jpg);*/
     }
+    
     body, html, .container-fluid{
         height: 100%;
     }
@@ -109,7 +109,7 @@
     .contentdiv{
         overflow: hidden;
        
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.9);
         height: 100%;
         margin-top: 1 em; 
     }
