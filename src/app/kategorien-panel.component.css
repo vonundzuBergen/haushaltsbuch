@@ -1,7 +1,8 @@
-.kategorie-container{
+#kategorie-container{
     display: flex;
+    flex-flow: row wrap;
     flex-direction: row;
-    justify-content: flex-start;
+    width: 100%;
 }
 
 .kategorie{
