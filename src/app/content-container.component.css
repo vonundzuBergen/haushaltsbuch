@@ -57,15 +57,4 @@
         min-height: 200px;
     }
 
-    .kategorie-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
 
-    .kategorie{
-        padding: 1em;
-        background-color: darkcyan;
-        margin: 1em;
-        border-radius: 3px;
-    }
