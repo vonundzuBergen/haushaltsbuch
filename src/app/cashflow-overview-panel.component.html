@@ -1,5 +1,22 @@
 <div id="cashflow-overview-panel" class="container">
-    <table class="table borderless">
+    <div class="cash" id="einnahmen">
+        <p>
+            Einnahmen
+            <br> {{ gesamtEinnahmen | currency:'EUR':true:'1.2-2'}}
+        </p>
+    </div>
+    <div class="cash" id="ausgaben">
+        <p>
+            Ausgaben
+            <br> {{gesamtAusgaben | currency:'EUR':true:'1.2-2'}}
+        </p>
+    </div>
+    <div class="saldodiv" id="saldo">
+        <p>{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</p>
+    </div>
+</div>
+
+<!--    <table class="table borderless">
         <thead id="cashflow-overview-panel-table-header">
             <td class="text-center">
                 <h3 class="display-2">Einnahmen</h3>
@@ -23,8 +40,8 @@
                 </td>
             </tr>
         </tbody>
-    </table>
-    <!--
+    </table>-->
+<!--
     <div class="row">
         <div class="col-md-3">
             <h3>hallo

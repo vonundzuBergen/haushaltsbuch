@@ -4,7 +4,7 @@
     height: 100%;
 }
 
-#cashflow-overview-panel-table-header{
+/*#cashflow-overview-panel-table-header{
     border-bottom: 1px solid gray;
 }
 
@@ -18,8 +18,49 @@
 
 .negativerBetrag{
     color: red;
+}*/
+
+
+
+.cash{
+    border-radius: 5px; 
+    display: flex; 
+    color: white;
+    margin-top: 1em;
+}
+.saldodiv{
+    border-radius: 5px; 
+    display: flex; 
+    color: white;
+    margin-left: 0.5em;
+    margin-right:0.5;
+
 }
 
-h3{
-    font-size: 2em;
+
+#einnahmen{
+    float: left;
+    height: 50%;
+    width: 45%;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    
+    background: lightgreen;
+
+}
+#ausgaben{
+    height: 50%;
+    width: 45%;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    
+    background: indianred;
+}
+
+#saldo{
+    height: 45%;
+    width: 95%;
+    background:black;
 }
