@@ -22,6 +22,7 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      "ngx-popover": "node_modules/ngx-popover",
 
       // other libraries
       'rxjs': 'npm:rxjs',
@@ -39,6 +40,7 @@
       },
       "ng2-charts": { main: "ng2-charts.js", defaultExtension: "js" },
       'ng2-datepicker': { main: './ng2-datepicker.js', defaultExtension: 'js' },
+      "ngx-popover": { "main": "index.js", "defaultExtension": "js" },
     }
   });
 })(this);

@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row row-eq-height" id="top-container">
         <div class="col-md-4" id="top-content">
-            <div class="col-md-12 contentdiv" style="border-radius: 5px">
+            <div class="col-md-12 contentdiv border5" id="cashflow">
                 <div>
                     <cashflow-overview-panel></cashflow-overview-panel>
                 </div>
@@ -20,24 +20,25 @@
             </div>
         </div>
         <div class="col-md-3" id="top-content">
-            <div class="col-md-12 contentdiv" style="border-radius: 5px">
+            <div class="col-md-12 contentdiv border5" id="piechart">
                 <pie-chart></pie-chart>
             </div>
         </div>
         <div class="col-md-5" id="top-content">
-            <div class="col-md-12 contentdiv" style="border-radius: 5px">
+            <div class="col-md-12 contentdiv border5" id="linechart">
                 <line-chart></line-chart>
             </div>
         </div>
     </div>
     <div class="row row-eq-height" id="bottom-content-container">
-        <div class="col-md-7 " id="bottom-left-container" style="border-radius: 5px">
-            <div class="col-md-12 contentdiv" style="padding: 0; border-radius: 5px">
+        <div class="col-md-7 " id="bottom-left-container">
+            <div class="col-md-12 contentdiv border5" id="transaktabelle">
                 <div>
                     <transaktionen-tabelle></transaktionen-tabelle>
                 </div>
             </div>
         </div>
+
         <div class="col-md-5 contentFrame border5" id="bottom-right-container">
             <div class="row" style="height: 40%"> 
                 <div class="col-md-12 contentdiv" style="overflow: auto; border-radius: 5px; margin-bottom: 1em;">
@@ -77,4 +78,3 @@
         </div>
     </div>
 </div>
-

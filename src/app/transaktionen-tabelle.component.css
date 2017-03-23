@@ -1,12 +1,13 @@
-div{
+/*div{
     border-radius: 5px;
 }
 thead{
     /*border-top: black solid;
     border-right: black solid;
-    border-left: black solid;*/
+    border-left: black solid;
     border-radius: 5px;
 }
+
 .fixed-header > table{
     width:100%;
     overflow-y: auto;
@@ -32,7 +33,7 @@ thead{
 /*.fixed-header > thead > th{
     height: 100px;
    
-}*/
+}
 
 .fixed-header > tbody{
     height: 100px;
@@ -43,7 +44,7 @@ thead{
 .fixed-header > thead > th{
     width: 16.67%;
     float: left; 
-}
+}*/
 
 /*.fixed-header thead {
   width: 97%;
@@ -60,3 +61,55 @@ thead{
   float: left;
   border-bottom-width: 0;
 }*/
+
+table {
+        width: 100%;
+    }
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 20%;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 650px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    float: left;
+}
+
+td.amountCol, th.amountCol{
+    width: 15%;
+}
+
+td.dateCol, th.dateCol{
+    width: 15%;
+}
+
+td.categoryCol, th.categoryCol{
+    width: 15%;
+}
+
+td.descriptionCol, th.descriptionCol{
+    width: 40%;
+}
+td.emptyCol, th.emptyCol{
+    width: 7.5%;
+}

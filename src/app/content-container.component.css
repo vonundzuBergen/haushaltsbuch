@@ -1,54 +1,71 @@
-    #top-container{
-       padding: 1em;
-       height: 250px;
-       position: relative;
-    }
-    body, html{
-        background: darkgray;
-    }
-    
-    body, html, .container-fluid{
-        height: 100%;
-    }
-    
-    .contentdiv{
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.9);
-        height: 100%;
-        margin-top: 1 em; 
-    }
-    #right-top-container{
-        height: 30%;       
-    }
- 
-    #bottom-content-container{
-        height: 70%;
-        margin-bottom: 1em;
-        padding: 1em;  
-    }
+#top-container{
+    padding: 1em;
+    height: 250px;
+    position: relative;
+}
+body, html{
+    background: darkgray;
+}
 
-    #bottom-left-container{
-        height: 100%;
-        overflow: auto;
-    }
+body, html, .container-fluid{
+    height: 100%;
+}
 
-    #bottom-right-container{
-        height: 100%;
-        overflow: auto; 
-    }
+.contentdiv{
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9);
+    height: 100%;
+    margin-top: 1 em; 
+}
+
+.contentFrame{
+    overflow: hidden;
+    height: 100%;
+    margin-top: 1 em; 
+}
+
+#top-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom-content{
+    height: 100%;
+}
+
+#bottom-left-container{
+    height: 100%;
+    overflow: auto;
+}
+
+#bottom-right-container{
+    height: 100%;
+    overflow: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#bottom-content-container{
+    height: 70%;
+    margin-bottom: 1em;
+    padding: 1em;  
+}
+
+.border5{
+    border-radius: 5px;
+}
+
+#transaktabelle{
+    border-radius: 5px; 
+    padding: 0px;
+}
+
+.question-sign{
+    text-align: right;
+}
 
 
-    #top-content{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
-    #bottom-right-container{
-        height: 100%;
-    }
 
-    #bottom-content{
-        height: 100%;
-    }

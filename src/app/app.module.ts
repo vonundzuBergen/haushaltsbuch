@@ -25,11 +25,14 @@ import { PieChartService } from './pie-chart.service';
 import { WiederkehrendeTransaktionenTabelleComponent } from './wiederkehrende-transaktionen-tabelle.component';
 import { WiederkehrendeTransaktionenService } from './wiederkehrende-transaktionen.service';
 import { WiederkehrendeTransaktionenController } from './wiederkehrende-transaktionen.controller';
-import { GetNameOfKategoriePipe } from './getNameOfKategoriePipe';
+import { KategorienPanelComponent } from './kategorien-panel.component';
+import { PopoverModule } from 'ngx-popover';
+
 @NgModule({
-  imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
-  declarations: [GetNameOfKategoriePipe, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
+  imports: [PopoverModule, BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
+  declarations: [KategorienPanelComponent, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
   providers: [WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

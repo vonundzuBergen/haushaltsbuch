@@ -1,0 +1,15 @@
+#kategorie-container{
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+.kategorie{
+    padding: 0.5em;
+    background-color: lightskyblue;
+    margin-top: 1em;
+    margin-right: 1em;
+    border-radius: 3px;
+}

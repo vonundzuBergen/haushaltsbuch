@@ -2,26 +2,26 @@
     <table id="transaktionen-table" class="table table-hover table-bordered">
         <thead>
             <tr>
-                <th>Betrag</th>
-                <th>Datum</th>
-                <th>Kategorie</th>
-                <th>Beschreibung</th>
-                <th></th>
-                <th></th>
+                <th class = "amountCol">Betrag</th>
+                <th class = "dateCol">Datum</th>
+                <th class = "categoryCol">Kategorie</th>
+                <th class = "descriptionCol">Beschreibung</th>
+                <th class = "emptyCol">	&nbsp;</th>
+                <th class = "emptyCol">	&nbsp;</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.IsEinnahme" [class.danger]="!transaktion.IsEinnahme">
-                <th scope="row">{{transaktion.Betrag}} €</th>
-                <td>{{transaktion.Datum | date}}</td>
-                <td>{{transaktion.KategorieId | getName: kategorien}}</td>
-                <td>{{transaktion.Beschreibung}}</td>
-                <td>
+            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
+                <td class = "amountCol" scope="row">{{transaktion.betrag}} €</td>
+                <td class = "dateCol">{{("0" + transaktion.day).slice(-2)}}/{{("0" + transaktion.month).slice(-2)}}/{{transaktion.year}}</td>
+                <td class = "categoryCol">{{transaktion.kategorie}}</td>
+                <td class = "descriptionCol">{{transaktion.beschreibung}}</td>
+                <td class = "emptyCol">
                     <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
                         <span class="glyphicon glyphicon-edit"></span>
                     </a>
                 </td>
-                <td>
+                <td class = "emptyCol">
                     <a href="#" (click)="deleteTransaktion(transaktion)">
                         <span class="glyphicon glyphicon-remove"></span>
                     </a>
