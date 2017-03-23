@@ -26,10 +26,11 @@ import { WiederkehrendeTransaktionenTabelleComponent } from './wiederkehrende-tr
 import { WiederkehrendeTransaktionenService } from './wiederkehrende-transaktionen.service';
 import { WiederkehrendeTransaktionenController } from './wiederkehrende-transaktionen.controller';
 import { KategorienPanelComponent } from './kategorien-panel.component';
+import { PopoverModule } from 'ngx-popover';
 
 
 @NgModule({
-  imports: [BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
+  imports: [PopoverModule, BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
   declarations: [KategorienPanelComponent, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
   providers: [WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
   bootstrap: [AppComponent]
