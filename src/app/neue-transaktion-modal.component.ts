@@ -26,11 +26,14 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
     private isUpdateWiederkehrendeZahlung: boolean;
     private myStartDatePickerOptions: IMyOptions;
     private myEndDatePickerOptions: IMyOptions;
+    private selectedKategorie: string;
+
     private transaktionsTypen = [
         'Einnahme',
         'Ausgabe'
     ];
     private selectedTransaktionsTyp: string;
+    private selectedTransaktionsHaeufigkeit: string;
 
     private transaktionsHaeufigkeiten = [
         'Einmalig',
@@ -39,11 +42,13 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
         'Monatlich'
     ];
 
-    constructor(private _kategorienController: KategorienController, private _fb: FormBuilder, private _neueTransaktionModalService: NeueTransaktionModalService) {
+    constructor(private _transaktionenController: TransaktionenController, private _kategorienController: KategorienController, private _fb: FormBuilder, private _neueTransaktionModalService: NeueTransaktionModalService) {
         this.onModalHidden();
         this.isUpdateWiederkehrendeZahlung = true;
         this.kategorien = new Array<Kategorie>();
         this.selectedTransaktionsTyp = this.transaktionsTypen[0];
+        this.selectedTransaktionsHaeufigkeit = this.transaktionsHaeufigkeiten[0];
+
         let currentDate = new Date();
         this.currentDateObject = {
             date: {
@@ -54,11 +59,19 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
         };
 
         this.myStartDatePickerOptions = {
-            dateFormat: 'dd.mm.yyyy',
+            inline: false,
+            editableDateField: false,
+            showClearDateBtn: false,
+            showTodayBtn: true,
+            markCurrentDay: true,
+            dateFormat: 'dd mmm yyyy',
         };
 
         this.myEndDatePickerOptions = {
-            dateFormat: 'dd.mm.yyyy',
+            inline: false,
+            editableDateField: false,
+            showClearDateBtn: false,
+            dateFormat: 'dd mmm yyyy',
             disableUntil: { year: this.currentDateObject.date.year, month: this.currentDateObject.date.month, day: this.currentDateObject.date.day }
         };
 
@@ -70,24 +83,31 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
             transaktion => this.populateFormWithWiederkehrendeTransaktion(transaktion)
         );
 
+        let betragRegex = /^\d+((,|.)\d{1,})?$/;
+        let beschreibungRegex = /^[a-z\d\-_,.\s]+$/i;
+
+        this.form = this._fb.group({
+            transaktionsTyp: [''],
+            betrag: ['', [Validators.required, Validators.pattern(betragRegex)]],
+            kategorie: [''],
+            beschreibung: ['', [Validators.required, Validators.pattern(beschreibungRegex)]],
+            transaktionsHaeufigkeit: ['Einmalig'],
+            startDatum: [this.currentDateObject],
+            endDatum: ['']
+        });
+
         this.kategorienControllerSubscription = this._kategorienController.kategorien$.subscribe(
             kategorien => {
-                console.log(kategorien);
                 this.kategorien = kategorien;
+                if (this.kategorien.length > 0) {
+                    this.form.controls['kategorie'].setValue(this.kategorien[0].Name);
+                }
             }
         )
     }
 
     ngOnInit(): void {
-        this.form = this._fb.group({
-            transaktionsTyp: [''],
-            betrag: ['', Validators.required],
-            kategorie: [''],
-            beschreibung: [''],
-            transaktionsHaeufigkeit: ['Einmalig'],
-            startDatum: [this.currentDateObject, Validators.required],
-            endDatum: ['']
-        })
+
     }
 
     ngOnDestroy() {
@@ -101,12 +121,16 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
 
         this.isUpdateWiederkehrendeZahlung = false;
         this.isWiederkehrendeZahlung = false;
-        this.selectedTransaktionsTyp = transaktion.isEinnahme ? 'Einnahme' : 'Ausgabe';
-        this.form.controls['betrag'].setValue(transaktion.betrag);
-        this.form.controls['kategorie'].setValue(transaktion.kategorie);
-        this.form.controls['beschreibung'].setValue(transaktion.beschreibung);
+        this.selectedTransaktionsTyp = transaktion.IsEinnahme ? 'Einnahme' : 'Ausgabe';
+        this.form.controls['betrag'].setValue(transaktion.Betrag);
+
+        let kategorieIndex = this.kategorien.findIndex(x => x.KategorieId == transaktion.KategorieId);
+        let kategorie = this.kategorien[kategorieIndex];
+
+        this.form.controls['kategorie'].setValue(kategorie.Name);
+        this.form.controls['beschreibung'].setValue(transaktion.Beschreibung);
         this.form.controls['transaktionsHaeufigkeit'].setValue(this.transaktionsHaeufigkeiten[0]);
-        this.form.controls['startDatum'].setValue({ date: { year: transaktion.year, month: transaktion.month, day: transaktion.day } });
+        this.form.controls['startDatum'].setValue({ date: { year: transaktion.Datum.getFullYear(), month: transaktion.Datum.getMonth() + 1, day: transaktion.Datum.getDate() } });
     }
 
     private populateFormWithWiederkehrendeTransaktion(transaktion: WiederkehrendeTransaktion) {
@@ -125,9 +149,14 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
     clearForm() {
         this.selectedTransaktionsTyp = 'Einnahme';
         this.form.controls['betrag'].reset();
-        this.form.controls['kategorie'].reset();
+        if (this.kategorien.length > 0) {
+            this.form.controls['kategorie'].setValue(this.kategorien[0].Name);
+        }
         this.form.controls['beschreibung'].reset();
         this.form.controls['transaktionsHaeufigkeit'].setValue(this.transaktionsHaeufigkeiten[0]);
+
+        this.onTransaktionsHaeufigkeitChange(this.form.controls['transaktionsHaeufigkeit'].value);
+
         this.form.controls['startDatum'].setValue(this.currentDateObject);
         this.isUpdateWiederkehrendeZahlung = true;
     }
@@ -142,13 +171,14 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
     }
 
     onTransaktionsHaeufigkeitChange(h: string) {
+        this.selectedTransaktionsHaeufigkeit = h;
+
         if (h == 'Einmalig') {
             this.isWiederkehrendeZahlung = false;
         }
         else {
             this.isWiederkehrendeZahlung = true;
         }
-        console.log(this.isWiederkehrendeZahlung);
     }
 
     // dateChanged callback function called when the user select the date. This is mandatory callback
@@ -188,9 +218,34 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
         ////This event is fired immediately when the hide instance method has been called.
         ///called to reset the events and the headers.
         $('#neueTransaktionModal').on('shown.bs.modal', function () {
-
-
             console.log("modal is hidden");
         });
+    }
+
+    onSubmit() {
+        var transaktion = new Transaktion();
+        console.log(Number.parseFloat(this.form.controls['betrag'].value));
+        transaktion.Betrag = Number.parseFloat(this.form.controls['betrag'].value);
+        transaktion.IsEinnahme = this.selectedTransaktionsTyp == this.transaktionsTypen[0] ? true : false;
+        transaktion.Beschreibung = this.form.controls['beschreibung'].value;
+
+        let date = this.form.controls['startDatum'].value.date;
+
+        transaktion.Datum = new Date(date.year, date.month, date.day);
+
+        let kategorieIndex = this.kategorien.findIndex(x => x.Name == this.form.controls['kategorie'].value);
+        transaktion.KategorieId = this.kategorien[kategorieIndex].KategorieId;
+
+        this._transaktionenController.addTransaktion(transaktion);
+    }
+
+    onKategorieChanged(k: string) {
+        //console.log(this.selectedKategorie);
+        //console.log(this.form.controls['kategorie'].value);
+        //console.log(k);
+    }
+
+    onChangeBetrag() {
+        console.log(this.form.valid);
     }
 }

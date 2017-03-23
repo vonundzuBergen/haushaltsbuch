@@ -9,7 +9,7 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class TransaktionenService {
 
-    private baseUrl = "/app/transaktionen.json";
+    private baseUrl = "http://localhost:34408/api/Transaktionen";
 
     constructor(private http: Http) {
     }
@@ -19,7 +19,7 @@ export class TransaktionenService {
         let bodyString = JSON.stringify(transaktion);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        let url = `${this.baseUrl}/${transaktion.id}`;
+        let url = `${this.baseUrl}(${transaktion.TransaktionId})`;
 
         return this.http
             .put(url, bodyString, options)
@@ -27,11 +27,11 @@ export class TransaktionenService {
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
-    post(transaktion: Transaktion): Observable<Transaktion[]> {
+    post(transaktion: Transaktion): Observable<Transaktion> {
         let bodyString = JSON.stringify(transaktion); // Stringify payload
         let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
         let options = new RequestOptions({ headers: headers }); // Create a request option
-        let url = `${this.baseUrl}/${transaktion.id}`;
+        let url = `${this.baseUrl}`;
 
         return this.http
             .post(url, bodyString, options) // ...using post request
@@ -40,7 +40,7 @@ export class TransaktionenService {
     }
 
     delete(id: number): Observable<Transaktion[]> {
-        let url = `${this.baseUrl}/${id}`;
+        let url = `${this.baseUrl}(${id})`;
 
         return this.http
             .delete(url)
@@ -63,7 +63,15 @@ export class TransaktionenService {
 
         return this.http
             .get(url)
-            .map(response => response.json().transaktionen)
+            .map(this.extractDate)
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+
+    private extractDate(res: Response) {
+        var data = res.json().value || [];
+        data.forEach((d: any) => {
+            d.Datum = new Date(d.Datum);
+        });
+        return data;
     }
 }

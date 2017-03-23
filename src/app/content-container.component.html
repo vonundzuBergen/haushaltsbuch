@@ -8,6 +8,15 @@
                 <div>
                     <cashflow-overview-panel></cashflow-overview-panel>
                 </div>
+                <div class="question-sign">
+                    <span 
+                        popover="Hello popover" 
+                        popoverPlacement="left" 
+                        [popoverOnHover]="true" 
+                        [popoverCloseOnMouseOutside]="true" 
+                        class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+                </div>
             </div>
         </div>
         <div class="col-md-3" id="top-content">
@@ -29,46 +38,38 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5" id="bottom-right-container">
-            <div class="row" id="right-top-container">
-                <div class="col-md-12">
-                    <div class="col-md-12 contentdiv">
-                        <div>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueTransaktionModal">
-                                Neue Transaktion Modal
-                            </button>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
-                                Neue Kategorie Modal
-                            </button>
-                        </div>
+        <div class="col-md-5 contentFrame border5" id="bottom-right-container">
+            <div class="row" style="height: 40%"> 
+                <div class="col-md-12 contentdiv" style="overflow: auto; border-radius: 5px; margin-bottom: 1em;">
+                    <div id="kategorien" style="padding-top: 1em; padding-bottom: 0em;">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueTransaktionModal">
+                            Neue Kategorie Modal
+                        </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
+                            Testbutton
+                        </button>
                     </div>
+                    <kategorien-panel></kategorien-panel>
                 </div>
             </div>
-            <div class="row" id="right-bottom-container">
-                <div class="col-md-12 col-ld-12" id="placeholder2">
+            <div class="row" style="height: 5%"></div>
+            <div class="row" style="margin-bottom: 0em; height: 55%;" > 
+                <div class="col-md-12 contentdiv" style=" overflow: auto;padding: 0; border-radius: 5px;">
                     <div>
                         <wiederkehrende-transaktionen-tabelle></wiederkehrende-transaktionen-tabelle>
-                
-                    <div class="col-md-12" id="bottom-content">
-                        <div class="col-md-12 contentdiv" >
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
-  Neue Kategorie Modal
-</button>
-<button type="button" (click)="onDelete()">
-    Delete Kategorie
-</button>
-<button type="button" (click)="onPost()">
-    Post Kategorie
-</button>
-<button type="button" (click)="onUpdate()">
-    Update Kategorie
-</button>
-                        <div class="col-md-12" id="bottom-content">
-                            <div class="col-md-12 contentdiv" >
-                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
-                                 Neue Kategorie Modal
-                              </button>
-                            </div>
+                    </div>
+                    <div style="margin: 1em;"> 
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
+                            Neue Transaktion Modal
+                        </button>
+                        <div class="question-sign" style="margin: 1em;">
+                            <span 
+                                popover="Hellsadfsdfsadfffffff asdf lj asdflk jd er" 
+                                popoverPlacement="left" 
+                                [popoverOnHover]="true" 
+                                [popoverCloseOnMouseOutside]="true" 
+                                class="question-sign glyphicon glyphicon-question-sign">
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -76,3 +77,4 @@
         </div>
     </div>
 </div>
+

@@ -11,11 +11,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
-                <th scope="row">{{transaktion.betrag}} €</th>
-                <td>{{("0" + transaktion.day).slice(-2)}}/{{("0" + transaktion.month).slice(-2)}}/{{transaktion.year}}</td>
-                <td>{{transaktion.kategorie}}</td>
-                <td>{{transaktion.beschreibung}}</td>
+            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.IsEinnahme" [class.danger]="!transaktion.IsEinnahme">
+                <th scope="row">{{transaktion.Betrag}} €</th>
+                <td>{{transaktion.Datum | date}}</td>
+                <td>{{transaktion.KategorieId | getName: kategorien}}</td>
+                <td>{{transaktion.Beschreibung}}</td>
                 <td>
                     <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
                         <span class="glyphicon glyphicon-edit"></span>
