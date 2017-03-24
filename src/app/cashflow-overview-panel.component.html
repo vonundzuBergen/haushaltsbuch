@@ -1,3 +1,85 @@
+<<<<<<< HEAD
+
+<div id="cashflow-overview-panel">
+    <div class="cash" id="einnahmen">
+        <h3 align="center" > Einnahmen</h3>
+        <p class="text-center">
+            {{ gesamtEinnahmen | currency:'EUR':true:'1.2-2'}}
+        </p>
+    </div>
+    <div class="cash" id="ratsche">
+        <h3 align="center"> Ausgaben</h3>
+        <p class="text-center">
+            {{gesamtAusgaben | currency:'EUR':true:'1.2-2'}}
+        </p>
+    </div>
+    <div class="saldodiv">
+        <p class="text-center">{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</p>
+    </div>
+</div>
+
+<!--    <table class="table borderless">
+        <thead id="cashflow-overview-panel-table-header">
+            <td class="text-center">
+                <h3 class="display-2">Einnahmen</h3>
+            </td>
+            <td class="text-center">
+                <h3 class="display-2">Ausgaben</h3>
+            </td>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center positiverBetrag">
+                    <h3>{{ gesamtEinnahmen | currency:'EUR':true:'1.2-2'}}</h3>
+                </td>
+                <td class="text-center negativerBetrag">
+                    <h3>{{ gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center" [class.positiverBetrag]="gesamtCashflow>=0" [class.negativerBetrag]="gesamtCashflow<0">
+                    <h3 class="display-1">{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</h3>
+                </td>
+            </tr>
+        </tbody>
+<<<<<<< HEAD
+    </table>-->
+<!--
+=======
+    </table>
+</div>
+    <!--
+>>>>>>> 95071aa8767d0d2b4a5660a3a60a9c80beb2c670
+    <div class="row">
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+        <div class="col-md-3">
+            <h3>hallo
+            </h3>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>hallo</h3>
+        </div>
+    </div>
+</div>
+=======
 <div id="cashflow-overview-panel" class="container">
     <table class="table borderless">
         <thead id="cashflow-overview-panel-table-header">
@@ -55,4 +137,5 @@
         </div>
     </div>
 </div>
+>>>>>>> c410ec2feaf424ec0ed3c00252fac22ce0ff4b3e
 -->
