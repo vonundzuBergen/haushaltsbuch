@@ -1,7 +1,29 @@
+<style>
+  body {
+    overflow: hidden;
+  }
+  
+  body.loading #loadingModal {
+    display: block;
+  }
+  
+  #loadingModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8) url('./resources/gifs/wheel.gif') 50% 50% no-repeat;
+  }
+</style>
+
+<div id="loadingModal" [style.display]="showLoading ? 'block' : 'none'"></div>
 <neue-kategorie-modal></neue-kategorie-modal>
 <neue-transaktion-modal></neue-transaktion-modal>
 
-<div class="container-fluid">
+<div class="container-fluid" (onShowLoading)="onShowLoading($event)">
     <div class="row row-eq-height" id="top-container">
         <div class="col-md-4" id="top-content">
             <div class="col-md-12 contentdiv border5" id="cashflow">

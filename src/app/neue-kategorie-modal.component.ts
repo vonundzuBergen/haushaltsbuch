@@ -32,9 +32,15 @@ export class NeueKategorieModalComponent implements OnInit, OnDestroy {
         })
     }
 
-    addKategorie(name: string) {
-        console.log(name);
-        //this._kategorienController.addKategorie(kategorie);
+    addKategorie() {
+        var name = this.form.controls['name'].value;
+
+        var kategorie = new Kategorie();
+        kategorie.Name = name;
+
+        this._kategorienController.addKategorie(kategorie);
+
+        this.clearForm();
     }
 
     ngOnDestroy() {

@@ -1,6 +1,6 @@
 <div class="modal fade" id="neueKategorieModal" tabindex="-1" role="dialog" aria-labelledby="neueKategorieModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <form [formGroup]="form" (ngSubmit)="addKategorie(form.controls['name'].value)">
+        <form [formGroup]="form">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" (click)="clearForm()" data-dismiss="modal" >Schliessen</button>
-                    <button type="submit" [disabled]="!form.valid" (click)="clearForm()" class="btn btn-primary">Speichern</button>
+                    <button type="submit" [disabled]="!form.valid" (click)="addKategorie()" class="btn btn-primary" onclick="$('.modal').modal('hide')">Speichern</button>
                 </div>
             </div>
         </form>
