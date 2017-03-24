@@ -1,3 +1,25 @@
+<style>
+/* Color of invalid field */
+.has-error,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .form-control-feedback {
+    color: #a94442;
+}
+
+/* Color of valid field */
+.has-success,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback {
+    color: #3c763d;
+}
+.form-group {
+    position: relative;
+}
+
+</style>
+
 <div class="modal fade" id="neueTransaktionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -24,42 +46,58 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">Betrag</label>
-                            <div class="col-10">
+                        
+                        <div class="form-group has-feedback row col-10"
+                            [class.has-error]="!form.controls['betrag'].pristine && !form.controls['betrag'].valid"
+                            [class.has-success]="!form.controls['betrag'].pristine && form.controls['betrag'].valid"
+                        >
+                            <label class="col-2 col-form-label">Betrag*</label>
                                 <input 
-                                    maxlength="10" 
+                                    maxlength="15" 
                                     type="text" 
                                     class="form-control" 
                                     formControlName="betrag" 
                                     placeholder="0,00"
                                     (focusout)="onFocusOut()"
-                                    >
-                            </div>
+                                    (keypress)="onChangeBetrag()">
+                                <span *ngIf="!form.controls['betrag'].pristine && form.controls['betrag'].valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                <span *ngIf="!form.controls['betrag'].pristine && !form.controls['betrag'].valid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                <div class='form-text has-error' *ngIf="form.controls['betrag'].touched && !form.controls['betrag'].valid">
+                                    <div *ngIf="form.controls['betrag'].hasError('required')">Betrag darf nicht lehr sein.</div>
+                                    <div *ngIf="form.controls['betrag'].hasError('pattern')">Der angegebene Betrag ist nicht gültig.</div>
+                                </div>
                         </div>
                         <fieldset>
                             <div class="form-group row">
-                                <label class="mr-sm-2" for="inlineFormCustomSelect">Kategorie</label>
+                                <label class="mr-sm-2" for="inlineFormCustomSelect">Kategorie*</label>
                                 <select 
+                                    (change)="onKategorieChanged($event.target.value)"
                                     class="custom-select mb-2 mr-sm-2 mb-sm-0" 
                                     id="inlineFormCustomSelect"
                                     formControlName="kategorie" 
                                     class="form-control"
                                 >
-                                    <option *ngFor="let kategorie of kategorien">{{kategorie.name}}</option>
+                                    <option *ngFor="let kategorie of kategorien" [ngValue]="kategorie.Name">{{kategorie.Name}}</option>
                                 </select>
                             </div>
                         </fieldset>
-                        <div class="form-group row">
-                            <label for="inputBeschreibung" class="col-2 col-form-label">Beschreibung</label>
-                            <div class="col-10">
+                        <div class="form-group has-feedback row col-10"
+                            [class.has-error]="!form.controls['beschreibung'].pristine && !form.controls['beschreibung'].valid"
+                            [class.has-success]="!form.controls['beschreibung'].pristine && form.controls['beschreibung'].valid"
+                        >
+                            <label for="inputBeschreibung" class="col-2 col-form-label">Beschreibung*</label>
                                 <input 
                                     maxlength="50" 
                                     type="text" 
                                     class="form-control" 
                                     formControlName="beschreibung" 
                                     placeholder="Beschreibung">
-                            </div>
+                                <span *ngIf="!form.controls['beschreibung'].pristine && form.controls['beschreibung'].valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                <span *ngIf="!form.controls['beschreibung'].pristine && !form.controls['beschreibung'].valid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                <div class='form-text has-error' *ngIf="form.controls['beschreibung'].touched && !form.controls['beschreibung'].valid">
+                                    <div *ngIf="form.controls['beschreibung'].hasError('required')">Beschreibung darf nicht lehr sein.</div>
+                                    <div *ngIf="form.controls['beschreibung'].hasError('pattern')">Beschreibung darf nur alphanumerische Zeichen beinhalten.</div>
+                                </div>
                         </div>
                         <fieldset class="form-group row">
                             <div *ngIf="isUpdateWiederkehrendeZahlung" class="col-sm-10">
@@ -75,35 +113,33 @@
                                 </div>
                             </div>
                         </fieldset>
-                        <div>
-                            <label *ngIf="!isWiederkehrendeZahlung" class="col-2 col-form-label">Datum</label>
-                            <label *ngIf="isWiederkehrendeZahlung" class="col-2 col-form-label">Start Datum</label>                            
-                            <div class="col-2">
-                                <my-date-picker class="col-2"
+                        <div class="row">
+                            <label *ngIf="!isWiederkehrendeZahlung" class="col-2 col-form-label">Datum*</label>
+                            <label *ngIf="isWiederkehrendeZahlung" class="col-2 col-form-label">Start Datum*</label> 
+                            <div style="width: 50%">                           
+                                    <my-date-picker 
                                     [options]="myStartDatePickerOptions" 
-                                    (dateChanged)="onStartDateChanged($event)"
-                                    class="form-control" 
-                                    formControlName="startDatum" 
-                                ></my-date-picker>
+                                    (dateChanged)="onStartDateChanged($event)" 
+                                    formControlName="startDatum"
+                                    ></my-date-picker>
                             </div>
                         </div>
-                        <div *ngIf="isWiederkehrendeZahlung">
-                        <label class="col-2 col-form-label">End Datum</label>
-                        <div class="col-2">
-                            <my-date-picker class="col-2"
+                        <div class="row" *ngIf="isWiederkehrendeZahlung">
+                        <label class="col-2 col-form-label">End Datum</label>  
+                            <div style="width: 50%">
+                                <my-date-picker
                                 [options]="myEndDatePickerOptions" 
                                 (dateChanged)="onEndDateChanged($event)"
-                                class="form-control" 
                                 formControlName="endDatum" 
                             ></my-date-picker>
-                        </div>
+                            </div>                         
                         </div>
                     </form>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" (click)="clearForm()" data-dismiss="modal">Schliessen</button>
-                <button type="submit" [disabled]="!form.valid" (click)="clearForm()" class="btn btn-primary">Speichern</button>
+                <button type="button"  data-dismiss="modal" class="btn btn-primary" [disabled]="!form.valid" (click)="onSubmit()" >Speichern</button>
             </div>
         </div>
     </div>

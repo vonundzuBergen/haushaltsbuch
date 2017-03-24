@@ -27,37 +27,31 @@ export class PieChartComponent {
 
         _transaktionenController.transaktionen$.subscribe(
             transaktionen => {
-                for (var t of transaktionen) {
-                    this.transaktionen.push(t);
-                }
-
-                this.pieChartLabels = ['jan', 'hat', 'keine lust mehr'];
-                this.pieChartData = [1, 2, 3];
+                this.transaktionen = transaktionen;
 
 
-                this.pieChartLabels = ['christian', 'j', 'bergen'];
-                this.pieChartData = [1, 2, 3];
+                let labelsAndData = this._pieChartService.getPieChartLabelsAndData(this.kategorien, this.transaktionen);
+                console.log(labelsAndData);
 
-                this.pieChartLabels = this._pieChartService.getPieChartLabels(this.kategorien);
-                this.pieChartData = this._pieChartService.getPieChartData(this.kategorien, this.transaktionen);
 
-                console.log(this.pieChartLabels);
-                console.log(this.pieChartData);
+                this.pieChartLabels = labelsAndData.map(x => x.KategorieName);
+                this.pieChartData = labelsAndData.map(x => x.AnzahlTransaktionen);
 
             }
         )
 
         _kategorienController.kategorien$.subscribe(
             kategorien => {
-                for (var t of kategorien) {
-                    this.kategorien.push(t);
-                }
+                this.kategorien = kategorien;
 
-                this.pieChartLabels = this._pieChartService.getPieChartLabels(this.kategorien);
-                this.pieChartData = this._pieChartService.getPieChartData(this.kategorien, this.transaktionen);
+                /*
+                let labelsAndData = this._pieChartService.getPieChartLabelsAndData(this.kategorien, this.transaktionen);
 
-                console.log(this.pieChartLabels);
-                console.log(this.pieChartData);
+                console.log(labelsAndData);
+
+                this.pieChartLabels = labelsAndData.map(x => x.KategorieName);
+                this.pieChartData = labelsAndData.map(x => x.AnzahlTransaktionen);
+                */
             }
         );
     }

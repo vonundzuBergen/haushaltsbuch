@@ -1,14 +1,12 @@
 <div id="kategorie-container">
-    <div class="kategorie">
-        TESaddsfsdfTKATEGORIE 
-        <span _ngcontent-evh-6="" class="glyphicon glyphicon-remove"></span>
-    </div>
-    <div class="kategorie">
-        TESaddsfsdfTKATEGORIE 
-        <span _ngcontent-evh-6="" class="glyphicon glyphicon-remove"></span>
-    </div>
-    <div class="kategorie">
-        TESaddsfsdfTKATEGORIE 
-        <span _ngcontent-evh-6="" class="glyphicon glyphicon-remove"></span>
+    <div *ngFor="let kategorie of kategorien" class="kategorie">
+        {{kategorie.Name}}
+        <a href="#" (click)="deleteKategorie(kategorie)">
+            <span class="glyphicon glyphicon-remove"></span>
+        </a>
     </div>
 </div>
+
+<!--
+    _ngcontent-evh-6=""
+    -->

@@ -7,8 +7,8 @@ export class CashflowOverviewPanelService {
     getGesamtEinnahmen(transaktionen: Transaktion[]): number {
         let total = 0;
         for (let transaktion of transaktionen) {
-            if (transaktion.isEinnahme) {
-                total += transaktion.betrag;
+            if (transaktion.IsEinnahme) {
+                total += transaktion.Betrag;
             }
         }
 
@@ -18,8 +18,8 @@ export class CashflowOverviewPanelService {
     getGesamtAusgaben(transaktionen: Transaktion[]): number {
         let total = 0;
         for (let transaktion of transaktionen) {
-            if (!transaktion.isEinnahme) {
-                total += transaktion.betrag;
+            if (!transaktion.IsEinnahme) {
+                total += transaktion.Betrag;
             }
         }
 

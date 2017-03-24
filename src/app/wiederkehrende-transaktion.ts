@@ -1,5 +1,5 @@
 export class WiederkehrendeTransaktion {
-    id: number;
+    id?: number;
     isEinnahme: boolean;
     betrag: number;
     kategorie: string;

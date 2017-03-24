@@ -9,17 +9,17 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class KategorienService {
 
-    private baseUrl = "/app/kategorien.json";
+    private baseUrl = "http://localhost:34408/api/Kategorien";
 
     constructor(private http: Http) {
     }
 
-    put(kategorie: Kategorie): Observable<Kategorie[]> {
+    put(kategorie: Kategorie): Observable<Kategorie> {
 
         let bodyString = JSON.stringify(kategorie);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        let url = `${this.baseUrl}/${kategorie.id}`;
+        let url = `${this.baseUrl}(${kategorie.KategorieId})`;
 
         return this.http
             .put(url, bodyString, options)
@@ -27,11 +27,11 @@ export class KategorienService {
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
-    post(kategorie: Kategorie): Observable<Kategorie[]> {
+    post(kategorie: Kategorie): Observable<Kategorie> {
         let bodyString = JSON.stringify(kategorie); // Stringify payload
         let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
         let options = new RequestOptions({ headers: headers }); // Create a request option
-        let url = `${this.baseUrl}/${kategorie.id}`;
+        let url = `${this.baseUrl}`;
 
         return this.http
             .post(url, bodyString, options) // ...using post request
@@ -40,11 +40,11 @@ export class KategorienService {
     }
 
     delete(id: number): Observable<Kategorie[]> {
-        let url = `${this.baseUrl}/${id}`;
+        let url = `${this.baseUrl}(${id})`;
 
         return this.http
             .delete(url)
-            .map((res: Response) => res.json()) // ...and calling .json() on the response to return data
+            .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
     }
 
@@ -63,7 +63,8 @@ export class KategorienService {
 
         return this.http
             .get(url)
-            .map(response => response.json().kategorien)
+            .map(response =>
+                response.json().value)
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 }

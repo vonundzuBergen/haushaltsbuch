@@ -1,3 +1,4 @@
+
 #top-container{
     padding: 1em;
     height: 250px;
@@ -66,8 +67,6 @@ body, html, .container-fluid{
     text-align: right;
 }
 
-
 #noPadding{
     padding: 0em;
 }
-

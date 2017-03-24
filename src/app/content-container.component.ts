@@ -1,8 +1,11 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
-import { TransaktionenService } from './transaktionen.service';
-import { Transaktion } from './transaktion';
+import { KategorienController } from './kategorien.controller';
+import { Kategorie } from './kategorie';
 import { Observable } from 'rxjs/Observable';
+import { Transaktion } from './transaktion';
+import { TransaktionenController } from './transaktionen.controller';
+import { LoadingService } from './loading.service';
 
 @Component({
     selector: 'content-container',
@@ -12,8 +15,16 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ContentContainerComponent implements OnInit {
 
-    //constructor(private _transaktionenService: TransaktionenService) { }
+    showLoading: boolean;
+
+    constructor(private _loadingService: LoadingService) {
+        this.showLoading = false;
+
+        _loadingService.showLoading$.subscribe(x => {
+            this.showLoading = x;
+        });
+    }
 
     ngOnInit(): void {
     }
-}
+}   

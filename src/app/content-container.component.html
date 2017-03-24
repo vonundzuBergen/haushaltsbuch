@@ -1,14 +1,37 @@
+
+<style>
+  body {
+    overflow: hidden;
+  }
+  
+  body.loading #loadingModal {
+    display: block;
+  }
+  
+  #loadingModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8) url('./resources/gifs/wheel.gif') 50% 50% no-repeat;
+  }
+</style>
+
+<div id="loadingModal" [style.display]="showLoading ? 'block' : 'none'"></div>
 <neue-kategorie-modal></neue-kategorie-modal>
 <neue-transaktion-modal></neue-transaktion-modal>
 
-<div class="container-fluid">
+<div class="container-fluid" (onShowLoading)="onShowLoading($event)">
     <div class="row row-eq-height" id="top-container">
         <div class="col-md-4" id="top-content">
-            <div class="col-md-12 contentdiv border5" id="noPadding">
+            <div class="col-md-12 contentdiv border5" id="cashflow noPadding">
                 <div>
                     <cashflow-overview-panel></cashflow-overview-panel>
                 </div>
-<!--                <div class="question-sign">
+                <div class="question-sign">
                     <span 
                         popover="Hello popover" 
                         popoverPlacement="left" 
@@ -16,7 +39,7 @@
                         [popoverCloseOnMouseOutside]="true" 
                         class="question-sign glyphicon glyphicon-question-sign">
                     </span>
-                </div>-->
+                </div>
             </div>
         </div>
         <div class="col-md-3" id="top-content">
@@ -56,11 +79,14 @@
             <div class="row" style="height: 5%"></div>
             <div class="row" style="margin-bottom: 0em; height: 55%;" > 
                 <div class="col-md-12 contentdiv" style=" overflow: auto;padding: 0; border-radius: 5px;">
-                             <div style="margin: 1em;"> 
+                    <div>
+                        <wiederkehrende-transaktionen-tabelle></wiederkehrende-transaktionen-tabelle>
+                    </div>
+                    <div style="margin: 1em;"> 
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
                             Neue Transaktion Modal
                         </button>
-                        <div class="question-sign" style="margin: 1em;">
+                        <div class="question-sign" style="margin: 1em; float: right;">
                             <span 
                                 popover="Hellsadfsdfsadfffffff asdf lj asdflk jd er" 
                                 popoverPlacement="left" 
@@ -70,11 +96,9 @@
                             </span>
                         </div>
                     </div>
-                    <div>
-                        <wiederkehrende-transaktionen-tabelle></wiederkehrende-transaktionen-tabelle>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
