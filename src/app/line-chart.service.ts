@@ -33,13 +33,12 @@ export class LineChartService {
             d.setDate(d.getDate() - i);
 
             transaktionen.forEach(t => {
-
-                if (t.year == d.getFullYear() && t.month == d.getMonth() + 1 && t.day == d.getDate()) {
-                    if (t.isEinnahme) {
-                        einnahmen[counter] += t.betrag;
+                if (t.Datum.getFullYear() == d.getFullYear() && t.Datum.getMonth() + 1 == d.getMonth() + 1 && t.Datum.getDate() == d.getDate()) {
+                    if (t.IsEinnahme) {
+                        einnahmen[counter] += t.Betrag;
                     }
                     else {
-                        ausgaben[counter] += t.betrag;
+                        ausgaben[counter] += t.Betrag;
                     }
                 }
             });

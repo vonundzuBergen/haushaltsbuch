@@ -8,27 +8,48 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class PieChartService {
-    getPieChartLabels(kategorien: Array<Kategorie>): Array<string> {
-        let k = new Array<string>(kategorien.length);
+    getPieChartLabelsAndData(kategorien: Array<Kategorie>, transaktion: Array<Transaktion>): Array<any> {
+
+        let kategorienFreq = new Array<any>();
 
         for (var i = 0; i < kategorien.length; i++) {
-            k[i] = kategorien[i].name;
-        }
 
-        return k;
-    }
+            let frequency = 0;
 
-    getPieChartData(kategorien: Array<Kategorie>, transaktionen: Array<Transaktion>): Array<number> {
-        let k = new Array<number>(kategorien.length).fill(0);
-
-        for (var i = 0; i < kategorien.length; i++) {
-            transaktionen.forEach(transaktion => {
-                if (transaktion.kategorie == kategorien[i].name) {
-                    k[i] += transaktion.betrag
+            transaktion.forEach(t => {
+                if (t.KategorieId == kategorien[i].KategorieId) {
+                    frequency++;
                 }
             });
+
+            if(frequency == 0){
+                continue;
+            }
+
+            if (((frequency / transaktion.length) * 100) < 5) {
+
+                if(kategorienFreq.length < 1){
+                    kategorienFreq.push({ KategorieName: "Sonstige", AnzahlTransaktionen: frequency });
+                }
+                else if (kategorienFreq.find(x => x.KategorieName == "Sonstige")) {
+
+                    console.log("Sonstige");
+                    let entry = kategorienFreq.find(x => x.KategorieName == "Sonstige");
+                    let index = kategorienFreq.indexOf(entry);
+                    kategorienFreq[index].AnzahlTransaktionen += frequency;
+
+                }
+                else {
+                    kategorienFreq.push({ KategorieName: "Sonstige", AnzahlTransaktionen: frequency });                    
+                }
+            }
+            else {
+                kategorienFreq.push({ KategorieName: kategorien[i].Name, AnzahlTransaktionen: frequency });
+            }
         }
 
-        return k;
+        console.log(kategorienFreq);
+
+        return kategorienFreq;
     }
 }
