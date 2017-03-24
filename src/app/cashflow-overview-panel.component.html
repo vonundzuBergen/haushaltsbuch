@@ -1,18 +1,19 @@
-<div id="cashflow-overview-panel" class="container">
+
+<div id="cashflow-overview-panel">
     <div class="cash" id="einnahmen">
-        <p>
-            Einnahmen
-            <br> {{ gesamtEinnahmen | currency:'EUR':true:'1.2-2'}}
+        <h3 align="center" > Einnahmen</h3>
+        <p class="text-center">
+            {{ gesamtEinnahmen | currency:'EUR':true:'1.2-2'}}
         </p>
     </div>
-    <div class="cash" id="ausgaben">
-        <p>
-            Ausgaben
-            <br> {{gesamtAusgaben | currency:'EUR':true:'1.2-2'}}
+    <div class="cash" id="ratsche">
+        <h3 align="center"> Ausgaben</h3>
+        <p class="text-center">
+            {{gesamtAusgaben | currency:'EUR':true:'1.2-2'}}
         </p>
     </div>
-    <div class="saldodiv" id="saldo">
-        <p>{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</p>
+    <div class="saldodiv">
+        <p class="text-center">{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</p>
     </div>
 </div>
 

@@ -3,6 +3,9 @@
     width: 100%;
     height: 100%;
 }
+h3{
+    align: center;
+}
 
 /*#cashflow-overview-panel-table-header{
     border-bottom: 1px solid gray;
@@ -23,44 +26,47 @@
 
 
 .cash{
-    border-radius: 5px; 
+    height: 111px;
+    width: 50%;
     display: flex; 
-    color: white;
-    margin-top: 1em;
+    
+    display: inline-block;
+    
+    
+    
+    
+    
 }
 .saldodiv{
-    border-radius: 5px; 
-    display: flex; 
-    color: white;
-    margin-left: 0.5em;
-    margin-right:0.5;
-
+    border-bottom-right-radius: 5px; 
+    border-bottom-left-radius: 5px;
+    background: #dff0d8;
+    
+    height: 111px;
+    width: 100%;
+    font-size: 2.2em;
+    
 }
 
 
 #einnahmen{
     float: left;
-    height: 50%;
-    width: 45%;
-    margin-left: 1em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    
-    background: lightgreen;
+    border-top-left-radius: 5px;
+    background: #dff0d8;
+   
 
 }
-#ausgaben{
-    height: 50%;
-    width: 45%;
-    margin-left: 0.5em;
-    margin-right: 1em;
-    margin-bottom: 0.5em;
+
+
+#ratsche{
+    border-top-right-radius: 5px;
+    background: #f2dede;
     
-    background: indianred;
+
 }
 
-#saldo{
-    height: 45%;
-    width: 95%;
-    background:black;
+
+
+p{
+    font-size: 2em;
 }
