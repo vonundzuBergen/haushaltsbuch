@@ -241,4 +241,4 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-Api/Larrybook/Web.config
+/Api/Larrybook/Web.config
