@@ -1,32 +1,14 @@
-<div class="modal fade" id="neueKategorieModal" tabindex="-1" role="dialog" aria-labelledby="neueKategorieModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <form [formGroup]="form">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="form-group row" [class.has-success]="form.valid">
-                            <label for="kategorieName" class="col-2 col-form-label">Kategorie Name</label>
-                            <div class="col-10">
-                                <input 
-                                    type="text" 
-                                    formControlName="name" 
-                                    class="form-control " 
-                                    placeholder="Name"
-                                    maxlength="15"  
-                                    >
-                                <small *ngIf="form.controls['name'].hasError('required') || form.controls['name'].hasError('minlength')">
-                                    Name muss zwischen 3 - 15 Zeichen beinhalten.
-                                </small>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" (click)="clearForm()" data-dismiss="modal" >Schliessen</button>
-                    <button type="submit" [disabled]="!form.valid" (click)="addKategorie()" class="btn btn-primary" onclick="$('.modal').modal('hide')">Speichern</button>
-                </div>
-            </div>
-        </form>
+<form [formGroup]="form" class="form-inline">
+    <div class="form-group row" [class.has-success]="form.valid">
+        <div class="col-10">
+            <label for="kategorieName" class="col-2 col-form-label">Kategorie:</label>
+            <input type="text" formControlName="name" class="form-control " placeholder="Name" maxlength="15">
+            <button type="submit" [disabled]="!form.valid" (click)="addKategorie()" class="btn btn-primary" onclick="$('.modal').modal('hide')">Speichern</button>
+        </div>
     </div>
-</div>
+    <div class="row" style="padding-top: 0.5em">
+        <small *ngIf="form.controls['name'].hasError('required') || form.controls['name'].hasError('minlength')">
+            Name muss zwischen 3 - 15 Zeichen beinhalten.
+        </small>
+    </div>
+</form>
