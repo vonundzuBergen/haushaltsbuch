@@ -1,7 +1,7 @@
 <form [formGroup]="form" class="form-inline">
     <div class="form-group row" [class.has-success]="form.valid">
         <div class="col-10">
-            <label for="kategorieName" class="col-2 col-form-label">Kategorie:</label>
+            <label for="kategorieName" class="col-2 col-form-label">Neue Kategorie:</label>
             <input type="text" formControlName="name" class="form-control " placeholder="Name" maxlength="15">
             <button type="submit" [disabled]="!form.valid" (click)="addKategorie()" class="btn btn-primary" onclick="$('.modal').modal('hide')">Speichern</button>
         </div>
