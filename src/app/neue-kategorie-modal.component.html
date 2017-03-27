@@ -1,10 +1,33 @@
+<style>
+/* Color of invalid field */
+.has-error,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .form-control-feedback {
+    color: #a94442;
+}
+
+/* Color of valid field */
+.has-success,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback {
+    color: #3c763d;
+}
+.form-group {
+    position: relative;
+}
+</style>
 <div class="modal fade" id="neueKategorieModal" tabindex="-1" role="dialog" aria-labelledby="neueKategorieModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <form [formGroup]="form">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <div class="form-group row" [class.has-success]="form.valid">
+                        <div class="form-group has-feedback row" 
+                                [class.has-error]="!form.controls['name'].pristine && nameIsTaken"
+                                [class.has-success]="!form.controls['name'].pristine && !nameIsTaken"
+                        >
                             <label for="kategorieName" class="col-2 col-form-label">Kategorie Name</label>
                             <div class="col-10">
                                 <input 
@@ -14,9 +37,18 @@
                                     placeholder="Name"
                                     maxlength="15"  
                                     >
-                                <small *ngIf="form.controls['name'].hasError('required') || form.controls['name'].hasError('minlength')">
+                                    <!--
+                                <small *ngIf="form.controls['name'].valid">
                                     Name muss zwischen 3 - 15 Zeichen beinhalten.
                                 </small>
+                                -->
+                                <span *ngIf="!form.controls['name'].pristine && !nameIsTaken" class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                <span *ngIf="!form.controls['name'].pristine && nameIsTaken" class="glyphicon glyphicon-remove form-control-feedback"></span>
+                                <div class='form-text has-error' *ngIf="form.controls['name'].touched && nameIsTaken">
+                                    <small>
+                                        Es existiert schon eine Kategorie mit diesem Namen.
+                                    </small>
+                                </div>
                             </div>
                         </div>
 
@@ -24,7 +56,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" (click)="clearForm()" data-dismiss="modal" >Schliessen</button>
-                    <button type="submit" [disabled]="!form.valid" (click)="addKategorie()" class="btn btn-primary" onclick="$('.modal').modal('hide')">Speichern</button>
+                    <button type="submit" [disabled]="nameIsTaken" (click)="addKategorie()" class="btn btn-primary" onclick="$('.modal').modal('hide')">Speichern</button>
                 </div>
             </div>
         </form>
