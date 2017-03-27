@@ -17,11 +17,11 @@ h3{
 }
 
 .positiverBetrag{
-    color: #c1e2b3;
+    background: #c1e2b3;
 }
 
 .negativerBetrag{
-    color: #ebcccc;
+    background: #ebcccc;
 }
 
 
