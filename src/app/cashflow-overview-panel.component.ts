@@ -19,7 +19,7 @@ export class CashflowOverviewPanelComponent implements OnInit {
       transaktionen => {
         this.gesamtEinnahmen = _cashflowService.getGesamtEinnahmen(transaktionen);
         this.gesamtAusgaben = _cashflowService.getGesamtAusgaben(transaktionen);
-        this.gesamtAusgaben = this.gesamtEinnahmen + this.gesamtAusgaben;
+        this.gesamtCashflow = this.gesamtEinnahmen - this.gesamtAusgaben;
       }
     );
   }
