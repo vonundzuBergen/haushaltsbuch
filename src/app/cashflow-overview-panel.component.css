@@ -8,7 +8,7 @@ h3{
     text-align: center;
 }
 
-/*#cashflow-overview-panel-table-header{
+#cashflow-overview-panel-table-header{
     border-bottom: 1px solid gray;
 }
 
@@ -17,12 +17,12 @@ h3{
 }
 
 .positiverBetrag{
-    color: green;
+    color: #c1e2b3;
 }
 
 .negativerBetrag{
-    color: red;
-}*/
+    color: #ebcccc;
+}
 
 
 
@@ -30,24 +30,20 @@ h3{
     height: 111px;
     width: 50%;
     display: flex; 
-    
     display: inline-block;
-    
-    
-    
-    
+
     
 }
-.saldodiv{
+.saldoDiv{
     border-bottom-right-radius: 5px; 
     border-bottom-left-radius: 5px;
-    background: #dff0d8;
-    
     height: 111px;
     width: 100%;
     font-size: 2.2em;
-    
+    line-height: 111px;
 }
+
+
 
 
 #einnahmen{
@@ -59,7 +55,7 @@ h3{
 }
 
 
-#ratsche{
+#ausgaben{
     border-top-right-radius: 5px;
     background: #f2dede;
     
