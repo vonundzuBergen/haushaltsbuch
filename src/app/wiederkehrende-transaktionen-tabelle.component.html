@@ -7,13 +7,15 @@
                 <th>End Datum</th>
                 <th>Kategorie</th>
                 <th>Beschreibung</th>
-                <th></th>
                 <th>
-
-                        <span popover="Hellsadfsdfsadfffffff asdf lj asdflk jd er" popoverPlacement="left" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                            class="question-sign glyphicon glyphicon-question-sign">
-                        </span>
- 
+                    <span popover="Hellsadfsdfsadfffffff asdf lj asdflk jd er" popoverPlacement="left" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true"
+                        class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+                </th>
+                <th>
+                    <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
                 </th>
             </tr>
         </thead>
