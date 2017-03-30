@@ -64,7 +64,6 @@ body, html{
 
 #bottom-left-container{
     height: 90%;
-    overflow: auto;
 }
 
 #bottom-right-container{
