@@ -1,7 +1,7 @@
 
 #top-container{
      padding: 1em;
-    height: 250px;
+    height: 300px;
     position: relative;
 }
 body, html{
@@ -104,13 +104,6 @@ body.loading #loadingModal {
     background: rgba( 255, 255, 255, .8) url('./resources/gifs/wheel.gif') 50% 50% no-repeat;
 }
 
-.contentHeadline{
-    
-    height: 5%;
-    float: left;
-    font-size: 2em;
-    margin:0.3em;
-}
 
 #kategorien{
     padding: 1em; 

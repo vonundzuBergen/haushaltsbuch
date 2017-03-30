@@ -7,43 +7,40 @@
     <div class="row row-eq-height" id="top-container">
 
         <div class="col-md-4" id="top-content">
-            <div class="col-md-12 contentHeadline">
-                <p> Transaktionen
-                    
-                    <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                        class="question-sign glyphicon glyphicon-question-sign">
-                        </span>
-                </p>
-            </div>
+
+            <h4> Gesamtüberblick
+                <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                    class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
             <div class="col-md-12 contentdiv border5" id="noPadding" style="height: 90%;">
                 <div>
                     <cashflow-overview-panel></cashflow-overview-panel>
                 </div>
-
             </div>
         </div>
 
         <div class="col-md-3" id="top-content">
-            <div class="col-md-12 contentHeadline">
-                <p> Transaktionen
-                    <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                        class="question-sign glyphicon glyphicon-question-sign">
-                        </span>
-                </p>
-            </div>
+
+            <h4> Ausgaben nach Kategorien
+                <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                    class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
+
             <div class="col-md-12 contentdiv border5" id="piechart" style="height: 90%;">
                 <pie-chart></pie-chart>
             </div>
         </div>
 
-        <div class="col-md-5" id="top-content" >
-            <div class="col-md-12 contentHeadline">
-                <p> Transaktionen
-                    <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                        class="question-sign glyphicon glyphicon-question-sign">
-                        </span>
-                </p>
-            </div>
+        <div class="col-md-5" id="top-content">
+
+            <h4> Einnahmen- und Ausgabenverlauf
+                <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                    class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
+
             <div class="col-md-12 contentdiv border5" id="linechart" style="height: 90%;">
                 <line-chart></line-chart>
             </div>
@@ -51,13 +48,13 @@
     </div>
     <div class="row row-eq-height" id="bottom-content-container">
         <div class="col-md-7" id="bottom-left-container">
-            <div class="col-md-12 contentHeadline">
-                <p> Transaktionen
-                    <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                        class="question-sign glyphicon glyphicon-question-sign">
-                        </span>
-                </p>
-            </div>
+
+            <h4> Transaktionen
+                <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                    class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
+
             <div class="col-md-12 contentdiv border5" id="transaktabelle">
                 <div>
                     <transaktionen-tabelle></transaktionen-tabelle>
@@ -67,13 +64,13 @@
 
         <div class="col-md-5 contentFrame border5" id="bottom-right-container">
             <div class="row" style="height: 50%;">
-                <div class="col-md-12 contentHeadline" style="height: 10%;">
-                    <p> Kategorien
-                        <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                            class="question-sign glyphicon glyphicon-question-sign">
-                            </span>
-                    </p>
-                </div>
+
+                <h4> Kategorien
+                    <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                        class="question-sign glyphicon glyphicon-question-sign">
+                        </span>
+                </h4>
+
                 <div class="col-md-12 contentdiv" style="height: 90%;">
 
                     <div id="kategorien">
@@ -87,13 +84,12 @@
 
 
             <div class="row" style=" height: 50%;">
-                <div class="col-md-12 contentHeadline" style="height:10%;">
-                    <p> wiederkehrende Transaktionen
-                        <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                            class="question-sign glyphicon glyphicon-question-sign">
-                            </span>
-                    </p>
-                </div>
+
+                <h4> wiederkehrende Transaktionen
+                    <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                        class="question-sign glyphicon glyphicon-question-sign">
+                        </span>
+                </h4>
                 <div class="col-md-12 contentdiv" style=" height:90%; overflow: auto;padding: 0; border-radius: 5px;">
                     <div>
                         <wiederkehrende-transaktionen-tabelle></wiederkehrende-transaktionen-tabelle>
