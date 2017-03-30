@@ -7,7 +7,11 @@
                 <th class = "categoryCol">Kategorie</th>
                 <th class = "descriptionCol">Beschreibung</th>
                 <th class = "emptyCol">	&nbsp;</th>
-                <th class = "emptyCol">	&nbsp;</th>
+                <th class = "emptyCol">
+                    <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </th>
             </tr>
         </thead>
         <tbody>

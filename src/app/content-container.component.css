@@ -1,9 +1,19 @@
 
+ @media (max-width: 800px) {
+     #top-container{
+         padding: 1em;
+         position: relative;
+         height: auto;
+         background-color: yellow;
+     }
+ }
+
 #top-container{
      padding: 1em;
     height: 300px;
     position: relative;
 }
+
 body, html{
     background: lightgray;
     height: 100%;
