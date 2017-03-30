@@ -68,19 +68,19 @@ body, html{
 
 #bottom-left-container{
     height: 90%;
-    overflow: auto;
+    
 }
 
 #bottom-right-container{
     height: 100%;
-   margin-bottom: 3em;
+   
     padding-left: 2em;
     padding-right: 2em;
 }
 
 #bottom-content-container{
-    height: 75%;
-    margin-bottom: 3em;
+    height: 70%;
+    
     padding: 1em; 
     
 }
