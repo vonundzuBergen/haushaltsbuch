@@ -5,11 +5,24 @@
     position: relative;
 }
 body, html{
-    background: darkgray;
+    background: lightgray;
+    height: 100%;
+    overflow: auto;
+
 }
 
-body, html, .container-fluid{
+.container-fluid{
     height: 100%;
+}
+
+.glyphicon{
+    color: 	 black;
+}
+
+.btn{
+    background: 	 #888888;
+    color: white;
+    border-color: #555555;
 }
 
 .contentdiv{
@@ -69,4 +82,19 @@ body, html, .container-fluid{
 
 #noPadding{
     padding: 0px;
+}
+ 
+body.loading #loadingModal {
+    display: block;
+}
+    
+#loadingModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8) url('./resources/gifs/wheel.gif') 50% 50% no-repeat;
 }

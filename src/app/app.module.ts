@@ -29,10 +29,11 @@ import { KategorienPanelComponent } from './kategorien-panel.component';
 import { PopoverModule } from 'ngx-popover';
 import { GetNameOfKategoriePipe } from './getNameOfKategoriePipe';
 import { LoadingService } from './loading.service';
+import { NavbarComponent } from './navbar.component';
 
 @NgModule({
   imports: [PopoverModule, BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
-  declarations: [GetNameOfKategoriePipe, KategorienPanelComponent, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
+  declarations: [NavbarComponent, GetNameOfKategoriePipe, KategorienPanelComponent, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
   providers: [LoadingService, WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
   bootstrap: [AppComponent]
 })
