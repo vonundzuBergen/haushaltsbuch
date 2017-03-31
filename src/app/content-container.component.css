@@ -27,7 +27,10 @@ body, html{
 
 .glyphicon{
     color: 	 black;
-    font-size: 0.5em !important; 
+    font-size: 1em; 
+}
+.glyphicon-question-sign{
+    font-size: 0.7em;
 }
 
 .btn{
@@ -62,9 +65,7 @@ body, html{
    
 }
 
-#bottom-content{
-    height: 100%;
-}
+
 
 #bottom-left-container{
     height: 90%;
@@ -72,7 +73,6 @@ body, html{
 
 #bottom-right-container{
     height: 100%;
-   
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -81,8 +81,8 @@ body, html{
     height: 70%;
     
     padding: 1em; 
-    
-}
+} 
+
 
 
 
@@ -121,4 +121,8 @@ body.loading #loadingModal {
     padding-bottom: 0em;
     height: 35%;
     
+}
+
+.popover{
+    z-index: 9999;
 }
