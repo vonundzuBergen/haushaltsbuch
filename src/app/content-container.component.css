@@ -1,13 +1,26 @@
 
- @media (max-width: 800px) {
+ @media (max-width: 1000px) {
      #top-container{
          padding: 1em;
          position: relative;
-         height: auto;
-         background-color: yellow;
+        height: auto;
      }
+
+     #top-content{
+        height: auto;
+        align-items: center;
+        justify-content: center;         
+     }
+
+     body, html{
+    background: lightgray;
+    height: 100%;
+
+    
+}
  }
 
+@media (min-width: 1000px) {
 #top-container{
      padding: 1em;
     height: 300px;
@@ -17,8 +30,6 @@
 body, html{
     background: lightgray;
     height: 100%;
-    
-
 }
 
 .container-fluid{
@@ -27,7 +38,7 @@ body, html{
 
 .glyphicon{
     color: 	 black;
-    font-size: 0.5em !important; 
+    font-size: 1em !important; 
 }
 
 .btn{
@@ -78,7 +89,7 @@ body, html{
 }
 
 #bottom-content-container{
-    height: 70%;
+    height: 65%;
     
     padding: 1em; 
     
@@ -122,3 +133,4 @@ body.loading #loadingModal {
     height: 35%;
     
 }
+ }
