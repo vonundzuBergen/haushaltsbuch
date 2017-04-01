@@ -1,66 +1,83 @@
-
-<style>
-    body {
-        overflow: hidden;
-    }
-    
-    body.loading #loadingModal {
-        display: block;
-    }
-    
-    #loadingModal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba( 255, 255, 255, .8) url('./resources/gifs/wheel.gif') 50% 50% no-repeat;
-    }
-</style>
-
 <div id="loadingModal" [style.display]="showLoading ? 'block' : 'none'"></div>
 
 <neue-transaktion-modal></neue-transaktion-modal>
-
+<info-box></info-box>
 <div class="container-fluid" (onShowLoading)="onShowLoading($event)">
     <div class="row row-eq-height" id="top-container">
+
         <div class="col-md-4" id="top-content">
-            <div class="col-md-12 contentdiv border5" id="noPadding">
+
+            <h4> Gesamtüberblick
+                <span popover=" Im Gesamtüberblick werden dir deine in der Transaktionentabelle eingetragenen Einahmen und Ausgaben angezeigt. 
+                                Im unteren Teil des Überblicks ist dein Saldo, also die Differenz zwischen Einnahmen und Ausgaben angezeigt. " 
+                                popoverPlacement="bottom" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                                class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
+            <div class="col-md-12 contentdiv  topheight noPadding">
                 <div>
                     <cashflow-overview-panel></cashflow-overview-panel>
                 </div>
-                <div class="question-sign">
-                    <span popover="Hello popover" popoverPlacement="left" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
-                    </span>
-                </div>
             </div>
         </div>
+
         <div class="col-md-3" id="top-content">
-            <div class="col-md-12 contentdiv border5" id="piechart">
+
+            <h4> Ausgaben nach Kategorien
+                <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                    class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
+
+            <div class="col-md-12 contentdiv  topheight" id="piechart">
                 <pie-chart></pie-chart>
             </div>
         </div>
+
         <div class="col-md-5" id="top-content">
-            <div class="col-md-12 contentdiv border5" id="linechart">
+
+            <h4> Einnahmen- und Ausgabenverlauf
+                <span popover="Robert stinkt nach Hund" popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
+                    class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
+
+            <div class="col-md-12 contentdiv topheight" id="linechart">
                 <line-chart></line-chart>
             </div>
         </div>
     </div>
     <div class="row row-eq-height" id="bottom-content-container">
-        <div class="col-md-7 " id="bottom-left-container">
-            <div class="col-md-12 contentdiv border5" id="transaktabelle">
+        <div class="col-md-7" id="bottom-left-container">
+
+            <h4> Transaktionen
+                <span popover=" In der Transaktionentabelle werden alle deine getätigten Transaktionen angezeigt. Die farbliche Markierung weißt auf Einnahme (grün) oder Ausgabe(rot) hin. 
+                                Eine neue Transaktion kann über das Plus-Symbol in der oberen rechten Ecke eingestellt werden. 
+                                Bestehende Transaktionen können editiert (Stift-Symbol) und gelöscht(X) werden. " 
+                                popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
+            </h4>
+
+            <div class="col-md-12 contentdiv" id="transaktabelle">
                 <div>
                     <transaktionen-tabelle></transaktionen-tabelle>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-5 contentFrame border5" id="bottom-right-container">
-            <div class="row" style="height: 40%">
-                <div class="col-md-12 contentdiv" style="border-radius: 5px; margin-bottom: 1em; overflow: auto;">
-                    <div id="kategorien" style="padding: 1em; padding-bottom: 0em;">
+        <div class="col-md-5 contentFrame " id="bottom-right-container">
+            <div class="row" style="height: 37%;margin-bottom:3%;">
+
+                <h4> Kategorien
+                    <span popover=" Durch die Zuordnung von Kategorien zu deinen Transaktionen, erhälst du einen guten Überblick über deine Hauptausgabe- und einnahmefelder.
+                                    Kategorien können erst gelöscht werden, wenn sie in keiner Transaktion vorkommen. "
+                                    popoverPlacement="bottom" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                        </span>
+                </h4>
+
+                <div class="col-md-12 contentdiv" style="height: 90%;">
+
+                    <div id="kategorien">
                         <neue-kategorie-modal></neue-kategorie-modal>
                     </div>
                     <div>
@@ -68,20 +85,27 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="height: 5%"></div>
-            <div class="row" style="margin-bottom: 0em; height: 55%;">
-                <div class="col-md-12 contentdiv" style=" overflow: auto;padding: 0; border-radius: 5px;">
+
+
+            <div class="row" style=" height: 50%;">
+
+                <h4> Zukünftige Transaktionen
+                    <span popover=" Die zukünftige Transaktionentabelle bietet dir die Möglichkeit, kommende Transaktionen schon vorab zu speichern 
+                                    und geben dir Planungssicherheit. Zudem kannst du hier auch Zahlung, welche in einer bestimmten Frequenz auftreten einspeichern. 
+                                    Diese werden dann automatisch für dich in die Transaktionentabelle überführt. Neue Transaktionen können über das Plus-Symbol in der
+                                    oberen rechten Ecke der Tabelle erstellt werden. Bestehende zukünftige Transaktionen können editiert (Stift-Symbol) und gelöscht(X) werden. "
+                                    popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                        </span>
+                </h4>
+                <div class="col-md-12 contentdiv" style=" height:90%; overflow: auto;padding: 0;">
                     <div>
                         <wiederkehrende-transaktionen-tabelle></wiederkehrende-transaktionen-tabelle>
                     </div>
-                    <div style="margin: 1em;">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#neueKategorieModal">
-                            Neue Transaktion Modal
-                        </button>
-                    </div>
+
                 </div>
             </div>
+
         </div>
+
     </div>
 </div>
-

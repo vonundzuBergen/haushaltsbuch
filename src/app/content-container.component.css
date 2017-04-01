@@ -1,72 +1,157 @@
 
-#top-container{
-    padding: 1em;
-    height: 250px;
-    position: relative;
-}
-body, html{
-    background: darkgray;
-}
+ @media (max-width: 1000px) {
+     #top-container{
+        padding: 1em;
+        position: relative;
+        height: auto;
+     }
 
-body, html, .container-fluid{
-    height: 100%;
-}
+     #top-content{
+        height: auto;
+        align-items: center;
+        justify-content: center;         
+     }
 
-.contentdiv{
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.9);
-    height: 100%;
-    margin-top: 1 em; 
-}
+    body, html{
+        background: lightgray;
+        height: 100%;
+    }
 
-.contentFrame{
-    overflow: hidden;
-    height: 100%;
-    margin-top: 1 em; 
-}
+    .contentdiv{
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.9);
+        height: 100%;
+        border-radius: 5px;
+    }
 
-#top-content{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    #transaktabelle{
+        border-radius: 5px; 
+        padding: 0em;
+    }
 
-#bottom-content{
-    height: 100%;
-}
+    #bottom-left-container{
+        height: 90%;
+        padding: 2em;
+        padding-top: 0em;
+    }
 
-#bottom-left-container{
-    height: 100%;
-    overflow: auto;
-}
+    .noPadding{
+        padding: 0px;
+    }
 
-#bottom-right-container{
-    height: 100%;
-    overflow: auto;
-    padding-left: 2em;
-    padding-right: 2em;
-}
+    #bottom-right-container{
+        height: 100%;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
 
-#bottom-content-container{
-    height: 70%;
-    margin-bottom: 1em;
-    padding: 1em;  
-}
+    #kategorien{
+        padding: 1em; 
+        padding-bottom: 0em;
+        height: 35%;
+    }   
+ }
 
-.border5{
-    border-radius: 5px;
-}
+@media (min-width: 1000px) {
+    #top-container{
+        padding: 1em;
+        height: 300px;
+        position: relative;
+    }
 
-#transaktabelle{
-    border-radius: 5px; 
-    padding: 0px;
-}
+    body, html{
+        background: lightgray;
+        height: 100%;
+    }
 
-.question-sign{
-    text-align: right;
-}
+    .container-fluid{
+        height: 100%;
+    }
 
-#noPadding{
-    padding: 0px;
-}
+    .glyphicon{
+        color: 	 black;
+        font-size: 1em !important; 
+    }
+
+    .btn{
+        background: 	 #888888;
+        color: white;
+        border-color: #555555;
+    }
+
+    .contentdiv{
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.9);
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .topheight{
+        height: 90%;
+    }
+
+    .contentFrame{
+        overflow: hidden;
+        height: 100%;
+    }
+
+    #top-content{
+        height: 100%;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    #bottom-content{
+        height: 100%;
+    }
+
+    #bottom-left-container{
+        height: 90%;
+    }
+
+    #bottom-right-container{
+        height: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #bottom-content-container{
+        height: 65%;
+        padding: 1em; 
+    }
+
+    #transaktabelle{
+        border-radius: 5px; 
+        padding: 0px;
+        height: 95%;
+    }
+
+    .question-sign{
+        text-align: right;
+    }
+
+    .noPadding{
+        padding: 0px;
+    }
+    
+    body.loading #loadingModal {
+        display: block;
+    }
+        
+    #loadingModal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba( 255, 255, 255, .8) url('./resources/gifs/wheel.gif') 50% 50% no-repeat;
+    }
+
+    #kategorien{
+        padding: 1em; 
+        padding-bottom: 0em;
+        height: 35%;
+    }
+ }

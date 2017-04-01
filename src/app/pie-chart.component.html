@@ -1,5 +1,11 @@
 <div style="display: block;">
-    <canvas style="height:400px" *ngIf="pieChartData.length > 1"
+    <chart style="display: block; height: 220px; width: auto;" id="pieChart" [options]="options" (load)="saveInstance($event.context)">
+    </chart>
+</div>
+
+<!--
+<div style="display: block;" *ngIf="!isKategorienLoading && !isTransaktionenLoading">
+    <canvas style="height:400px"
         baseChart 
         [data]="pieChartData" 
         [labels]="pieChartLabels" 
@@ -9,3 +15,4 @@
         >
     </canvas>
 </div>
+-->

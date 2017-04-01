@@ -99,7 +99,7 @@
                                 </div>
                         </div>
                         <fieldset class="form-group row">
-                            <div *ngIf="isUpdateWiederkehrendeZahlung" class="col-sm-10">
+                            <div *ngIf="!isUpdateTransaktion" class="col-sm-10">
                                 <div class="form-check" *ngFor="let t of transaktionsHaeufigkeiten">
                                     <label class="form-check-label">
                                         <input type="radio"  
@@ -112,9 +112,9 @@
                                 </div>
                             </div>
                         </fieldset>
-                        <div class="row">
+                        <div *ngIf="!isUpdateTransaktion" class="row">
                             <label *ngIf="!isWiederkehrendeZahlung" class="col-2 col-form-label">Datum*</label>
-                            <label *ngIf="isWiederkehrendeZahlung" class="col-2 col-form-label">Start Datum*</label> 
+                            <label *ngIf="isWiederkehrendeZahlung" class="col-2 col-form-label">Start/Next Datum*</label> 
                             <div style="width: 50%">                           
                                     <my-date-picker 
                                     [options]="myStartDatePickerOptions" 
@@ -124,8 +124,13 @@
                             </div>
                         </div>
                         <div class="row" *ngIf="isWiederkehrendeZahlung">
-                        <label class="col-2 col-form-label">End Datum</label>  
-                            <div style="width: 50%">
+                            <div class="form-check">
+                                <label class="col-2 col-form-label">
+                                    <input formControlName="hasEndDatum" class="form-check-input" type="checkbox" [checked]="hasEndDatum" (change)="onHasEndDatumChanged($event)">
+                                    End Datum
+                                </label>
+                            </div> 
+                            <div style="width: 50%" *ngIf="hasEndDatum">
                                 <my-date-picker
                                 [options]="myEndDatePickerOptions" 
                                 (dateChanged)="onEndDateChanged($event)"
@@ -137,7 +142,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" (click)="clearForm()" data-dismiss="modal">Schliessen</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schliessen</button>
                 <button type="button"  data-dismiss="modal" class="btn btn-primary" [disabled]="!form.valid" (click)="onSubmit()" >Speichern</button>
             </div>
         </div>

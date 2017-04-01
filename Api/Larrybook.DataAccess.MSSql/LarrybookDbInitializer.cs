@@ -30,7 +30,7 @@ namespace Larrybook.DataAccess.MSSql
             var dateToday = DateTime.Now;
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy asrvsvfafds",
                 Betrag = 11.88m,
                 Datum = dateToday,
                 IsEinnahme = true,
@@ -41,7 +41,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy asrvsvfafds",
                 Betrag = 32.45m,
                 Datum = dateToday.AddDays(-5),
                 IsEinnahme = false,
@@ -52,7 +52,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdsh <vfafds",
+                Beschreibung = "fdshvfafds",
                 Betrag = 24.56m,
                 Datum = dateToday.AddDays(-4),
                 IsEinnahme = true,
@@ -63,7 +63,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy asrvs vfafds",
                 Betrag = 255,
                 Datum = dateToday.AddDays(-1),
                 IsEinnahme = false,
@@ -74,7 +74,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy asrvs fafds",
                 Betrag = 13,
                 Datum = dateToday.AddDays(-2),
                 IsEinnahme = false,
@@ -85,7 +85,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy asrvsfafds",
                 Betrag = 5,
                 Datum = dateToday.AddDays(-1),
                 IsEinnahme = false,
@@ -93,7 +93,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy asrvsafds",
                 Betrag = 8.78m,
                 Datum = dateToday.AddDays(-1),
                 IsEinnahme = false,
@@ -101,7 +101,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy asrvsafds",
                 Betrag = 5,
                 Datum = dateToday.AddDays(-8),
                 IsEinnahme = true,
@@ -117,7 +117,7 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxy aafds",
                 Betrag = 5,
                 Datum = dateToday.AddDays(-6),
                 IsEinnahme = true,
@@ -125,12 +125,174 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
+                Beschreibung = "fdshabhhvxafds",
                 Betrag = 5,
                 Datum = dateToday.AddDays(-5),
                 IsEinnahme = true,
                 Kategorie = kat1
             });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 25,
+                Datum = dateToday.AddDays(-5),
+                IsEinnahme = true,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5.3m,
+                Datum = dateToday.AddDays(-11),
+                IsEinnahme = true,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 15,
+                Datum = dateToday.AddDays(-10),
+                IsEinnahme = true,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5,
+                Datum = dateToday.AddDays(-1),
+                IsEinnahme = true,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5,
+                Datum = dateToday.AddDays(-7),
+                IsEinnahme = true,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5,
+                Datum = dateToday.AddDays(-6),
+                IsEinnahme = true,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5,
+                Datum = dateToday.AddDays(-5),
+                IsEinnahme = true,
+                Kategorie = kat4
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5,
+                Datum = dateToday.AddDays(-5),
+                IsEinnahme = true,
+                Kategorie = kat7
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5.56m,
+                Datum = dateToday.AddDays(-2),
+                IsEinnahme = true,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "fdshabhhvxafds",
+                Betrag = 5,
+                Datum = dateToday.AddDays(-9),
+                IsEinnahme = true,
+                Kategorie = kat6
+            });
+
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 13,
+                IsEinnahme = false,
+                Frequenz = 0,
+                StartDatum = DateTime.Now.AddDays(3),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 1,
+                StartDatum = DateTime.Now.AddDays(5),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat4
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 1,
+                StartDatum = DateTime.Now.AddDays(11),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat3
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = false,
+                Frequenz = 2,
+                StartDatum = DateTime.Now.AddDays(10),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat2
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 1,
+                StartDatum = DateTime.Now.AddDays(1),
+                EndDatum = DateTime.Now.AddDays(50),
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 0,
+                StartDatum = DateTime.Now.AddDays(2),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 3,
+                StartDatum = DateTime.Now.AddDays(5),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 3,
+                StartDatum = DateTime.Now.AddDays(2),
+                EndDatum = DateTime.Now.AddDays(35),
+                Kategorie = kat1
+            });
+
             base.Seed(context);
         }
     }

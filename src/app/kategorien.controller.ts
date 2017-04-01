@@ -32,6 +32,8 @@ export class KategorienController {
             t.push(kategorie);
             this._kategorienSource.next(t);
 
+            console.log(t);
+
             this._loadingService.showLoading(false);
         }, (error) => {
             console.log(error);
@@ -68,8 +70,13 @@ export class KategorienController {
         obs.subscribe(res => {
             let t: Kategorie[] = this._kategorienSource.getValue();
 
+            //console.log(t);
+
             let index = t.map(x => x.KategorieId).indexOf(id, 0);
+            console.log(index);
             t.splice(index, 1);
+
+            console.log(t);
 
             this._kategorienSource.next(t);
             this._loadingService.showLoading(false);

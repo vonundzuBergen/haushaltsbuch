@@ -51,16 +51,16 @@
   <ItemGroup>
     <Compile Include="Mapping\KategorieMapper.cs" />
     <Compile Include="Mapping\TransaktionMapper.cs" />
-    <Compile Include="Mapping\WiederkehrendeTransaktionMapper.cs" />
+    <Compile Include="Mapping\ZukuenftigeTransaktionMapper.cs" />
     <Compile Include="Models\Kategorie.cs" />
     <Compile Include="Repositories\KategorieRepository.cs" />
     <Compile Include="LarrybookContext.cs" />
     <Compile Include="LarrybookDbInitializer.cs" />
     <Compile Include="Models\Transaktion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\WiederkehrendeTransaktion.cs" />
+    <Compile Include="Models\ZukuenftigeTransaktion.cs" />
     <Compile Include="Repositories\TransaktionRepository.cs" />
-    <Compile Include="Repositories\WiederkehrendeTransaktionRepository.cs" />
+    <Compile Include="Repositories\ZukuenftigeTransaktionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

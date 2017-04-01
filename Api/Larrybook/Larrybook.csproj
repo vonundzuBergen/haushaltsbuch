@@ -168,7 +168,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\KategorienController.cs" />
     <Compile Include="Controllers\TransaktionenController.cs" />
-    <Compile Include="Controllers\WiederkehrendeTransaktionenController.cs" />
+    <Compile Include="Controllers\ZukuenftigeTransaktionenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

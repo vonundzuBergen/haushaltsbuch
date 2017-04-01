@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TransaktionService.cs" />
-    <Compile Include="WiederkehrendeTransaktionService.cs" />
+    <Compile Include="ZukuenftigeTransaktionService.cs" />
     <Compile Include="KategorieService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

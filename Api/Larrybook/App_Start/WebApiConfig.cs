@@ -49,7 +49,7 @@ namespace Larrybook
             builder.ContainerName = "DefaultContainer";
             var transaktionen = builder.EntitySet<TransaktionBiz>("Transaktionen");
             var kategorien = builder.EntitySet<KategorieBiz>("Kategorien");
-            var wiederkehrendeTransaktionen = builder.EntitySet<WiederkehrendeTransaktionBiz>("WiederkehrendeTransaktionen");
+            var zukuenftigeTransaktionen = builder.EntitySet<ZukuenftigeTransaktionBiz>("ZukuenftigeTransaktionen");
 
             //transaktionen.HasRequiredBinding(x => x.Kategorie, kategorien);
             var edmModel = builder.GetEdmModel();

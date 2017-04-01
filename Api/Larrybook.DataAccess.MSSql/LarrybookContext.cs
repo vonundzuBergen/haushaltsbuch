@@ -16,7 +16,7 @@ namespace Larrybook.DataAccess.MSSql
 
         public DbSet<Kategorie> Kategorien { get; set; }
         public DbSet<Transaktion> Transaktionen { get; set; }
-        public DbSet<WiederkehrendeTransaktion> WiederkehrendeTransaktionen { get; set; }
+        public DbSet<ZukuenftigeTransaktion> ZukuenftigeTransaktionen { get; set; }
 
     }
 }
