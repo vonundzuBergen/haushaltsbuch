@@ -1,5 +1,10 @@
 
  @media (max-width: 1000px) {
+    .glyphicon{
+        color: 	 #5b5b5b;
+        font-size: 1em !important; 
+    }
+
      #top-container{
         padding: 1em;
         position: relative;
@@ -27,6 +32,7 @@
     #transaktabelle{
         border-radius: 5px; 
         padding: 0em;
+        overflow: auto;
     }
 
     #bottom-left-container{
@@ -69,7 +75,7 @@
     }
 
     .glyphicon{
-        color: 	 black;
+        color: 	 #5b5b5b;
         font-size: 1em !important; 
     }
 
@@ -88,11 +94,6 @@
 
     .topheight{
         height: 90%;
-    }
-
-    .contentFrame{
-        overflow: hidden;
-        height: 100%;
     }
 
     #top-content{
@@ -124,6 +125,7 @@
         border-radius: 5px; 
         padding: 0px;
         height: 95%;
+        overflow: auto;
     }
 
     .question-sign{

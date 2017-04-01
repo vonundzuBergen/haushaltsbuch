@@ -1,24 +1,4 @@
-
-
 table {
         width: 100%;
     }
 
-td.amountCol, th.amountCol{
-    width: 15%;
-}
-
-td.dateCol, th.dateCol{
-    width: 15%;
-}
-
-td.categoryCol, th.categoryCol{
-    width: 15%;
-}
-
-td.descriptionCol, th.descriptionCol{
-    width: 40%;
-}
-td.emptyCol, th.emptyCol{
-    width: 7.5%;
-}

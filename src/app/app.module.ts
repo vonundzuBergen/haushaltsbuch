@@ -34,11 +34,12 @@ import { InfoBoxComponent } from './info-box.component';
 import { InfoBoxService } from './info-box.service';
 import { CheckEndDatePipe } from './checkEndDatePipe';
 import { ChartModule } from 'angular2-highcharts';
+import { LOCALE_ID } from '@angular/core';
 
 @NgModule({
   imports: [ChartModule.forRoot(require('highcharts')), PopoverModule, BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
   declarations: [CheckEndDatePipe, InfoBoxComponent, GetNameOfKategoriePipe, KategorienPanelComponent, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
-  providers: [DatePipe, InfoBoxService, LoadingService, WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
+  providers: [{ provide: LOCALE_ID, useValue: "de-DE" }, DatePipe, InfoBoxService, LoadingService, WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
