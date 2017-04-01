@@ -21,18 +21,14 @@ export class TransaktionenController {
     }
 
     addTransaktion(transaktion: Transaktion) {
+        this._loadingService.showLoading(true);
+
         let obs = this._transaktionenService.post(transaktion);
 
         obs.subscribe(res => {
-            let obs = this._transaktionenService.put(transaktion);
-
             let t: Transaktion[] = this._transaktionenSource.getValue();
 
             transaktion.TransaktionId = res.TransaktionId;
-
-            console.log(res.TransaktionId);
-            console.log(res.KategorieId);
-            console.log(t);
 
             t.push(transaktion);
             this._transaktionenSource.next(t);
@@ -46,10 +42,10 @@ export class TransaktionenController {
     }
 
     updateTransaktion(transaktion: Transaktion) {
+        this._loadingService.showLoading(true);
         let obs = this._transaktionenService.put(transaktion);
 
         obs.subscribe(res => {
-            this._loadingService.showLoading(true);
 
             let t = this._transaktionenSource.getValue();
             let index = t.map(x => x.TransaktionId).indexOf(transaktion.TransaktionId, 0);
@@ -65,11 +61,11 @@ export class TransaktionenController {
     }
 
     deleteTransaktion(id: number) {
+        this._loadingService.showLoading(true);
+
         let obs = this._transaktionenService.delete(id);
 
         obs.subscribe(res => {
-            this._loadingService.showLoading(true);
-
             let t = this._transaktionenSource.getValue();
 
             let index = t.map(x => x.TransaktionId).indexOf(id, 0);
@@ -86,10 +82,11 @@ export class TransaktionenController {
     }
 
     getAllTransaktionen() {
+        this._loadingService.showLoading(true);
+
         let obs = this._transaktionenService.getAll();
 
         obs.subscribe(res => {
-            this._loadingService.showLoading(true);
 
             let t = new Array<Transaktion>();
             res.map(x => {
@@ -97,7 +94,7 @@ export class TransaktionenController {
                 t.push(x);
             });
             this._transaktionenSource.next(t);
-
+            console.log(t);
             this._loadingService.showLoading(false);
         }, (error) => {
             console.log(error);

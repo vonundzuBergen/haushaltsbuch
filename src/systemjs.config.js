@@ -23,6 +23,8 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       "ngx-popover": "node_modules/ngx-popover",
+      'angular2-highcharts': 'node_modules/angular2-highcharts',
+      'highcharts': 'node_modules/highcharts',
 
       // other libraries
       'rxjs': 'npm:rxjs',
@@ -41,6 +43,15 @@
       "ng2-charts": { main: "ng2-charts.js", defaultExtension: "js" },
       'ng2-datepicker': { main: './ng2-datepicker.js', defaultExtension: 'js' },
       "ngx-popover": { "main": "index.js", "defaultExtension": "js" },
+
+      highcharts: {
+        main: './highcharts.js',
+        defaultExtension: 'js'
+      },
+      'angular2-highcharts': {
+        main: './index.js',
+        defaultExtension: 'js'
+      }
     }
   });
 })(this);

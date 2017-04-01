@@ -17,35 +17,40 @@ export class PieChartService {
             let frequency = 0;
 
             transaktion.forEach(t => {
-                if (t.KategorieId == kategorien[i].KategorieId) {
-                    frequency++;
+                if (t.KategorieId == kategorien[i].KategorieId && t.IsEinnahme == false) {
+                    frequency += t.Betrag;
                 }
             });
 
-            if(frequency == 0){
+            if (frequency == 0) {
                 continue;
             }
 
+            kategorienFreq.push({ name: kategorien[i].Name, y: frequency });
+
+
+            /*
             if (((frequency / transaktion.length) * 100) < 5) {
 
-                if(kategorienFreq.length < 1){
-                    kategorienFreq.push({ KategorieName: "Sonstige", AnzahlTransaktionen: frequency });
+                if (kategorienFreq.length < 1) {
+                    kategorienFreq.push({ name: "Sonstige", y: frequency });
                 }
-                else if (kategorienFreq.find(x => x.KategorieName == "Sonstige")) {
+                else if (kategorienFreq.find(x => x.name == "Sonstige")) {
 
                     console.log("Sonstige");
-                    let entry = kategorienFreq.find(x => x.KategorieName == "Sonstige");
+                    let entry = kategorienFreq.find(x => x.name == "Sonstige");
                     let index = kategorienFreq.indexOf(entry);
-                    kategorienFreq[index].AnzahlTransaktionen += frequency;
+                    kategorienFreq[index].y += frequency;
 
                 }
                 else {
-                    kategorienFreq.push({ KategorieName: "Sonstige", AnzahlTransaktionen: frequency });                    
+                    kategorienFreq.push({ name: "Sonstige", y: frequency });
                 }
             }
             else {
-                kategorienFreq.push({ KategorieName: kategorien[i].Name, AnzahlTransaktionen: frequency });
+                kategorienFreq.push({ name: kategorien[i].Name, y: frequency });
             }
+            */
         }
 
         console.log(kategorienFreq);

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { ContentContainerComponent } from './content-container.component';
@@ -29,12 +30,15 @@ import { KategorienPanelComponent } from './kategorien-panel.component';
 import { PopoverModule } from 'ngx-popover';
 import { GetNameOfKategoriePipe } from './getNameOfKategoriePipe';
 import { LoadingService } from './loading.service';
-import { NavbarComponent } from './navbar.component';
+import { InfoBoxComponent } from './info-box.component';
+import { InfoBoxService } from './info-box.service';
+import { CheckEndDatePipe } from './checkEndDatePipe';
+import { ChartModule } from 'angular2-highcharts';
 
 @NgModule({
-  imports: [PopoverModule, BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
-  declarations: [NavbarComponent, GetNameOfKategoriePipe, KategorienPanelComponent, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
-  providers: [LoadingService, WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
+  imports: [ChartModule.forRoot(require('highcharts')), PopoverModule, BrowserModule, ChartsModule, RouterModule, MyDatePickerModule, HttpModule, FormsModule, ReactiveFormsModule],
+  declarations: [CheckEndDatePipe, InfoBoxComponent, GetNameOfKategoriePipe, KategorienPanelComponent, WiederkehrendeTransaktionenTabelleComponent, AppComponent, ContentContainerComponent, NeueTransaktionModalComponent, TransaktionenTabelleComponent, PieChartComponent, CashflowOverviewPanelComponent, LineChartComponent, NeueKategorieModalComponent],
+  providers: [DatePipe, InfoBoxService, LoadingService, WiederkehrendeTransaktionenController, WiederkehrendeTransaktionenService, PieChartService, TransaktionenService, KategorienService, LineChartService, CashflowOverviewPanelService, TransaktionenController, KategorienController, NeueTransaktionModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

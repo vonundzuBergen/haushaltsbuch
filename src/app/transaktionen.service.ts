@@ -14,7 +14,9 @@ export class TransaktionenService {
     constructor(private http: Http) {
     }
 
-    put(transaktion: Transaktion): Observable<Transaktion[]> {
+    put(transaktion: Transaktion): Observable<Transaktion> {
+
+        console.log(transaktion);
 
         let bodyString = JSON.stringify(transaktion);
         let headers = new Headers({ 'Content-Type': 'application/json' });

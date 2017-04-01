@@ -32,10 +32,20 @@ export class TransaktionenTabelleComponent implements OnInit {
                 this.transaktionen = transaktionen.sort((a, b) => {
                     if (a.Datum > b.Datum)
                         return -1;
-                    else if (a.Datum === b.Datum)
-                        return 0;
-                    else
+                    else if (a.Datum < b.Datum)
                         return 1;
+
+                    if (a.Betrag > b.Betrag)
+                        return -1;
+                    else if (a.Betrag < b.Betrag)
+                        return 1;
+
+                    if (a.Beschreibung < b.Beschreibung)
+                        return -1;
+                    else if (a.Beschreibung > b.Beschreibung)
+                        return 1;
+                    else
+                        return 0;
                 });
             }
         );
@@ -45,6 +55,7 @@ export class TransaktionenTabelleComponent implements OnInit {
     }
 
     editTransaktion(transaktion: Transaktion) {
+        console.log("in editTransaktion");
         this._neueTransaktionModalService.updateTransaktion(transaktion);
     }
 

@@ -9,17 +9,17 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class WiederkehrendeTransaktionenService {
 
-    private baseUrl = "/app/wiederkehrendeTransaktionen.json";
+    private baseUrl = "http://localhost:34408/api/ZukuenftigeTransaktionen";
 
     constructor(private http: Http) {
     }
 
-    put(transaktion: WiederkehrendeTransaktion): Observable<WiederkehrendeTransaktion[]> {
+    put(transaktion: WiederkehrendeTransaktion): Observable<WiederkehrendeTransaktion> {
 
         let bodyString = JSON.stringify(transaktion);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        let url = `${this.baseUrl}/${transaktion.id}`;
+        let url = `${this.baseUrl}(${transaktion.ZukuenftigeTransaktionId})`;
 
         return this.http
             .put(url, bodyString, options)
@@ -27,11 +27,11 @@ export class WiederkehrendeTransaktionenService {
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
-    post(transaktion: WiederkehrendeTransaktion): Observable<WiederkehrendeTransaktion[]> {
+    post(transaktion: WiederkehrendeTransaktion): Observable<WiederkehrendeTransaktion> {
         let bodyString = JSON.stringify(transaktion); // Stringify payload
         let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
         let options = new RequestOptions({ headers: headers }); // Create a request option
-        let url = `${this.baseUrl}/${transaktion.id}`;
+        let url = `${this.baseUrl}`;
 
         return this.http
             .post(url, bodyString, options) // ...using post request
@@ -40,7 +40,7 @@ export class WiederkehrendeTransaktionenService {
     }
 
     delete(id: number): Observable<WiederkehrendeTransaktion[]> {
-        let url = `${this.baseUrl}/${id}`;
+        let url = `${this.baseUrl}(${id})`;
 
         return this.http
             .delete(url)
@@ -63,7 +63,16 @@ export class WiederkehrendeTransaktionenService {
 
         return this.http
             .get(url)
-            .map(response => response.json().transaktionen)
+            .map(this.extractDate)
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+
+    private extractDate(res: Response) {
+        var data = res.json().value || [];
+        data.forEach((d: any) => {
+            d.StartDatum = new Date(d.StartDatum);
+            d.EndDatum = new Date(d.EndDatum);
+        });
+        return data;
     }
 }

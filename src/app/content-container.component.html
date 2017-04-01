@@ -1,9 +1,8 @@
 <div id="loadingModal" [style.display]="showLoading ? 'block' : 'none'"></div>
 
 <neue-transaktion-modal></neue-transaktion-modal>
-
+<info-box></info-box>
 <div class="container-fluid" (onShowLoading)="onShowLoading($event)">
-    <navbar></navbar>
     <div class="row row-eq-height" id="top-container">
 
         <div class="col-md-4" id="top-content">
@@ -15,7 +14,7 @@
                                 class="question-sign glyphicon glyphicon-question-sign">
                     </span>
             </h4>
-            <div class="col-md-12 contentdiv  topheight" id="noPadding">
+            <div class="col-md-12 contentdiv  topheight noPadding">
                 <div>
                     <cashflow-overview-panel></cashflow-overview-panel>
                 </div>

@@ -21,6 +21,8 @@ export class KategorienController {
     }
 
     addKategorie(kategorie: Kategorie) {
+        this._loadingService.showLoading(true);
+
         let obs = this._kategorienService.post(kategorie);
 
         obs.subscribe(res => {
@@ -31,14 +33,20 @@ export class KategorienController {
             this._kategorienSource.next(t);
 
             console.log(t);
+
+            this._loadingService.showLoading(false);
+        }, (error) => {
+            console.log(error);
+            this._loadingService.showLoading(false);
         });
     }
 
     updateKategorie(kategorie: Kategorie) {
+        this._loadingService.showLoading(true);
+
         let obs = this._kategorienService.put(kategorie);
 
         obs.subscribe(res => {
-            this._loadingService.showLoading(true);
 
             let t = this._kategorienSource.getValue();
 
@@ -55,15 +63,20 @@ export class KategorienController {
     }
 
     deleteKategorie(id: number) {
+        this._loadingService.showLoading(true);
+
         let obs = this._kategorienService.delete(id);
 
         obs.subscribe(res => {
-            this._loadingService.showLoading(true);
-
             let t: Kategorie[] = this._kategorienSource.getValue();
 
+            //console.log(t);
+
             let index = t.map(x => x.KategorieId).indexOf(id, 0);
+            console.log(index);
             t.splice(index, 1);
+
+            console.log(t);
 
             this._kategorienSource.next(t);
             this._loadingService.showLoading(false);
@@ -80,7 +93,6 @@ export class KategorienController {
         let obs = this._kategorienService.getAll();
 
         obs.subscribe(res => {
-            this._loadingService.showLoading(true);
 
             let t = new Array<Kategorie>();
 

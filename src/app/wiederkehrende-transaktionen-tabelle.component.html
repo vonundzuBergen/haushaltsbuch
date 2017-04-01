@@ -2,46 +2,41 @@
     <table id="transaktionen-table" class="table table-hover table-bordered">
         <thead>
             <tr>
-                <th>
-                    <span popover="Hellsadfsdfsadfffffff asdf lj asdflk jd er" popoverPlacement="left" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true"
-                        class="question-sign glyphicon glyphicon-question-sign">
-                    </span>
-                </th>
                 <th>Betrag</th>
-                <th>Datum</th>
+                <th>Start Datum</th>
                 <th>End Datum</th>
                 <th>Kategorie</th>
                 <th>Beschreibung</th>
+                <th></th>
                 <th>
-                    <span popover="Hellsadfsdfsadfffffff asdf lj asdflk jd er" popoverPlacement="left" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true"
+                    <span popover="Hellsadfsdfsadfffffff asdf lj asdflk jd er" popoverPlacement="left" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
                         class="question-sign glyphicon glyphicon-question-sign">
-                    </span>
-                </th>
-                <th>
-                    <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
-                        <span class="glyphicon glyphicon-plus"></span>
-                    </a>
+                        </span>
+
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.isEinnahme" [class.danger]="!transaktion.isEinnahme">
-                <th scope="row">{{transaktion.betrag}} €</th>
-                <td>{{("0" + transaktion.startDay).slice(-2)}}/{{("0" + transaktion.startMonth).slice(-2)}}/{{transaktion.startYear}}</td>
-                <td>{{("0" + transaktion.endDay).slice(-2)}}/{{("0" + transaktion.endMonth).slice(-2)}}/{{transaktion.endYear}}</td>
-                <td>{{transaktion.kategorie}}</td>
-                <td>{{transaktion.beschreibung}}</td>
-                <td>
+            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.IsEinnahme" [class.danger]="!transaktion.IsEinnahme">
+                <th scope="row">{{transaktion.Betrag}} €</th>
+                <td>{{transaktion.StartDatum | date}}</td>
+                <td>{{transaktion.EndDatum | checkEndDate}}</td>
+                <td>{{transaktion.KategorieId | getName: kategorien}}</td>
+                <td>{{transaktion.Beschreibung}}</td>
+                <td class="emptyCol">
                     <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
                         <span class="glyphicon glyphicon-edit"></span>
                     </a>
                 </td>
-                <td>
-                    <a href="#">
+                <td class="emptyCol">
+                    <a href="#" (click)="deleteTransaktion(transaktion)">
                         <span class="glyphicon glyphicon-remove"></span>
                     </a>
                 </td>
             </tr>
         </tbody>
     </table>
+    <div class="plus">
+        <span class="glyphicon glyphicon-plus" style="right: 0"></span>
+    </div>
 </div>
