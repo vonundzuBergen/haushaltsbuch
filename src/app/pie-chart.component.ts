@@ -10,7 +10,8 @@ declare var $: any;
 
 @Component({
     selector: 'pie-chart',
-    templateUrl: '/app/pie-chart.component.html'
+    templateUrl: '/app/pie-chart.component.html',
+    styleUrls: ['./app/pie-chart.component.css']
 })
 export class PieChartComponent implements AfterViewInit {
 

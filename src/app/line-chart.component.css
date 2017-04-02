@@ -1,0 +1,10 @@
+#line-chart-component{
+    display: block;
+}
+
+#lineChart{
+    padding-top: 1em; 
+    display: block; 
+    height: 220px; 
+    width: auto;
+}

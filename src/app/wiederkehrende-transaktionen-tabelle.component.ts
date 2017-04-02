@@ -29,7 +29,8 @@ export class WiederkehrendeTransaktionenTabelleComponent implements OnInit {
 
         _transaktionenController.transaktionen$.subscribe(
             transaktionen => {
-                this.transaktionen = transaktionen.sort((a, b) => {
+                this.transaktionen = transaktionen.slice();
+                this.transaktionen = this.transaktionen.sort((a, b) => {
                     if (a.StartDatum > b.StartDatum)
                         return 1;
                     else if (a.StartDatum < b.StartDatum)

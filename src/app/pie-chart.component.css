@@ -1,0 +1,9 @@
+#pieDiv{
+    display: block;
+}
+
+#piechart{
+    height: 220px;
+    width: auto;
+    display: block;
+}

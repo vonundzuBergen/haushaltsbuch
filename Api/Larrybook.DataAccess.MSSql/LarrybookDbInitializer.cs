@@ -292,7 +292,46 @@ namespace Larrybook.DataAccess.MSSql
                 EndDatum = DateTime.Now.AddDays(35),
                 Kategorie = kat1
             });
-
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 3,
+                StartDatum = DateTime.Now.AddDays(-2),
+                EndDatum = DateTime.Now.AddDays(35),
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 3,
+                StartDatum = DateTime.Now,
+                EndDatum = DateTime.Now.AddDays(35),
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 34,
+                IsEinnahme = true,
+                Frequenz = 3,
+                StartDatum = DateTime.Now.AddDays(-10),
+                EndDatum = DateTime.Now.AddDays(35),
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "halofsdhbsda",
+                Betrag = 99.99m,
+                IsEinnahme = false,
+                Frequenz = 2,
+                StartDatum = DateTime.Now.AddDays(-25),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat4
+            });
             base.Seed(context);
         }
     }

@@ -72,7 +72,6 @@ export class TransaktionenController {
             t.splice(index, 1);
 
             this._transaktionenSource.next(t);
-
             this._loadingService.showLoading(false);
 
         }, (error) => {
@@ -87,14 +86,53 @@ export class TransaktionenController {
         let obs = this._transaktionenService.getAll();
 
         obs.subscribe(res => {
+            console.log("starting");
 
             let t = new Array<Transaktion>();
             res.map(x => {
                 x.Datum = x.Datum
                 t.push(x);
             });
-            this._transaktionenSource.next(t);
+            console.log("fertig");
             console.log(t);
+
+            this._transaktionenSource.next(t);
+            this._loadingService.showLoading(false);
+        }, (error) => {
+            console.log(error);
+            this._loadingService.showLoading(false);
+        });
+    }
+    getFilteredTransaktionen(numberOfDays: number) {
+        this._loadingService.showLoading(true);
+
+        let obs = this._transaktionenService.getAll();
+
+        obs.subscribe(res => {
+
+            let cutOffDatum: Date = new Date();
+            cutOffDatum.setDate(cutOffDatum.getDate() - numberOfDays);
+            let cutOffDatumAsDate = new Date(cutOffDatum.getFullYear(), cutOffDatum.getMonth(), cutOffDatum.getDate());
+
+            console.log("cutOffDatumAsDate")
+            console.log(cutOffDatumAsDate);
+
+            console.log("starting");
+            console.log("cutOffDatumAsDate")
+            console.log(cutOffDatumAsDate);
+            let t = new Array<Transaktion>();
+            res.map(x => {
+                if (x.Datum >= cutOffDatumAsDate) {
+                    t.push(x);
+                } else {
+                    console.log(x.Datum)
+                    console.log(cutOffDatum)
+                }
+            });
+            console.log("fertig");
+            console.log(t);
+
+            this._transaktionenSource.next(t);
             this._loadingService.showLoading(false);
         }, (error) => {
             console.log(error);

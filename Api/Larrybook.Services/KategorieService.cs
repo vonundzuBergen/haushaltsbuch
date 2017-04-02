@@ -24,6 +24,8 @@ namespace Larrybook.Services
 
         public List<KategorieBiz> GetAll()
         {
+            Common.UpdateTransaktionenTables();
+
             return _kategorieRepository.GetAll();
         }
 

@@ -19,6 +19,8 @@ namespace Larrybook.Services
 
         public List<TransaktionBiz> GetAll()
         {
+            Common.UpdateTransaktionenTables();
+
             return _transaktionRepository.GetAll();
         }
 
@@ -35,6 +37,21 @@ namespace Larrybook.Services
         public bool Delete(int id)
         {
             return _transaktionRepository.Delete(id);
+        }
+
+        private void UpdateTransaktionenTables()
+        {
+            //Check for zukuenftige transaktionen with startdate today or in past 
+            
+            //create new transaktion and add to transaktionen table 
+
+            //if was einmalig, delete from zukuenftige transaktionen 
+
+            //else check if there is another transaktion to come 
+
+            //if yes, adjust start date to date of next transaktion 
+
+            //if no delete 
         }
     }
 }

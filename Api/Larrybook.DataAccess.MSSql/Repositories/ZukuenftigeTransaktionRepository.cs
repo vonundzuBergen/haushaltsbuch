@@ -2,6 +2,7 @@
 using Larrybook.DomainModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,9 +39,10 @@ namespace Larrybook.DataAccess.MSSql.Repositories
             var mapper = new ZukuenftigeTransaktionMapper();
             var transaktion = mapper.MapFromDomainModel(transaktionBiz);
 
-            _context.ZukuenftigeTransaktionen.Attach(transaktion);
-            var entry = _context.Entry(transaktion);
-            entry.State = System.Data.Entity.EntityState.Modified;
+            _context.Set<ZukuenftigeTransaktion>().AddOrUpdate(transaktion);
+            //_context.ZukuenftigeTransaktionen.Attach(transaktion);
+            //var entry = _context.Entry(transaktion);
+            //entry.State = System.Data.Entity.EntityState.Modified;
             _context.SaveChanges();
 
             return transaktionBiz;
@@ -83,6 +85,24 @@ namespace Larrybook.DataAccess.MSSql.Repositories
 
             return false;
         }
+
+        public List<ZukuenftigeTransaktionBiz> GetOutdated()
+        {
+            var mapper = new ZukuenftigeTransaktionMapper();
+
+            var dateNow = DateTime.Now;
+            var transaktionen = _context.ZukuenftigeTransaktionen.Where(x => x.StartDatum.CompareTo(dateNow) < 1).ToList();
+            var mappedTransaktionen = new List<ZukuenftigeTransaktionBiz>();
+
+            foreach (var transaktion in transaktionen)
+            {
+                mappedTransaktionen.Add(mapper.MapToDomainModel(transaktion));
+            }
+
+            return mappedTransaktionen;
+        }
+
+
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
 

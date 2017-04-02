@@ -19,6 +19,8 @@ namespace Larrybook.Services
 
         public List<ZukuenftigeTransaktionBiz> GetAll()
         {
+            Common.UpdateTransaktionenTables();
+
             return _transaktionRepository.GetAll();
         }
 

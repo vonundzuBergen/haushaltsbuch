@@ -1,32 +1,14 @@
-<style>
-/* Color of invalid field */
-.has-error,
-.has-error .control-label,
-.has-error .help-block,
-.has-error .form-control-feedback {
-    color: #a94442;
-}
 
-/* Color of valid field */
-.has-success,
-.has-success .control-label,
-.has-success .help-block,
-.has-success .form-control-feedback {
-    color: #3c763d;
-}
-.form-group {
-    position: relative;
-}
-</style>
 
 <div class="modal fade" id="neueTransaktionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+                <h4 class="modal-title" *ngIf="!isUpdateTransaktion && !isUpdateZukuenftigeTransaktion"><b>Neue Transaktion</b></h4>
+                <h4 class="modal-title" *ngIf="isUpdateTransaktion || isUpdateZukuenftigeTransaktion"><b>Transaktion bearbeiten</b></h4>
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -115,7 +97,7 @@
                         <div *ngIf="!isUpdateTransaktion" class="row">
                             <label *ngIf="!isWiederkehrendeZahlung" class="col-2 col-form-label">Datum*</label>
                             <label *ngIf="isWiederkehrendeZahlung" class="col-2 col-form-label">Start/Next Datum*</label> 
-                            <div style="width: 50%">                           
+                            <div class="width50">                           
                                     <my-date-picker 
                                     [options]="myStartDatePickerOptions" 
                                     (dateChanged)="onStartDateChanged($event)" 
@@ -130,7 +112,7 @@
                                     End Datum
                                 </label>
                             </div> 
-                            <div style="width: 50%" *ngIf="hasEndDatum">
+                            <div  class="width50" *ngIf="hasEndDatum">
                                 <my-date-picker
                                 [options]="myEndDatePickerOptions" 
                                 (dateChanged)="onEndDateChanged($event)"

@@ -1,13 +1,5 @@
-<div style="display: block;">
-    <canvas *ngIf="lineChartData.length > 1" 
-        baseChart
-        height="90"
-        [data]="lineChartData"
-        [labels]="lineChartLabels"
-        [options]="lineChartOptions"
-        [chartType]="lineChartType"
-        [colors]="lineChartColors"
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)">
-    </canvas>
+<div id="line-chart-component">
+    <chart id="lineChart" [options]="options" (load)="saveInstance($event.context)">
+    </chart>
 </div>
+
