@@ -52,6 +52,9 @@ Projektdateien:
   - ManuelleTestbeschreibung_G7.pdf
   - Projektbeschreibung_G7.pdf
   
+  Ordner "API" - Backend
+  
+  Ordner "src" - Frontend
                   
 
 
