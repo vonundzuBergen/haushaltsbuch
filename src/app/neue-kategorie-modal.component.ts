@@ -82,6 +82,8 @@ export class NeueKategorieModalComponent implements OnInit, OnDestroy {
     }
 
     addKategorie() {
+        console.log("name")
+        
         var name = this.form.controls['name'].value.trim().replace(/ +(?= )/g, '');
 
         if (this.kategorien.findIndex(x => x.Name === name) != -1) {
