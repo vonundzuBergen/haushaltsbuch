@@ -1,0 +1,8 @@
+<div id="kategorie-container">
+    <div *ngFor="let kategorie of kategorien" id="kategorie">
+        {{kategorie.Name}}
+        <a href="#" (click)="deleteKategorie(kategorie)">
+            <span class="glyphicon glyphicon-remove"></span>
+        </a>
+    </div>
+</div>

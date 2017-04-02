@@ -1,0 +1,21 @@
+/* Color of invalid field */
+.has-error,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .form-control-feedback {
+    color: #a94442;
+}
+
+/* Color of valid field */
+.has-success,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback {
+    color: #3c763d;
+}
+.form-group {
+    position: relative;
+}
+.width50{
+    width: 50%;
+}

@@ -1,0 +1,19 @@
+<form [formGroup]="form" class="form-inline">
+    <div class="form-group has-feedback row" 
+        [class.has-error]="!form.controls['name'].pristine && (nameIsTaken || !namePatternOk)"
+        [class.has-success]="!form.controls['name'].pristine && (!nameIsTaken && namePatternOk)">
+        <div class="col-10">
+            <label for="kategorieName" class="col-2 col-form-label">Neue Kategorie:</label>
+            <input type="text" formControlName="name" class="form-control " placeholder="Name" maxlength="15">
+            <button type="submit" [disabled]="!namePatternOk || nameIsTaken" (click)="addKategorie()" class="btn btn-primary">Speichern</button>
+        </div>
+    </div>
+    <div class="row" >
+        <small *ngIf="!this.form.controls['name'].pristine && (namePatternOk && nameIsTaken)">
+            Es existiert schon eine Kategorie mit diesem Namen.
+        </small>
+        <small *ngIf="!this.form.controls['name'].pristine && !namePatternOk">
+            Name muss zwischen 3 - 15 Zeichen beinhalten.
+        </small>
+    </div>
+</form>

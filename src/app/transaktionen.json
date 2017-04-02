@@ -1,0 +1,235 @@
+{
+    "transaktionen": [
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz2",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 18
+        },
+        {
+            "id": 1,
+            "isEinnahme": true,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 20
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz3",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 20
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz4",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 21
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz5",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 22
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "id": 1,
+            "isEinnahme": false,
+            "betrag": 100,
+            "kategorie": "xyz1",
+            "beschreibung": "beschreibung hier",
+            "year": 2017,
+            "month": 2,
+            "day": 23
+        }
+
+    ]
+}

@@ -1,0 +1,46 @@
+<div class="fixed-header">
+    <table id="transaktionen-table" class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center">Art</th> 
+                <th class="text-center">Betrag</th>
+                <th class="text-center">Start Datum</th>
+                <th class="text-center">End Datum</th>
+                <th class="text-center">Kategorie</th>
+                <th class="text-center">Beschreibung</th>
+                <th class="text-center"></th>
+                <th class="text-center">
+                    <a href="#" data-target="#neueTransaktionModal" data-toggle="modal">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaktion of transaktionen" [class.success]="transaktion.IsEinnahme" [class.danger]="!transaktion.IsEinnahme">
+                <td class="text-center">
+                    <img *ngIf="transaktion.Frequenz == 0" src="./resources/imgs/once.png">
+                    <img *ngIf="transaktion.Frequenz == 1" src="./resources/imgs/daily.png">
+                    <img *ngIf="transaktion.Frequenz == 2" src="./resources/imgs/weekly.png">
+                    <img *ngIf="transaktion.Frequenz == 3" src="./resources/imgs/monthly.png">
+                </td>
+                <td class="text-right" scope="row"><b>{{transaktion.Betrag | currency:'EUR':true:'1.2-2'}}</b></td>
+                <td class="text-right">{{transaktion.StartDatum | date}}</td>
+                <td class="text-right">{{transaktion.EndDatum | checkEndDate}}</td>
+                <td class="text-center">{{transaktion.KategorieId | getName: kategorien}}</td>
+                <td class="text-center">{{transaktion.Beschreibung}}</td>
+                <td class="text-center">
+                    <a href="#" (click)="editTransaktion(transaktion)" data-target="#neueTransaktionModal" data-toggle="modal">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                </td>
+                <td class="text-center">
+                    <a href="#" (click)="deleteTransaktion(transaktion)">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,17 @@
+<div id="cashflow-overview-panel">
+    <div class="Geldfluss" id="einnahmen">
+        <h3 align="center"> Einnahmen</h3>
+        <p class="text-center">
+            {{ gesamtEinnahmen | currency:'EUR':true:'1.2-2'}}
+        </p>
+    </div>
+    <div class="Geldfluss" id="ausgaben">
+        <h3 align="center"> Ausgaben</h3>
+        <p class="text-center">
+            {{gesamtAusgaben | currency:'EUR':true:'1.2-2'}}
+        </p>
+    </div>
+    <div id="saldo">
+        <p class="text-center" [class.positiverBetrag]="gesamtCashflow>=0" [class.negativerBetrag]="gesamtCashflow<0">{{ gesamtEinnahmen-gesamtAusgaben | currency:'EUR':true:'1.2-2'}}</p>
+    </div>
+</div>

@@ -1,0 +1,190 @@
+
+ @media (max-width: 1000px) {
+    .glyphicon{
+        color: 	 #5b5b5b;
+        font-size: 1em !important; 
+    }
+
+     #top-container{
+        padding: 1em;
+        position: relative;
+        
+     }
+
+     #top-content{
+        align-items: center;
+        justify-content: center;         
+     }
+
+    body, html{
+        background: lightgray;
+        height: 100%;
+    }
+
+    .contentdiv{
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.9);
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    #transaktabelle{
+        border-radius: 5px; 
+        padding: 0em;
+        overflow: auto;
+    }
+
+    #bottom-left-container{
+        height: 90%;
+        padding: 2em;
+        padding-top: 0em;
+    }
+
+    .noPadding{
+        padding: 0px;
+    }
+
+    #bottom-right-container{
+        height: 100%;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    #kategorien{
+        padding: 1em; 
+        padding-bottom: 0em;
+        height: 35%;
+    }   
+
+    .btn{
+        background: 	 #888888;
+        color: white;
+        border-color: #555555;
+    }
+
+        #catRow{
+        height: 37%;
+        margin-bottom:3%;
+    }
+    .bottom-right-content{
+        height: 90%; 
+        overflow: auto;
+    }
+    #ztransRow{
+        height: 50%;
+    }
+ }
+
+@media (min-width: 1000px) {
+    #top-container{
+        padding: 1em;
+        height: 300px;
+        position: relative;
+    }
+
+    #viewSwitch{
+        position: absolute; 
+        right: 1em;
+    }
+    body, html{
+        background: lightgray;
+        height: 100%;
+    }
+
+    .container-fluid{
+        height: 100%;
+    }
+
+    .glyphicon{
+        color: 	 #5b5b5b;
+        font-size: 1em !important; 
+    }
+
+    .btn{
+        background: 	 #888888;
+        color: white;
+        border-color: #555555;
+    }
+
+    .contentdiv{
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.9);
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .height90{
+        height: 90%;
+    }
+
+    #top-content{
+        height: 100%;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    #bottom-content{
+        height: 100%;
+    }
+
+
+
+    #bottom-right-container{
+        height: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #bottom-content-container{
+        height: 65%;
+        padding: 1em;
+        padding-bottom: 0; 
+    }
+
+    #transaktabelle{
+        border-radius: 5px; 
+        padding: 0px;
+        height: 95%;
+        overflow: auto;
+    }
+
+    .question-sign{
+        text-align: right;
+    }
+
+    .noPadding{
+        padding: 0px;
+    }
+    
+    body.loading #loadingModal {
+        display: block;
+    }
+        
+    #loadingModal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba( 255, 255, 255, .8) url('./resources/gifs/wheel.gif') 50% 50% no-repeat;
+    }
+
+    #kategorien{
+        padding: 1em; 
+        padding-bottom: 0em;
+        height: 35%;
+    }
+    #catRow{
+        height: 37%;
+        margin-bottom:3%;
+    }
+    .bottom-right-content{
+        height: 90%; 
+        overflow: auto;
+    }
+    #ztransRow{
+        height: 50%;
+    }
+ }

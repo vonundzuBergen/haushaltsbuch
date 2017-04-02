@@ -1,0 +1,45 @@
+
+#cashflow-overview-panel{
+    width: 100%;
+    height: 100%;
+}
+
+.positiverBetrag{
+    background: #c1e2b3;
+}
+
+.negativerBetrag{
+    background: #ebcccc;
+}
+
+.Geldfluss{
+    height: 122.5px;
+    width: 50%;
+    display: flex; 
+    display: inline-block;
+    
+}
+#saldo{
+    border-bottom-right-radius: 5px; 
+    border-bottom-left-radius: 5px;
+    height: 122.5px;
+    width: 100%;
+    font-size: 2.2em;
+    line-height: 122.5px;
+}
+
+#einnahmen{
+    float: left;
+    border-top-left-radius: 5px;
+    background: #dff0d8;
+}
+
+
+#ausgaben{
+    border-top-right-radius: 5px;
+    background: #f2dede;
+}
+
+p{
+    font-size: 2em;
+}
