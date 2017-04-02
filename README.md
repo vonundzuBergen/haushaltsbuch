@@ -32,5 +32,26 @@ Folgende Funktionen sind vorhanden:
 
 Projektdateien:
 
+  Ordner "Dokumentation": 
+  
+  - Projektbeschreibung (Projektbeschreibung_G7.pdf)
+  - Ordner "UI Prototyping"
+      - MockupDraftEbene1V01.jpg
+      - MockupDraftEbene2V01.jpg
+      - Mockup_DP_V0.1.png
+      - Mockup_FP_V0.1.png
+      - MockupDraftV0.2.jpg
+      - Mockup_V0.2.jpg
+      - Mockup_V1.0.jpg
+      - Mockup_Details_V1.0.jpg
+      - Persona_LarryLewis.pdf
+      - UseCase_Larrybook.pdf
+      - UserStories_Larrybook.pdf
+  - MVC_Larrybook.pdf
+  - REST_Larrybook.pdf
+  - ManuelleTestbeschreibung_G7.pdf
+  - Projektbeschreibung_G7.pdf
+  
+                  
 
 
