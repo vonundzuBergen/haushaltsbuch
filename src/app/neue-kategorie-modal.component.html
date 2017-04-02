@@ -8,7 +8,7 @@
             <button type="submit" [disabled]="!namePatternOk || nameIsTaken" (click)="addKategorie()" class="btn btn-primary">Speichern</button>
         </div>
     </div>
-    <div class="row" style="padding-top: 0.5em">
+    <div class="row" >
         <small *ngIf="!this.form.controls['name'].pristine && (namePatternOk && nameIsTaken)">
             Es existiert schon eine Kategorie mit diesem Namen.
         </small>

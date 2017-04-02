@@ -5,7 +5,7 @@ declare var $: any;
 @Component({
   selector: 'info-box',
   templateUrl: '/app/info-box.component.html',
-  styleUrls: ['app/kategorien-panel.component.css']
+  styleUrls: ['app/info-box.component.css']
 })
 export class InfoBoxComponent {
 

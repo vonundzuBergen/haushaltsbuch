@@ -1,18 +1,4 @@
-<div style="display: block;">
-    <chart style="display: block; height: 220px; width: auto;" id="pieChart" [options]="options" (load)="saveInstance($event.context)">
+<div id="pieDiv">
+    <chart id="piechart" [options]="options" (load)="saveInstance($event.context)">
     </chart>
 </div>
-
-<!--
-<div style="display: block;" *ngIf="!isKategorienLoading && !isTransaktionenLoading">
-    <canvas style="height:400px"
-        baseChart 
-        [data]="pieChartData" 
-        [labels]="pieChartLabels" 
-        [chartType]="pieChartType" 
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)"
-        >
-    </canvas>
-</div>
--->

@@ -8,11 +8,10 @@
      #top-container{
         padding: 1em;
         position: relative;
-        height: auto;
+        
      }
 
      #top-content{
-        height: auto;
         align-items: center;
         justify-content: center;         
      }
@@ -56,6 +55,24 @@
         padding-bottom: 0em;
         height: 35%;
     }   
+
+    .btn{
+        background: 	 #888888;
+        color: white;
+        border-color: #555555;
+    }
+
+        #catRow{
+        height: 37%;
+        margin-bottom:3%;
+    }
+    .bottom-right-content{
+        height: 90%; 
+        overflow: auto;
+    }
+    #ztransRow{
+        height: 50%;
+    }
  }
 
 @media (min-width: 1000px) {
@@ -65,6 +82,10 @@
         position: relative;
     }
 
+    #viewSwitch{
+        position: absolute; 
+        right: 1em;
+    }
     body, html{
         background: lightgray;
         height: 100%;
@@ -92,7 +113,7 @@
         border-radius: 5px;
     }
 
-    .topheight{
+    .height90{
         height: 90%;
     }
 
@@ -106,9 +127,7 @@
         height: 100%;
     }
 
-    #bottom-left-container{
-        height: 90%;
-    }
+
 
     #bottom-right-container{
         height: 100%;
@@ -118,7 +137,8 @@
 
     #bottom-content-container{
         height: 65%;
-        padding: 1em; 
+        padding: 1em;
+        padding-bottom: 0; 
     }
 
     #transaktabelle{
@@ -155,5 +175,16 @@
         padding: 1em; 
         padding-bottom: 0em;
         height: 35%;
+    }
+    #catRow{
+        height: 37%;
+        margin-bottom:3%;
+    }
+    .bottom-right-content{
+        height: 90%; 
+        overflow: auto;
+    }
+    #ztransRow{
+        height: 50%;
     }
  }

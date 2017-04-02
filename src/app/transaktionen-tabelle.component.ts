@@ -29,7 +29,8 @@ export class TransaktionenTabelleComponent implements OnInit {
 
         _transaktionenController.transaktionen$.subscribe(
             transaktionen => {
-                this.transaktionen = transaktionen.sort((a, b) => {
+                this.transaktionen = transaktionen.slice();                
+                this.transaktionen = this.transaktionen.sort((a, b) => {
                     if (a.Datum > b.Datum)
                         return -1;
                     else if (a.Datum < b.Datum)

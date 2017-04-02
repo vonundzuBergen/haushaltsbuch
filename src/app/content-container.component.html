@@ -4,78 +4,63 @@
 <info-box></info-box>
 <div class="container-fluid" (onShowLoading)="onShowLoading($event)">
     <div class="row row-eq-height" id="top-container">
-
         <div class="col-md-4" id="top-content">
-
-            <h4> Gesamtüberblick
-                <span popover=" Im Gesamtüberblick werden dir deine saldierten Einahmen und Ausgaben angezeigt."
-                            
-                                popoverPlacement="bottom" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                                class="question-sign glyphicon glyphicon-question-sign">
-                    </span>
+            <h4>
+                Gesamtüberblick
+                <span popover=" Im Gesamtüberblick werden dir deine saldierten Einahmen und Ausgaben angezeigt." popoverPlacement="bottom"
+                    [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                </span>
             </h4>
-            <div class="col-md-12 contentdiv  topheight noPadding">
+            <div class="col-md-12 contentdiv  height90 noPadding">
                 <div>
                     <cashflow-overview-panel></cashflow-overview-panel>
                 </div>
             </div>
         </div>
-
         <div class="col-md-3" id="top-content">
-
             <h4> Ausgaben nach Kategorien
-                <span popover="In diesem Diagramm kannst du den Anteil der Kategorien im Vergleich zu deinen Gesamtausgaben sehen." popoverPlacement="bottom" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                    class="question-sign glyphicon glyphicon-question-sign">
+                <span popover="In diesem Diagramm kannst du den Anteil der Kategorien im Vergleich zu deinen Gesamtausgaben sehen." popoverPlacement="bottom"
+                    [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
                     </span>
             </h4>
-
-            <div class="col-md-12 contentdiv  topheight" id="piechart">
+            <div class="col-md-12 contentdiv  height90" id="piechart">
                 <pie-chart></pie-chart>
             </div>
         </div>
-
         <div class="col-md-5" id="top-content">
-
             <h4> Einnahmen- und Ausgabenverlauf
-                <span popover="Das Diagramm zeigt dir den zeitlichen Verlauf deines Einnahme- und Ausgabesaldos." popoverPlacement="bottom" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true"
-                    class="question-sign glyphicon glyphicon-question-sign">
-                    </span>
+                <span popover="Das Diagramm zeigt dir den zeitlichen Verlauf deines Einnahme- und Ausgabesaldos." popoverPlacement="bottom"
+                    [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                </span>
             </h4>
-
-            <div class="col-md-12 contentdiv topheight" id="linechart">
+            <div class="col-md-12 contentdiv height90" id="linechart">
                 <line-chart></line-chart>
             </div>
         </div>
     </div>
     <div class="row row-eq-height" id="bottom-content-container">
-        <div class="col-md-7" id="bottom-left-container">
-
+        <div class="col-md-7 height90" >
             <h4> Transaktionen
                 <span popover="Die Tabelle zeigt dir deine getätigten Transaktionen an. Die farbliche Hervorhebung zeigt dir an, ob es sich um eine Einnahme oder eine Ausgabe handelt.
-                                Du kannst Transaktionen nachträglich bearbeiten oder löschen." 
-                                popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
-                    </span>
+                    Du kannst Transaktionen nachträglich bearbeiten oder löschen." popoverPlacement="right"
+                    [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                </span>
             </h4>
-
             <div class="col-md-12 contentdiv" id="transaktabelle">
                 <div>
                     <transaktionen-tabelle></transaktionen-tabelle>
                 </div>
             </div>
         </div>
-
         <div class="col-md-5 contentFrame " id="bottom-right-container">
-            <div class="row" style="height: 37%;margin-bottom:3%;">
-
+            <div class="row" id="catRow">
                 <h4> Kategorien
                     <span popover="Du kannst deine Ausgaben Kategorien zuordnen, die du selber erstellen kannst.
-                                    Kategorien können erst dann gelöscht werden, wenn ihnen keine Transaktion mehr zugeordnet ist."
-                                    popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
-                        </span>
+                        Kategorien können erst dann gelöscht werden, wenn ihnen keine Transaktion mehr zugeordnet ist."
+                        popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
                 </h4>
-
-                <div class="col-md-12 contentdiv" style="height: 90%; overflow: auto;">
-
+                <div class="col-md-12 contentdiv bottom-right-content">
                     <div id="kategorien">
                         <neue-kategorie-modal></neue-kategorie-modal>
                     </div>
@@ -84,25 +69,19 @@
                     </div>
                 </div>
             </div>
-
-
-            <div class="row" style=" height: 50%;">
-
+            <div class="row" id ="ztransRow">
                 <h4> Zukünftige Transaktionen
                     <span popover="In dieser Tabelle werden dir bevorstehende Transaktionen angezeigt. So kannst du schnell erkennen, welche Einnahmen oder Ausgaben 
-                                    dich als nächstes erwarten. Außerdem kannst du sehen, ob eine Transaktion einmalig oder regelmäßig ist."
-                                    popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
-                        </span>
+                        dich als nächstes erwarten. Außerdem kannst du sehen, ob eine Transaktion einmalig oder regelmäßig ist."
+                        popoverPlacement="right" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" class="question-sign glyphicon glyphicon-question-sign">
+                    </span>
                 </h4>
-                <div class="col-md-12 contentdiv" style=" height:90%; overflow: auto;padding: 0;">
+                <div class="col-md-12 contentdiv noPadding bottom-right-content">
                     <div>
                         <wiederkehrende-transaktionen-tabelle></wiederkehrende-transaktionen-tabelle>
                     </div>
-
                 </div>
             </div>
-
         </div>
-
     </div>
 </div>
