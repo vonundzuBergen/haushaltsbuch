@@ -43,7 +43,7 @@
                                     (keypress)="onChangeBetrag()">
                                 <span *ngIf="!form.controls['betrag'].pristine && form.controls['betrag'].valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
                                 <span *ngIf="!form.controls['betrag'].pristine && !form.controls['betrag'].valid" class="glyphicon glyphicon-remove form-control-feedback"></span>
-                                <div class='form-text has-error' *ngIf="form.controls['betrag'].touched && !form.controls['betrag'].valid">
+                                <div class='form-text has-error' *ngIf="!form.controls['betrag'].pristine && !form.controls['betrag'].valid">
                                     <div *ngIf="form.controls['betrag'].hasError('required')">Betrag darf nicht lehr sein.</div>
                                     <div *ngIf="form.controls['betrag'].hasError('pattern')">Der angegebene Betrag ist nicht gültig.</div>
                                 </div>

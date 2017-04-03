@@ -17,6 +17,10 @@ namespace Larrybook.DataAccess.MSSql.Repositories
             _context = new LarrybookContext();
         }
 
+        /// <summary>
+        /// Hallo
+        /// </summary>
+        /// <returns></returns>
         public List<KategorieBiz> GetAll()
         {
             var kategorien = _context.Kategorien.ToList();
@@ -32,6 +36,11 @@ namespace Larrybook.DataAccess.MSSql.Repositories
             return kategorienBiz;
         }
 
+        /// <summary>
+        /// Diese Methode macht
+        /// </summary>
+        /// <param name="kategorieBiz"></param>
+        /// <returns></returns>
         public KategorieBiz Update(KategorieBiz kategorieBiz)
         {
             var mapper = new KategorieMapper();
