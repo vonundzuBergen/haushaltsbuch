@@ -52,7 +52,12 @@ Projektdateien:
   - ManuelleTestbeschreibung_G7.pdf
   - Projektbeschreibung_G7.pdf
   
-  Ordner "API" - Backend
+  Ordner "API" 
+    - Backend
+    - Beispielhaft generierte Codedokumentation eines der Backendprojekte(Larrybook.DataAccess.MSSql): 
+      Das genutzte Programm ist "Sandcastel Help File Builder" und nutzt XML Documentation Tags im Code. 
+      api/code dokumentationa/help/index.html
+      
   
   Ordner "src" - Frontend
                   
