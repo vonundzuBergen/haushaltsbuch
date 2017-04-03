@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Larrybook.DataAccess.MSSql
 {
+    /// <summary>
+    /// Represents a Transaktion Entity as it is stored in the database.
+    /// </summary>
     [Table("Transaktion")]
     public class Transaktion
     {

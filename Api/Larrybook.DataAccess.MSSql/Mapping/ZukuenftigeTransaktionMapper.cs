@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Larrybook.DataAccess.MSSql.Mapping
 {
+    /// <summary>
+    /// Responsible for mapping ZukuenftigeTransaktionen between the service layer and the repository layer.
+    /// </summary>
     class ZukuenftigeTransaktionMapper
     {
         private KategorieRepository _kategorieRepository;

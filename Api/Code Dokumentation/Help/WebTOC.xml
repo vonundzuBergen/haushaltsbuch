@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="266a5beb-3471-4a28-b1e9-5746335353d2" Title="Larrybook.DataAccess.MSSql" Url="html/5284b8d8-d4b3-e812-0fb5-0b4017ecadb7.htm">
+    <HelpTOCNode Id="31292821-e3a9-4a10-b50b-e85bab423d45" Title="Kategorie Class" Url="html/618eb864-79a2-000f-c8cc-b6f6d42de23d.htm">
+      <HelpTOCNode Title="Kategorie Constructor " Url="html/2fa52fa3-9b79-7d0a-d414-bbb56fddb0e5.htm" />
+      <HelpTOCNode Title="Kategorie Methods" Url="html/46115c6f-95a1-2f8b-940d-6c2dd267124a.htm" />
+      <HelpTOCNode Id="2740512c-d23c-4ee0-bd83-cbce0929b81b" Title="Kategorie Properties" Url="html/7d92eea2-a7f8-0f98-1c68-aa24b5541aa9.htm">
+        <HelpTOCNode Title="KategorieId Property " Url="html/86aa51ac-df07-a546-5502-ca010953bf09.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/96b83021-cfe2-b3cf-a587-e960a1d97be6.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e5170e28-6e27-4dea-9229-7275bb5fe162" Title="LarrybookContext Class" Url="html/80869b50-fc72-f2ff-786b-5eeb31e0a8f3.htm">
+      <HelpTOCNode Title="LarrybookContext Constructor " Url="html/0a351e81-95e7-1790-a02f-9b7636921a8b.htm" />
+      <HelpTOCNode Title="LarrybookContext Methods" Url="html/19bee1b6-7874-21b8-4191-378aadecdb4a.htm" />
+      <HelpTOCNode Id="e78ad2f1-bd4a-4f98-b185-df2501173c2f" Title="LarrybookContext Properties" Url="html/fd688b90-8c68-9be0-225f-5c461e23bdd5.htm">
+        <HelpTOCNode Title="Kategorien Property " Url="html/03f7fbd5-3094-0409-fd7b-c601041976d6.htm" />
+        <HelpTOCNode Title="Transaktionen Property " Url="html/288aa2c1-a47f-d992-64c6-6b42f41b7158.htm" />
+        <HelpTOCNode Title="ZukuenftigeTransaktionen Property " Url="html/7d885cec-0cdd-e50b-15bb-b9b57621f65c.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="47c89e53-4218-48f5-ac80-cbf63d1d86fc" Title="Transaktion Class" Url="html/eb61efde-45c0-2ca8-5fc7-c6907a3754a1.htm">
+      <HelpTOCNode Title="Transaktion Constructor " Url="html/50c8c66b-e8ca-bf70-b289-56837e155631.htm" />
+      <HelpTOCNode Title="Transaktion Methods" Url="html/11d5dfb3-222d-c5d7-0aec-e7e3fdb1dbcd.htm" />
+      <HelpTOCNode Id="dceed364-2c06-425e-b92c-584dd3192cdf" Title="Transaktion Properties" Url="html/48712648-0460-9453-de9b-b4bc6506fdc0.htm">
+        <HelpTOCNode Title="Beschreibung Property " Url="html/8d67023e-d09c-f586-5fd8-9463edf4732a.htm" />
+        <HelpTOCNode Title="Betrag Property " Url="html/991b434e-51f2-64ae-07c1-700901f296d7.htm" />
+        <HelpTOCNode Title="Datum Property " Url="html/5628c3b4-613f-d78e-ffa6-5716e6e059ec.htm" />
+        <HelpTOCNode Title="IsEinnahme Property " Url="html/9b46599d-81b9-c14f-91e2-c60a36db942a.htm" />
+        <HelpTOCNode Title="Kategorie Property " Url="html/705051f5-f7be-9afb-7884-7460a6854326.htm" />
+        <HelpTOCNode Title="KategorieId Property " Url="html/944066b8-3cb8-fa72-819d-c65c42238905.htm" />
+        <HelpTOCNode Title="TransaktionId Property " Url="html/2fd02c0a-9f56-73e5-8809-6b24b9a8d5d1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fa62abfc-c09f-4fa5-a734-a2dcf54306b9" Title="ZukuenftigeTransaktion Class" Url="html/8a9391bd-a0bd-0a37-c2a7-659e3029f5d4.htm">
+      <HelpTOCNode Title="ZukuenftigeTransaktion Constructor " Url="html/2c639577-085f-9e6b-e119-80575f560a12.htm" />
+      <HelpTOCNode Title="ZukuenftigeTransaktion Methods" Url="html/6cdb21d2-ba3f-fecd-9504-9fca68c4300c.htm" />
+      <HelpTOCNode Id="8ff44e2c-c00f-4dc8-9622-58c68e26c8e1" Title="ZukuenftigeTransaktion Properties" Url="html/1a211006-7a4f-1d5c-c293-de277acc0dbf.htm">
+        <HelpTOCNode Title="Beschreibung Property " Url="html/1c554872-4ece-1ed2-0254-7cc409391fdb.htm" />
+        <HelpTOCNode Title="Betrag Property " Url="html/e897cd0d-26e9-17ae-b271-0e68c70de2b5.htm" />
+        <HelpTOCNode Title="EndDatum Property " Url="html/d548c7d1-c901-f978-86ae-e49186ba2ba6.htm" />
+        <HelpTOCNode Title="Frequenz Property " Url="html/1c45d0bc-fe3e-f423-a1a5-3206f94ed00d.htm" />
+        <HelpTOCNode Title="IsEinnahme Property " Url="html/f7a96761-bd79-5fb2-3cee-20135e96031d.htm" />
+        <HelpTOCNode Title="Kategorie Property " Url="html/7eceebd7-4e7e-ba80-f6d8-1b3a69b1aa9c.htm" />
+        <HelpTOCNode Title="KategorieId Property " Url="html/114deb1a-9029-ec15-9d0a-0b06fd3a7ccf.htm" />
+        <HelpTOCNode Title="StartDatum Property " Url="html/5b9c1864-6a72-78a3-9cab-c3ef7fa5848e.htm" />
+        <HelpTOCNode Title="ZukuenftigeTransaktionId Property " Url="html/ea27abc3-78a3-c6a4-9c4a-cf8235e3b9d2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a7be8f59-fa8a-439f-8c0b-4a9da86956dc" Title="Larrybook.DataAccess.MSSql.Repositories" Url="html/e05d3779-c7fc-c2b4-ba03-50590bd04b53.htm">
+    <HelpTOCNode Id="368f3d42-c193-497f-86a0-62fb8803f493" Title="KategorieRepository Class" Url="html/f10d0b52-befb-2044-1a7c-a9f4f31f15fc.htm">
+      <HelpTOCNode Title="KategorieRepository Constructor " Url="html/10d5a3ef-fced-7e8b-67c5-3c74df3432f2.htm" />
+      <HelpTOCNode Id="d381a92e-9aea-433b-aa80-46f2bb8c4fce" Title="KategorieRepository Methods" Url="html/a0ae68ac-3653-b2c0-c89a-225410f48605.htm">
+        <HelpTOCNode Title="Delete Method " Url="html/460008a8-c103-e31e-b194-da4a1d07f258.htm" />
+        <HelpTOCNode Id="de167e65-1036-433f-b90c-84cc8b27e060" Title="Dispose Method " Url="html/4d02f70b-f539-2ff3-f55f-7c6768119151.htm">
+          <HelpTOCNode Title="Dispose Method " Url="html/bd06edb0-20f9-e9c3-c13e-59ddabde50fc.htm" />
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/fc816e80-3ca2-3fcd-d638-ec1749e95013.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetAll Method " Url="html/01dbb590-c1f7-a19e-78bb-c6a4e94fbfc7.htm" />
+        <HelpTOCNode Title="Insert Method " Url="html/539d0293-eb93-43a8-504a-f0d48911dd28.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/8c92aff8-d1b9-c354-a2dc-8d2a8f015f1e.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="db16f622-26d0-46af-bb7b-62244fabe22a" Title="TransaktionRepository Class" Url="html/0bb1a2cc-82e1-7d46-99a7-07a41a623a18.htm">
+      <HelpTOCNode Title="TransaktionRepository Constructor " Url="html/32cb9f1d-b647-e65d-eb0b-e3d09b6015e6.htm" />
+      <HelpTOCNode Id="3ddc48d7-5f9e-47e3-b665-730b42d9d5a9" Title="TransaktionRepository Methods" Url="html/bb2551bd-3e3f-62ea-11a3-335aa7e7b6f0.htm">
+        <HelpTOCNode Title="Delete Method " Url="html/aab3dfde-aeb6-8262-4513-d048d2223bd4.htm" />
+        <HelpTOCNode Id="af5920b9-974b-44e2-b651-439b050f2b46" Title="Dispose Method " Url="html/c89dd112-41bd-b806-5eff-c55757780301.htm">
+          <HelpTOCNode Title="Dispose Method " Url="html/381de8d9-73f9-e710-3864-136a68afa682.htm" />
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/4dd9e8fc-8768-9b37-4a7e-9bcff4e149f3.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetAll Method " Url="html/c9da900c-b70b-cb6b-8fcd-ea17ebf4b035.htm" />
+        <HelpTOCNode Title="Insert Method " Url="html/1de17470-c0a9-7830-69db-9372fcd8872b.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/ff4da287-6cd7-80d3-cc4f-50c2e54dd08b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d98bcfc9-d0df-4d97-afbd-a4f25549095d" Title="ZukuenftigeTransaktionRepository Class" Url="html/44aac129-7a74-4633-a8d0-190b68aa4eb1.htm">
+      <HelpTOCNode Title="ZukuenftigeTransaktionRepository Constructor " Url="html/fad24d8f-8f28-3b82-c897-8bae5254e21f.htm" />
+      <HelpTOCNode Id="a7442f68-47c5-4edb-899c-93abc46f35ae" Title="ZukuenftigeTransaktionRepository Methods" Url="html/44d8f57e-b8d9-c570-1d2e-cb2c8dd5dd66.htm">
+        <HelpTOCNode Title="Delete Method " Url="html/90fd91bc-9fe5-21f4-3cb1-acdf88761ed0.htm" />
+        <HelpTOCNode Id="0afa065b-62fd-4db7-a3b5-562df2767e75" Title="Dispose Method " Url="html/ad17bb4a-8b5f-9d43-dc33-e5b36b306a75.htm">
+          <HelpTOCNode Title="Dispose Method " Url="html/b6cf2b96-2281-502f-c7ed-49b9498b5348.htm" />
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/85c8f470-bc0f-2002-4a59-158c58d97a11.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetAll Method " Url="html/1c707935-14fd-6b06-ac6b-786885117678.htm" />
+        <HelpTOCNode Title="GetOutdated Method " Url="html/5645e6bc-69ce-4827-9217-dc7561701123.htm" />
+        <HelpTOCNode Title="Insert Method " Url="html/82ae0283-f7da-62fb-901d-9bb0e00caf80.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/201cb290-c0db-2c7a-0fc8-1c5a7e6becea.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

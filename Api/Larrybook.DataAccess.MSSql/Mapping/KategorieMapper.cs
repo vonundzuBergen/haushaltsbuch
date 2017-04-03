@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Larrybook.DataAccess.MSSql.Mapping
 {
+    /// <summary>
+    /// Responsible for mapping Kategorien between the service layer and the repository layer.
+    /// </summary>
     class KategorieMapper
     {
         public KategorieBiz MapToDomainModel(Kategorie kategorie)

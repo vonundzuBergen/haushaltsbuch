@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Larrybook.DataAccess.MSSql
 {
+    /// <summary>
+    /// Represents the DbContext for connecting to the database.
+    /// </summary>
     public class LarrybookContext : DbContext
     {
         public LarrybookContext(): base("Name=mssql") 
