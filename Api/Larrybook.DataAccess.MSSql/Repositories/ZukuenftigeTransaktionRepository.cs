@@ -91,7 +91,16 @@ namespace Larrybook.DataAccess.MSSql.Repositories
             var mapper = new ZukuenftigeTransaktionMapper();
 
             var dateNow = DateTime.Now;
-            var transaktionen = _context.ZukuenftigeTransaktionen.Where(x => x.StartDatum.CompareTo(dateNow) < 1).ToList();
+            List<ZukuenftigeTransaktion> transaktionen;
+            try
+            {
+                transaktionen = _context.ZukuenftigeTransaktionen.Where(x => x.StartDatum.CompareTo(dateNow) < 1).ToList();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
             var mappedTransaktionen = new List<ZukuenftigeTransaktionBiz>();
 
             foreach (var transaktion in transaktionen)
