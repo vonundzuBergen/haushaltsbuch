@@ -27,6 +27,7 @@
     <HelpKINode Title="ZukuenftigeTransaktionRepository.GetAll Method " Url="html/1c707935-14fd-6b06-ac6b-786885117678.htm" />
   </HelpKINode>
   <HelpKINode Title="GetOutdated method" Url="html/5645e6bc-69ce-4827-9217-dc7561701123.htm" />
+  <HelpKINode Title="Init method" Url="html/d9eaf3c3-f7e4-9acc-b462-15329d760cde.htm" />
   <HelpKINode Title="Insert method">
     <HelpKINode Title="KategorieRepository.Insert Method " Url="html/539d0293-eb93-43a8-504a-f0d48911dd28.htm" />
     <HelpKINode Title="TransaktionRepository.Insert Method " Url="html/1de17470-c0a9-7830-69db-9372fcd8872b.htm" />
@@ -55,6 +56,16 @@
     <HelpKINode Title="Transaktion.KategorieId Property " Url="html/944066b8-3cb8-fa72-819d-c65c42238905.htm" />
     <HelpKINode Title="ZukuenftigeTransaktion.KategorieId Property " Url="html/114deb1a-9029-ec15-9d0a-0b06fd3a7ccf.htm" />
   </HelpKINode>
+  <HelpKINode Title="KategorieMapperTests class">
+    <HelpKINode Title="KategorieMapperTests Class" Url="html/8f9b1b14-56d9-00af-e723-256a566f721a.htm" />
+    <HelpKINode Title="about KategorieMapperTests class" Url="html/8f9b1b14-56d9-00af-e723-256a566f721a.htm" />
+    <HelpKINode Title="constructor" Url="html/c92b025f-bd4d-3068-193c-6bcf9ba57c0f.htm" />
+    <HelpKINode Title="methods" Url="html/13891a40-e784-04ff-f270-a53736be9267.htm" />
+  </HelpKINode>
+  <HelpKINode Title="KategorieMapperTests.Init method" Url="html/d9eaf3c3-f7e4-9acc-b462-15329d760cde.htm" />
+  <HelpKINode Title="KategorieMapperTests.KategorieMapperTests constructor" Url="html/c92b025f-bd4d-3068-193c-6bcf9ba57c0f.htm" />
+  <HelpKINode Title="KategorieMapperTests.MapFromDomainModel_ValidKategorieBiz_KategoriePropertiesSetCorrectly method" Url="html/3b320634-b820-ef9b-4a54-e8d5f4a5f9c9.htm" />
+  <HelpKINode Title="KategorieMapperTests.MapToDomainModel_ValidKategorie_KategorieBizPropertiesSetCorrectly method" Url="html/3c1ef727-b709-28c6-2e70-0ee9f2415892.htm" />
   <HelpKINode Title="Kategorien property" Url="html/03f7fbd5-3094-0409-fd7b-c601041976d6.htm" />
   <HelpKINode Title="KategorieRepository class">
     <HelpKINode Title="KategorieRepository Class" Url="html/f10d0b52-befb-2044-1a7c-a9f4f31f15fc.htm" />
@@ -71,6 +82,8 @@
   <HelpKINode Title="Larrybook.DataAccess.MSSql namespace" Url="html/5284b8d8-d4b3-e812-0fb5-0b4017ecadb7.htm" />
   <HelpKINode Title="Larrybook.DataAccess.MSSql.Kategorie class" Url="html/618eb864-79a2-000f-c8cc-b6f6d42de23d.htm" />
   <HelpKINode Title="Larrybook.DataAccess.MSSql.LarrybookContext class" Url="html/80869b50-fc72-f2ff-786b-5eeb31e0a8f3.htm" />
+  <HelpKINode Title="Larrybook.DataAccess.MSSql.Mapping namespace" Url="html/b18d2d7f-4a50-dd32-77da-e0cec438064c.htm" />
+  <HelpKINode Title="Larrybook.DataAccess.MSSql.Mapping.KategorieMapperTests class" Url="html/8f9b1b14-56d9-00af-e723-256a566f721a.htm" />
   <HelpKINode Title="Larrybook.DataAccess.MSSql.Repositories namespace" Url="html/e05d3779-c7fc-c2b4-ba03-50590bd04b53.htm" />
   <HelpKINode Title="Larrybook.DataAccess.MSSql.Repositories.KategorieRepository class" Url="html/f10d0b52-befb-2044-1a7c-a9f4f31f15fc.htm" />
   <HelpKINode Title="Larrybook.DataAccess.MSSql.Repositories.TransaktionRepository class" Url="html/0bb1a2cc-82e1-7d46-99a7-07a41a623a18.htm" />
@@ -88,6 +101,8 @@
   <HelpKINode Title="LarrybookContext.LarrybookContext constructor" Url="html/0a351e81-95e7-1790-a02f-9b7636921a8b.htm" />
   <HelpKINode Title="LarrybookContext.Transaktionen property" Url="html/288aa2c1-a47f-d992-64c6-6b42f41b7158.htm" />
   <HelpKINode Title="LarrybookContext.ZukuenftigeTransaktionen property" Url="html/7d885cec-0cdd-e50b-15bb-b9b57621f65c.htm" />
+  <HelpKINode Title="MapFromDomainModel_ValidKategorieBiz_KategoriePropertiesSetCorrectly method" Url="html/3b320634-b820-ef9b-4a54-e8d5f4a5f9c9.htm" />
+  <HelpKINode Title="MapToDomainModel_ValidKategorie_KategorieBizPropertiesSetCorrectly method" Url="html/3c1ef727-b709-28c6-2e70-0ee9f2415892.htm" />
   <HelpKINode Title="Name property" Url="html/96b83021-cfe2-b3cf-a587-e960a1d97be6.htm" />
   <HelpKINode Title="StartDatum property" Url="html/5b9c1864-6a72-78a3-9cab-c3ef7fa5848e.htm" />
   <HelpKINode Title="Transaktion class">
