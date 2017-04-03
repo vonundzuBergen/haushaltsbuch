@@ -100,7 +100,7 @@ export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
             transaktion => this.populateFormWithZukuenftigeTransaktion(transaktion)
         );
 
-        let betragRegex = /^\d+((,|.)\d{1,})?$/;
+        let betragRegex = /^\d+((,|.)\d{1,2})?$/;
         let beschreibungRegex = /^[a-z\d\-_,.\s]+$/i;
 
         this.form = this._fb.group({
