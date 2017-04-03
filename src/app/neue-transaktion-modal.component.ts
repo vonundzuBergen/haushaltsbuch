@@ -14,7 +14,7 @@ declare var $: any;
 @Component({
     selector: 'neue-transaktion-modal',
     templateUrl: '/app/neue-transaktion-modal.component.html',
-    styleUrls: ['/app/neue-transaktion-modal.component.css']
+    styleUrls: ['./app/neue-transaktion-modal.component.css']
 })
 export class NeueTransaktionModalComponent implements OnInit, OnDestroy {
 
