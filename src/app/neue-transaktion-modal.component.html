@@ -45,7 +45,7 @@
                                 <span *ngIf="!form.controls['betrag'].pristine && !form.controls['betrag'].valid" class="glyphicon glyphicon-remove form-control-feedback"></span>
                                 <div class='form-text has-error' *ngIf="!form.controls['betrag'].pristine && !form.controls['betrag'].valid">
                                     <div *ngIf="form.controls['betrag'].hasError('required')">Betrag darf nicht lehr sein.</div>
-                                    <div *ngIf="form.controls['betrag'].hasError('pattern')">Der angegebene Betrag ist nicht gültig.</div>
+                                    <div *ngIf="form.controls['betrag'].hasError('pattern')">Der angegebene Betrag ist nicht gültig. Es sind maximal 2 Nachkommstellen erlaubt.</div>
                                 </div>
                         </div>
                         <fieldset>
@@ -75,8 +75,8 @@
                                     placeholder="Beschreibung">
                                 <span *ngIf="!form.controls['beschreibung'].pristine && form.controls['beschreibung'].valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
                                 <span *ngIf="!form.controls['beschreibung'].pristine && !form.controls['beschreibung'].valid" class="glyphicon glyphicon-remove form-control-feedback"></span>
-                                <div class='form-text has-error' *ngIf="form.controls['beschreibung'].touched && !form.controls['beschreibung'].valid">
-                                    <div *ngIf="form.controls['beschreibung'].hasError('required')">Beschreibung darf nicht lehr sein.</div>
+                                <div class='form-text has-error' *ngIf="!form.controls['beschreibung'].pristine && !form.controls['beschreibung'].valid">
+                                    <div *ngIf="form.controls['beschreibung'].hasError('required')">Beschreibung darf nicht leer sein.</div>
                                     <div *ngIf="form.controls['beschreibung'].hasError('pattern')">Beschreibung darf nur alphanumerische Zeichen beinhalten.</div>
                                 </div>
                         </div>
@@ -112,7 +112,7 @@
                                     End Datum
                                 </label>
                             </div> 
-                            <div  class="width50" *ngIf="hasEndDatum">
+                            <div  class ="width50" *ngIf="hasEndDatum">
                                 <my-date-picker
                                 [options]="myEndDatePickerOptions" 
                                 (dateChanged)="onEndDateChanged($event)"

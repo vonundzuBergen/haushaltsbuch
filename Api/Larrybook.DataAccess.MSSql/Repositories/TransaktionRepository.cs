@@ -66,7 +66,14 @@ namespace Larrybook.DataAccess.MSSql.Repositories
                 return false;
 
             _context.Transaktionen.Remove(transaktion);
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
 
             transaktion = _context.Transaktionen.Find(id);
 
