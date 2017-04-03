@@ -15,7 +15,7 @@
 .Geldfluss{
     height: 122.5px;
     width: 50%;
-    display: flex; 
+     
     display: inline-block;
     
 }
@@ -26,6 +26,7 @@
     width: 100%;
     font-size: 2.2em;
     line-height: 122.5px;
+    display: inline-block;
 }
 
 #einnahmen{
