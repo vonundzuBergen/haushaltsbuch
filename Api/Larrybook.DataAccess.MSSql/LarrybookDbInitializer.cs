@@ -11,13 +11,14 @@ namespace Larrybook.DataAccess.MSSql
     {
         protected override void Seed(LarrybookContext context)
         {
-            var kat1 = new Kategorie() { Name = "Kateg1" };
-            var kat2 = new Kategorie() { Name = "Kateg324" };
-            var kat3 = new Kategorie() { Name = "Kategorie2345" };
-            var kat4 = new Kategorie() { Name = "Kategor324" };
-            var kat5 = new Kategorie() { Name = "Kategorie6432" };
-            var kat6 = new Kategorie() { Name = "Katego34c" };
-            var kat7 = new Kategorie() { Name = "Katego87z" };
+            var kat1 = new Kategorie() { Name = "Auto" };
+            var kat2 = new Kategorie() { Name = "Miete" };
+            var kat3 = new Kategorie() { Name = "Lebensmittel" };
+            var kat4 = new Kategorie() { Name = "Freizeit" };
+            var kat5 = new Kategorie() { Name = "Studium" };
+            var kat6 = new Kategorie() { Name = "Sonstiges" };
+            var kat7 = new Kategorie() { Name = "Ebay-Verkäufe" };
+            var kat8 = new Kategorie() { Name = "Gehalt" };
 
             context.Kategorien.Add(kat1);
             context.Kategorien.Add(kat2);
@@ -26,196 +27,188 @@ namespace Larrybook.DataAccess.MSSql
             context.Kategorien.Add(kat5);
             context.Kategorien.Add(kat6);
             context.Kategorien.Add(kat7);
+            context.Kategorien.Add(kat8);
 
             var dateToday = DateTime.Now;
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvsvfafds",
-                Betrag = 11.88m,
+                Beschreibung = "Bahnticket",
+                Betrag = 2.40m,
                 Datum = dateToday,
-                IsEinnahme = true,
+                IsEinnahme = false,
                 Kategorie = context.Kategorien.Add(new Kategorie()
                 {
-                    Name = "mdsaasuuc"
+                    Name = "Transport"
                 })
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvsvfafds",
-                Betrag = 32.45m,
+                Beschreibung = "Inspektion",
+                Betrag = 325.25m,
                 Datum = dateToday.AddDays(-5),
                 IsEinnahme = false,
-                Kategorie = context.Kategorien.Add(new Kategorie()
-                {
-                    Name = "23f"
-                })
+                Kategorie = kat1
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshvfafds",
-                Betrag = 24.56m,
-                Datum = dateToday.AddDays(-4),
+                Beschreibung = "Lohnsteuererrückzahlung 2016",
+                Betrag = 456.50m,
+                Datum = dateToday.AddDays(-18),
                 IsEinnahme = true,
                 Kategorie = context.Kategorien.Add(new Kategorie()
                 {
-                    Name = "azusdbf"
+                    Name = "Sondereinkommen"
                 })
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs vfafds",
-                Betrag = 255,
+                Beschreibung = "Döner",
+                Betrag = 4.50m,
                 Datum = dateToday.AddDays(-1),
                 IsEinnahme = false,
-                Kategorie = context.Kategorien.Add(new Kategorie()
-                {
-                    Name = "pffsa"
-                })
+                Kategorie = kat3
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvs fafds",
-                Betrag = 13,
+                Beschreibung = "Buch Einführung in die WI",
+                Betrag = 22.50m,
                 Datum = dateToday.AddDays(-2),
                 IsEinnahme = false,
-                Kategorie = context.Kategorien.Add(new Kategorie()
-                {
-                    Name = "asfzv"
-                })
+                Kategorie = kat5
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvsfafds",
-                Betrag = 5,
+                Beschreibung = "Wahlkampfspende",
+                Betrag = 250.00m,
                 Datum = dateToday.AddDays(-1),
                 IsEinnahme = false,
-                Kategorie = kat1
+                Kategorie = kat6
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvsafds",
-                Betrag = 8.78m,
+                Beschreibung = "Rewe Einkauf",
+                Betrag = 45.50m,
                 Datum = dateToday.AddDays(-1),
                 IsEinnahme = false,
-                Kategorie = kat1
+                Kategorie = kat3
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxy asrvsafds",
-                Betrag = 5,
+                Beschreibung = "Computerspiel",
+                Betrag = 59.99m,
                 Datum = dateToday.AddDays(-8),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxy asrvs <vfafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-7),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxy aafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-6),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-5),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 25,
-                Datum = dateToday.AddDays(-5),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5.3m,
-                Datum = dateToday.AddDays(-11),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 15,
-                Datum = dateToday.AddDays(-10),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-1),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-7),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-6),
-                IsEinnahme = true,
-                Kategorie = kat1
-            });
-            context.Transaktionen.Add(new Transaktion()
-            {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-5),
-                IsEinnahme = true,
+                IsEinnahme = false,
                 Kategorie = kat4
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5,
-                Datum = dateToday.AddDays(-5),
+                Beschreibung = "Waschanlage",
+                Betrag = 14.99m,
+                Datum = dateToday.AddDays(-7),
+                IsEinnahme = false,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Verkauf alter DVDs",
+                Betrag = 20.65m,
+                Datum = dateToday.AddDays(-6),
                 IsEinnahme = true,
                 Kategorie = kat7
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5.56m,
-                Datum = dateToday.AddDays(-2),
+                Beschreibung = "Zinszahlung Girokonto",
+                Betrag = 5.78m,
+                Datum = dateToday.AddDays(-5),
                 IsEinnahme = true,
+                Kategorie = kat6
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Kneipenbesuch",
+                Betrag = 25.00m,
+                Datum = dateToday.AddDays(-5),
+                IsEinnahme = false,
+                Kategorie = kat4
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Parkticket",
+                Betrag = 1.75m,
+                Datum = dateToday.AddDays(-11),
+                IsEinnahme = false,
                 Kategorie = kat1
             });
             context.Transaktionen.Add(new Transaktion()
             {
-                Beschreibung = "fdshabhhvxafds",
-                Betrag = 5,
+                Beschreibung = "Musik-CD",
+                Betrag = 15,
+                Datum = dateToday.AddDays(-10),
+                IsEinnahme = false,
+                Kategorie = kat4
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Bußgeld Geschwindigkeitsüberschreitung",
+                Betrag = 15.00m,
+                Datum = dateToday.AddDays(-1),
+                IsEinnahme = false,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Leuchtmittel vorne links",
+                Betrag = 65,
+                Datum = dateToday.AddDays(-17),
+                IsEinnahme = false,
+                Kategorie = kat1
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Konzertbesuch",
+                Betrag = 45,
+                Datum = dateToday.AddDays(-6),
+                IsEinnahme = false,
+                Kategorie = kat4
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Eis",
+                Betrag = 1.5m,
+                Datum = dateToday.AddDays(-5),
+                IsEinnahme = false,
+                Kategorie = kat3
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Urlaub Mallorca",
+                Betrag = 580,
+                Datum = dateToday.AddDays(-15),
+                IsEinnahme = false,
+                Kategorie = kat4
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Tanzkurs",
+                Betrag = 80,
+                Datum = dateToday.AddDays(-2),
+                IsEinnahme = false,
+                Kategorie = kat4
+            });
+            context.Transaktionen.Add(new Transaktion()
+            {
+                Beschreibung = "Tankfüllung",
+                Betrag = 58.59m,
                 Datum = dateToday.AddDays(-9),
-                IsEinnahme = true,
-                Kategorie = kat6
+                IsEinnahme = false,
+                Kategorie = kat1
             });
 
             context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
             {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 13,
+                Beschreibung = "Abschlussrate PKW",
+                Betrag = 2080,
                 IsEinnahme = false,
                 Frequenz = 0,
                 StartDatum = DateTime.Now.AddDays(3),
@@ -224,113 +217,53 @@ namespace Larrybook.DataAccess.MSSql
             });
             context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
             {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 1,
+                Beschreibung = "Spotify",
+                Betrag = 4.99m,
+                IsEinnahme = false,
+                Frequenz = 3,
                 StartDatum = DateTime.Now.AddDays(5),
-                EndDatum = new DateTime(2000, 1, 1),
+                EndDatum = DateTime.Now.AddDays(75),
                 Kategorie = kat4
             });
             context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
             {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
+                Beschreibung = "Lohn",
+                Betrag = 2200,
                 IsEinnahme = true,
-                Frequenz = 1,
-                StartDatum = DateTime.Now.AddDays(11),
+                Frequenz = 3,
+                StartDatum = DateTime.Now.AddDays(-4),
                 EndDatum = new DateTime(2000, 1, 1),
-                Kategorie = kat3
+                Kategorie = kat8
             });
             context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
             {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
+                Beschreibung = "Miete",
+                Betrag = 650,
                 IsEinnahme = false,
-                Frequenz = 2,
-                StartDatum = DateTime.Now.AddDays(10),
+                Frequenz = 3,
+                StartDatum = DateTime.Now.AddDays(-2),
                 EndDatum = new DateTime(2000, 1, 1),
                 Kategorie = kat2
             });
             context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
             {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 1,
-                StartDatum = DateTime.Now.AddDays(1),
-                EndDatum = DateTime.Now.AddDays(50),
-                Kategorie = kat1
-            });
-            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
-            {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 0,
-                StartDatum = DateTime.Now.AddDays(2),
-                EndDatum = new DateTime(2000, 1, 1),
-                Kategorie = kat1
-            });
-            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
-            {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 3,
-                StartDatum = DateTime.Now.AddDays(5),
-                EndDatum = new DateTime(2000, 1, 1),
-                Kategorie = kat1
-            });
-            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
-            {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 3,
-                StartDatum = DateTime.Now.AddDays(2),
-                EndDatum = DateTime.Now.AddDays(35),
-                Kategorie = kat1
-            });
-            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
-            {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 3,
-                StartDatum = DateTime.Now.AddDays(-2),
-                EndDatum = DateTime.Now.AddDays(35),
-                Kategorie = kat1
-            });
-            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
-            {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 3,
-                StartDatum = DateTime.Now,
-                EndDatum = DateTime.Now.AddDays(35),
-                Kategorie = kat1
-            });
-            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
-            {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 34,
-                IsEinnahme = true,
-                Frequenz = 3,
-                StartDatum = DateTime.Now.AddDays(-10),
-                EndDatum = DateTime.Now.AddDays(35),
-                Kategorie = kat1
-            });
-            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
-            {
-                Beschreibung = "halofsdhbsda",
-                Betrag = 99.99m,
+                Beschreibung = "KFZ-Versicherung",
+                Betrag = 85,
                 IsEinnahme = false,
-                Frequenz = 2,
-                StartDatum = DateTime.Now.AddDays(-25),
+                Frequenz = 3,
+                StartDatum = DateTime.Now.AddDays(1),
                 EndDatum = new DateTime(2000, 1, 1),
-                Kategorie = kat4
+                Kategorie = kat1
+            });
+            context.ZukuenftigeTransaktionen.Add(new ZukuenftigeTransaktion()
+            {
+                Beschreibung = "Mittagsmenü Nr. 1 Kantine",
+                Betrag = 3.99m,
+                IsEinnahme = false,
+                Frequenz = 1,
+                StartDatum = DateTime.Now.AddDays(2),
+                EndDatum = new DateTime(2000, 1, 1),
+                Kategorie = kat3
             });
             base.Seed(context);
         }
