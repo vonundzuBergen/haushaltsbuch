@@ -51,6 +51,8 @@ Projektdateien:
   - REST_Larrybook.pdf
   - ManuelleTestbeschreibung_G7.pdf
   - Projektbeschreibung_G7.pdf
+  - Testautomatisierung.pdf
+  - Larrybook-Videos.7z
   
   Ordner "API" 
     - Backend
