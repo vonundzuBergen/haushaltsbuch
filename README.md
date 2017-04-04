@@ -13,7 +13,7 @@ Anwendung: "Larrybook"
 
 Beschreibung der Applikation: 
 
-"Larrybook" ist ein Online-Haushaltsbuch, zur Verwaltung der persönlichen Einnahmen und Ausgaben. Ziel ist eine einfach und übersichtliche Verfolgung aller Transaktionen. Einnahmen und Ausgaben können kategorisiert und kommentiert und in verschiedenen Grafiken präsentiert werden. Eine Anbindung an Bankdienstleister ist nicht vorgesehen. Daher ist auch keine Repräsentation des Nutzerkontostands geplant, sondern lediglich des Cashflows.
+"Larrybook" ist ein Online-Haushaltsbuch, zur Verwaltung der persönlichen Einnahmen und Ausgaben. Ziel ist eine einfach und übersichtliche Verfolgung aller Transaktionen. Einnahmen und Ausgaben können kategorisiert, kommentiert und in verschiedenen Grafiken präsentiert werden. Eine Anbindung an Bankdienstleister ist nicht vorgesehen. Daher ist auch keine Repräsentation des Nutzerkontostands geplant, sondern lediglich des Cashflows.
 
 
 Die Applikation soll nach dem Model-View-Controller Muster implementiert werden. Zudem soll das REST-Prinzip angewendet werden.
@@ -25,7 +25,7 @@ Folgende Funktionen sind vorhanden:
 ♣	Speicherung von Einnahmen und Ausgaben
 ♣	Vormerken von zukünftigen Transaktionen und automatisierter Buchungen
 ♣	Automatisierte Transaktionen in bestimmten Zeitintervallen 
-♣	Personalisierbaren Kategorien
+♣	Personalisierbare Kategorien
 ♣	Gesamtüberblick der Einnahmen, Ausgaben und des Saldos 
 ♣	Darstellung der Ausgaben pro Kategorie
 
@@ -55,13 +55,13 @@ Projektdateien:
   - Larrybook-Videos.7z
   
   Ordner "API" 
-    - Backend
+    - Backend Projekt
     - Beispielhaft generierte Codedokumentation eines der Backendprojekte(Larrybook.DataAccess.MSSql): 
       Das genutzte Programm ist "Sandcastel Help File Builder" und nutzt XML Documentation Tags im Code. 
       api/code dokumentationa/help/index.html
       
   
-  Ordner "src" - Frontend
+  Ordner "src" - Frontend Projekt
                   
 
 
