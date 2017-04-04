@@ -53,6 +53,7 @@ Projektdateien:
   - Projektbeschreibung_G7.pdf
   - Testautomatisierung.pdf
   - Larrybook-Videos.7z
+  - Larrybook.pptx
   
   Ordner "API" 
     - Backend Projekt
